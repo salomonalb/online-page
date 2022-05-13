@@ -1,0 +1,155 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/* ------------------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  padding: 5px;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  font-size: 16px;
+}
+header a {
+  color: #3475dd;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+header a:hover {
+  text-decoration: underline;
+  background-color: hsla(217, 71%, 54%, 0.1);
+}
+
+header svg {
+  display: inline;
+}
+
+.details {
+  font-size: 14px;
+  color:gray;
+}
+.notification-panel {
+  margin: auto;
+  padding: 0.5rem 1rem;
+  border: 2px solid #f6f6f6;
+  border-radius: 4px;
+  box-shadow: 2px 2px 8px #f6f6f6, 1px 1px 2px #f7f7f7;
+  width: clamp(310px, 100%, 600px);
+}
+article > a {
+  color: #3475dd;
+  border-top: 3px solid #f1f1f1;
+  padding-top: 1rem;
+  display: block;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+article > a:hover {
+  text-decoration: underline;
+  background-color: hsla(217, 71%, 54%, 0.1);
+  border-top: 3px solid hsla(217, 71%, 54%, 0.1);
+  
+}
+
+.grid-container {
+  display: grid;
+  grid-template: 1fr / min-content 1fr max-content;
+  gap: 1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.grid-container:hover {
+  background-color: hsla(217, 71%, 54%, 0.1);
+  color: #0072fa;
+  cursor: pointer;
+}
+.notification {
+  font-weight: 600;
+}
+svg#checks {
+  display: block;
+  color: #3475dd;
+  width: 25px;
+  height: 16pxpx;
+  margin-right: 0.2rem;
+  margin-left: auto;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #3475dd;
+  border-radius: 50%;
+  display: inline-block;
+}
+.icon-container {
+  display: grid;
+  place-items: start center;
+}
+img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 500px) {
+  .name {
+    display: none;
+  }
+}
