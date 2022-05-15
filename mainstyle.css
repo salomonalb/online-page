@@ -61,7 +61,6 @@ p, h1, h2, h3, h4, h5, h6 {
   --title-large: 4rem;
   --main-color:hsl(81, 49%, 53%);
   --second-color:hsl(222, 6%, 32%);
-  --accent-color:;
   --blue-links:hsl(180, 66%, 38%);
 }
 
@@ -82,7 +81,6 @@ h1 {
 }
 
 ul {
-  width:;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -94,6 +92,7 @@ li {
   max-width: 50rem;
   overflow: auto;
   margin: auto;
+  margin-bottom: var(--space-m);
   box-shadow: 2px 8px 8px hsl(222, 6%, 20%);
   transition: all 100ms ease-in-out 0ms;
   

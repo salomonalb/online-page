@@ -1,0 +1,183 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+/* ----------------------------------------------------------------- */
+/*
+* {
+    outline: 1px solid red;
+}
+*/
+body {
+    background-color: #5451fa;
+    padding: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+.widget {
+    background-color: white;
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1.2rem;
+    max-width: 420px;
+    margin:auto;
+    margin-bottom: 50px;
+}
+/* Top Icons */
+header {
+    display: flex;
+    justify-content: end;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+svg {
+    display: block;
+    width: 2rem;
+    color: #4a4a4a;
+}
+header svg:hover {
+    stroke: #979797 ;
+    cursor: pointer;
+}
+
+/* Images */
+#background {
+    border-radius: 1rem;
+    margin: auto;
+    width: 100%;
+}
+#avatar {
+    margin: auto;
+    width: 35%;
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.images-container {
+    position: relative;
+    margin-bottom:  4.5rem;
+}
+
+/* Name and Bio */
+.name {
+    
+    text-align: center;
+    margin-bottom: 2rem;
+}
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    display: inline-block;
+}
+.name svg {
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+.name p {
+    color: gray;
+    font-size: 14px;
+}
+
+
+/* stats */
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.column {
+    text-align: center;
+}
+
+.column p {
+    font-size: 24px;
+    font-weight: 700;
+}
+.column p:hover {
+    color: #5451fa;
+    cursor: pointer;
+}
+.column h2 {
+    font-size: 14px;
+    font-weight: 400;
+    color: gray;
+}
+
+
+/* button */
+button {
+    background-color: #5451fa;
+    border: none;
+    color: white;
+    border-radius: 1rem;
+    width: 100%;
+    padding: 1.25rem;
+    margin-top: 1.5rem;
+}
+button:hover {
+    background-color:#dcdafe;
+    color: #5451fa;
+    cursor: pointer;
+}
+/*  info */
+.info {
+    display: grid;
+    grid-template: 1fr 1fr 1fr / max-content max-content;
+    gap: 1rem 0.5rem;
+    padding: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.info p {
+    color: gray;
+    font-size: 14px;
+}
+span.bold {
+    font-weight: 700;
+}

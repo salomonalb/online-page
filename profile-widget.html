@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile Widget</title>
+        <link rel="stylesheet" href="wickedcss.min.css">
+        <link rel="stylesheet" type="text/css" href="profile-widget-styless.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body class="fadeIn">
+        <article class="widget slideRight">
+            <!-- Top Icons-->
+            <header>
+                <div class="">
+                    <svg  xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#4a4a4a" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="10" cy="10" r="7" />
+                        <line x1="21" y1="21" x2="15" y2="15" />
+                      </svg>
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bell-ringing" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#4a4a4a" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
+                        <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
+                        <path d="M21 6.727a11.05 11.05 0 0 0 -2.794 -3.727" />
+                        <path d="M3 6.727a11.05 11.05 0 0 1 2.792 -3.727" />
+                      </svg>
+                </div>
+            </header>
+            <!-- Images-->
+            <div class="images-container">
+                <img id="background" src="assets/background.png" alt="background">
+                <img id="avatar" src="assets/avatar.png" alt="avatar">
+            </div>
+            <!-- Name and Bio-->
+            <div class="name">
+                <h1>John Westfield</h1> 
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check" width="25" height="25" viewBox="1 1 25 21" stroke-width="1.5" stroke="white" fill="#5451fa" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M9 12l2 2l4 -4" />
+                  </svg>
+                <p>I'm interested in building projects, traveling and biking</p>
+            </div>
+            <!-- Stats -->
+            <div class="row">
+                <div class="column">
+                    <p>150</p>
+                    <h2>Following</h2>
+                </div>
+                <div class="column">
+                    <p>43.150</p>
+                    <h2>Followers</h2>
+                </div>
+                <div class="column">
+                    <p>163</p>
+                    <h2>Posts</h2>
+                </div>
+            </div>
+            <!-- button -->
+            <button>Follow Me</button>
+            <!-- info -->
+            <div class="info">
+                <div class="small-icon-container">
+                    <img src="assets/mark.png" alt="mark">
+                </div>
+                <p>Lives in <span class="bold">Budapest</span></p>
+                <div class="small-icon-container">
+                    <img src="assets/case.png" alt="case">
+                </div>
+                <p>Works as Full-Stack developer at Google</p>
+                <div class="small-icon-container">
+                    <img src="assets/fire.png" alt="fire">
+                </div>
+                <p>ReactJs, NodeJs, MongoDB, Devops</p>
+            </div>
+        </article>
+    </body>
+</html>
