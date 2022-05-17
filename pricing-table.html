@@ -1,0 +1,145 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Table</title>
+    <link rel="stylesheet" href="pricing-table-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <!-- header-->
+    <header class="header">
+        <h1 class="header__title">Simple transparent pricing</h1>
+        <p class="header__paragraph">All plans include a 30 days trial.</p>
+    </header>
+    <!-- radio buttons -->
+    <div class="container">
+        <span class="radio-separator"><input checked 
+                                            type="radio" 
+                                            name="billing-options" 
+                                            value="annually" 
+                                            id="annually"><label for="annually">Billed Annually (save 15%)</label></span>
+        <span class="radio-separator"><input type="radio" 
+                                            name="billing-options" 
+                                            value="monthly" 
+                                            id="monthly"><label for="monthly">Billed Monthly</label></span> 
+    </div>
+    <!-- pricing table-->
+    <div class="pricing-table">
+        <!--Basic -->
+        <div class="card">
+            <h2 class="card__title">Basic</h2>
+            <p class="card__subtitle">for hobbiests</p>
+            <div class="card__pricing">
+                <p class="card__pricing__price"><sup>$</sup>8</p>
+                <p class="card__pricing__description">per user/month billed annually</p>
+            </div>
+            <ul class="card__list">
+                <li class="card__list__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="1 2 25 25" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M5 12l5 5l10 -10" />
+                    </svg>
+                    5 projects</li>
+                <li class="card__list__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="1 2 25 25" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M5 12l5 5l10 -10" />
+                    </svg>
+                    100 assets</li>
+                <li class="card__list__item item--x">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-x" width="24" height="24" viewBox="1 2 25 25" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M10 10l4 4m0 -4l-4 4" />
+                    </svg>
+                    Log history</li>
+                <li class="card__list__item item--x">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-x" width="24" height="24" viewBox="1 2 25 25" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M10 10l4 4m0 -4l-4 4" />
+                    </svg>
+                    Priority support</li>
+            </ul>
+            <button class="button">Get Started</button>
+        </div>
+        <!-- Pro -->
+        <div class="card card--accent" id="pro">
+            <h2 class="card__title accent-color">Pro</h2>
+            <p class="card__subtitle">for professionals</p>
+            <div class="card__pricing">
+                <p class="card__pricing__price accent-color"><sup>$</sup>12</p>
+                <p class="card__pricing__description">per user/month billed annually</p>
+            </div>
+            <ul class="card__list">
+                <li class="card__list__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="1 2 25 25" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M5 12l5 5l10 -10" />
+                    </svg>
+                    Unlimited projects</li>
+                <li class="card__list__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="1 2 25 25" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M5 12l5 5l10 -10" />
+                    </svg>
+                    Unlimited assets</li>
+                <li class="card__list__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="1 2 25 25" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M5 12l5 5l10 -10" />
+                    </svg>
+                    Log history</li>
+                <li class="card__list__item item--x">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-x" width="24" height="24" viewBox="1 2 25 25" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M10 10l4 4m0 -4l-4 4" />
+                    </svg>
+                    Priority support</li>
+            </ul>
+            <button class="button button--accent">Get Started</button>
+        </div>
+        <!-- Enterprise -->
+        <div class="card">
+            <h2 class="card__title">Enterprise</h2>
+            <p class="card__subtitle">for teams</p>
+            <div class="card__pricing">
+                <p class="card__pricing__price"><sup>$</sup>30</p>
+                <p class="card__pricing__description">per user/month billed annually</p>
+            </div>
+            <ul class="card__list">
+                <li class="card__list__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="1 2 25 25" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M5 12l5 5l10 -10" />
+                    </svg>
+                    5 projects</li>
+                <li class="card__list__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="1 2 25 25" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M5 12l5 5l10 -10" />
+                    </svg>
+                    100 assets</li>
+                <li class="card__list__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="1 2 25 25" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M5 12l5 5l10 -10" />
+                    </svg>
+                    Log history</li>
+                <li class="card__list__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="1 2 25 25" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M5 12l5 5l10 -10" />
+                    </svg>
+                    Priority support</li>
+            </ul>
+            <button class="button">Contact us</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,254 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /* ------------------------------------------------ */
+:root {
+    --font-size-l: 22px;
+    --font-size-m: 16px;
+    --font-weight-4: 400;
+    --font-weight-7: 700;
+    --light-blue: #d5e3fe;
+    --blue: #004df3;
+    --red: #ff2725; 
+    --green: #00b341;
+    --gray: #646464;
+    --light-gray: #e5e5e5;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header */
+.header__title {
+    text-align: center;
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-7);
+    margin-top:2rem;
+}
+.header__paragraph {
+    text-align: center;
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-4);
+    color: var(--gray);
+    margin-bottom: 2rem;
+}
+
+/* Radio Buttons */ 
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+.radio-separator {
+    display: inline-block;
+    margin: 0 1rem;
+}
+label {
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-4);
+    color: var(--gray);
+    transition: all 200ms ease-in-out 0ms;
+}
+input {
+    margin-right: 0.25rem;
+}
+input:checked + label{
+    color: var(--blue);
+}
+input:hover + label, label:hover {
+    color: var(--blue);
+    cursor: pointer;
+}
+
+/* cards container */
+.pricing-table {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    justify-content: center;
+    margin: 0 1.25rem;
+    margin-bottom: 2rem;
+}
+/* cards */
+.card {
+    border: 3px solid var(--light-gray);
+    padding: 1.75rem 3rem;
+    transition: all 200ms;
+}
+
+.card:hover {
+    border-color: var(--light-blue);
+    cursor: pointer;
+    transform: scale(1.050);
+}
+
+.card__title {
+    color: var(--gray);
+    font-weight: var(--font-weight-4);
+    font-size: calc(var(--font-size-l) + 0.5rem);
+    transition: all 200ms;
+    margin-left: 1rem;
+}
+
+.card:hover .card__title {
+    color: var(--blue);
+}
+
+.card__subtitle {
+    color: var(--gray);
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-4);
+    margin-left: 1rem;
+}
+.card__pricing {
+    display: flex;
+    gap: 0.5rem;
+}
+.card__pricing__price {
+    color: black;
+    font-size: calc(var(--font-size-l) + 1rem);
+    font-weight: var(--font-weight-7);
+    transition: all 200ms;
+}
+.card:hover .card__pricing__price {
+    color: var(--blue);
+}
+sup {
+    font-size: large;
+}
+.card__pricing__description {
+    width: 14ch;
+    font-size: calc(var(--font-size-m) - 0.25rem);
+    font-weight: var(--font-weight-4);
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+}
+/*list */
+.card__list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: .5rem;
+    margin: 2rem 0;
+}
+.card__list__item {
+    display: flex;
+    gap: .25rem;
+    color: var(--gray);
+    font-size: calc(var(--font-size-m) - 0.25rem);
+    font-weight: var(--font-weight-4);
+}
+.card__list__item svg {
+    color: var(--green);
+}
+
+/* Button */
+
+.button {
+    display: block;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    border: 2px solid var(--light-gray);
+    margin: auto;
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-7);
+    color: var(--gray);
+    transition: all 200ms;
+    width: 100%;
+}
+
+.card:hover .button {
+    color: var(--blue);
+    background-color: var(--light-blue);
+    border-color: var(--light-blue);
+    cursor: pointer;
+}
+
+/* overrides */
+.card--accent {
+    border-color: var(--blue);
+}
+
+.card--accent:hover {
+    border-color: var(--blue);
+    transform: scale(1.050);
+}
+
+.card--accent:hover .button--accent {
+    color: white;
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+
+.accent-color {
+    color: var(--blue);
+}
+.button--accent {
+    color: white;
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+.item--x svg {
+    color: var(--red);
+}
+
+@media screen and (max-width: 829px) {
+    .container {
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+    .radio-separator {
+        display: inline-block;
+        margin: .25rem 0;
+    }
+    #pro {
+        order: -1;
+    }
+}
