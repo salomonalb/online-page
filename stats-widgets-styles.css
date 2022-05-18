@@ -1,0 +1,299 @@
+@charset "UTF-8";
+
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation: none !important;
+            animation: none !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+}
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+  }
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1rem;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos */
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+    font-family: 'Inter', sans-serif;
+
+  min-height: 100vh;
+  font-size: 100%;
+  /* opcional */
+  line-height: 1.5;
+  /* opcional */
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+/* ------------------------------------------------*/
+
+
+
+:root {
+--red: #ea5d29;
+--yellow: #f6d146;
+--blue: #a292e4;
+--green: #30bb64;
+--dark-gray: #222222;
+--light-gray: #999999;
+--font-main: 1.125rem;
+--font-big: 3.875rem;
+--font-300: 300;
+--font-400: 400;
+}
+
+body {
+    background-color: black;
+}
+
+.cards-wrapper {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-bottom: 3rem;
+}
+.card {
+    border: 2px solid white;
+    border-radius: 15px;
+    background-color: var(--dark-gray);
+    padding-right: 2.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 23rem;
+    min-width: 23rem;
+    max-width: 23rem;
+}
+
+.card--red {
+    border: 2px solid var(--red);
+}
+.card--yellow {
+    border: 2px solid var(--yellow);
+    width: 16rem;
+    min-width: 16rem;
+}
+.card--blue {
+    border: 2px solid var(--blue);
+    width: 16rem;
+    min-width: 16rem;
+}
+
+.column-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.card__title {
+    color: var(--light-gray);
+    font-size: var(--font-main);
+    font-weight: var(--font-400);
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    
+}
+
+.card__title::before {
+    content:"";
+    border: 4px solid transparent;
+    border-radius: 3.5px;
+    margin-right: .5rem;
+    align-self: stretch;
+}
+.card__title--red::before {
+    border-color: var(--red);
+}
+.card__title--yellow::before {
+    border-color: var(--yellow);
+}
+.card__title--blue::before {
+    border-color: var(--blue);
+}
+
+.card__green-number {
+    color: var(--green);
+    font-size: calc( var(--font-main) + .4rem);
+}
+.card__main-number {
+    color: white;
+    font-size: var(--font-big);
+    font-weight: var(--font-300);
+    text-align: right;
+}
+.column-wrapper--bottom {
+    align-items: flex-end;
+}
+.card__bottom-text {
+    color: var(--light-gray);
+    font-size: var(--font-main);
+    font-weight: var(--font-300);
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+.card__bottom-text::before {
+    content:"";
+    border: 3.5px solid transparent;
+    border-radius: 3px;
+    margin-right: .5rem;
+    align-self: stretch;
+}
+.card__icon {
+    color: var(--light-gray);
+    margin-left: 25%;
+}
+
+.card--red .card__icon {
+    margin-left: 50%;
+}
+
+.card--red, .card--yellow, .card--blue {
+    transition: all 200ms;
+}
+
+.card--red:hover {
+    transform: scale(1.025);
+    box-shadow: 1px 1px 30px var(--red);
+    cursor: pointer;
+}
+
+.card--yellow:hover {
+    transform: scale(1.025);
+    box-shadow: 1px 1px 30px var(--yellow);
+    cursor: pointer;
+}
+.card--blue:hover {
+    transform: scale(1.025);
+    box-shadow: 1px 1px 30px var(--blue);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 976px) {
+    .cards-wrapper {
+        flex-direction: column;
+        align-content: center;
+        gap: 2rem;
+    }
+    .card--yellow {
+        width: 23rem;
+        min-width: 23rem;
+        max-width: 23rem;
+    }
+    .card--blue {
+        width: 23rem;
+        min-width: 23rem;
+        max-width: 23rem;
+    }
+    .card__icon {
+        margin-left: 50%;
+    }
+    .card--red:hover {
+        box-shadow: 1px 1px 60px var(--red);
+        cursor: pointer;
+    }
+    
+    .card--yellow:hover {
+        box-shadow: 1px 1px 60px var(--yellow);
+        cursor: pointer;
+    }
+    .card--blue:hover {
+        box-shadow: 1px 1px 60px var(--blue);
+        cursor: pointer;
+    }
+}
