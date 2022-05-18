@@ -111,13 +111,16 @@ input:hover + label, label:hover {
     gap: 1.25rem;
     justify-content: center;
     margin: 0 1.25rem;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
 }
 /* cards */
 .card {
     border: 3px solid var(--light-gray);
     padding: 1.75rem 3rem;
     transition: all 200ms;
+    width: 257px;
+    max-width: 257px;
+    min-width: 257px;
 }
 
 .card:hover {
@@ -237,7 +240,7 @@ sup {
     color: var(--red);
 }
 
-@media screen and (max-width: 829px) {
+@media screen and (max-width: 851px) {
     .container {
         flex-direction: column;
         margin: auto;
@@ -248,7 +251,7 @@ sup {
         display: inline-block;
         margin: .25rem 0;
     }
-    #pro {
+    .order--pro {
         order: -1;
     }
 }
