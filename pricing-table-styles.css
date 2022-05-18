@@ -112,6 +112,7 @@ input:hover + label, label:hover {
     justify-content: center;
     margin: 0 1.25rem;
     margin-bottom: 5rem;
+    padding-bottom: 5rem;
 }
 /* cards */
 .card {
