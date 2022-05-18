@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing Table</title>
     <link rel="stylesheet" href="pricing-table-styles.css">
+    <link rel="stylesheet" href="wickedcss.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <!-- header-->
-    <header class="header">
+    <header class="header fadeIn">
         <h1 class="header__title">Simple transparent pricing</h1>
         <p class="header__paragraph">All plans include a 30 days trial.</p>
     </header>
     <!-- radio buttons -->
-    <div class="container">
-        <span class="radio-separator"><input checked 
+    <div class="container fadeIn">
+        <span class="radio-separator"><input checked
                                             type="radio" 
                                             name="billing-options" 
                                             value="annually" 
@@ -30,11 +32,11 @@
     <!-- pricing table-->
     <div class="pricing-table">
         <!--Basic -->
-        <div class="card">
+        <div class="card slideUp">
             <h2 class="card__title">Basic</h2>
             <p class="card__subtitle">for hobbiests</p>
             <div class="card__pricing">
-                <p class="card__pricing__price"><sup>$</sup>8</p>
+                <p class="card__pricing__price" id="basic-price"><sup>$</sup>8</p>
                 <p class="card__pricing__description">per user/month billed annually</p>
             </div>
             <ul class="card__list">
@@ -68,11 +70,11 @@
             <button class="button">Get Started</button>
         </div>
         <!-- Pro -->
-        <div class="card card--accent order--pro">
+        <div class="card card--accent order--pro slideUp">
             <h2 class="card__title accent-color">Pro</h2>
             <p class="card__subtitle">for professionals</p>
             <div class="card__pricing">
-                <p class="card__pricing__price accent-color"><sup>$</sup>12</p>
+                <p class="card__pricing__price accent-color" id="pro-price"><sup>$</sup>12</p>
                 <p class="card__pricing__description">per user/month billed annually</p>
             </div>
             <ul class="card__list">
@@ -105,11 +107,11 @@
             <button class="button button--accent">Get Started</button>
         </div>
         <!-- Enterprise -->
-        <div class="card">
+        <div class="card slideUp">
             <h2 class="card__title">Enterprise</h2>
             <p class="card__subtitle">for teams</p>
             <div class="card__pricing">
-                <p class="card__pricing__price"><sup>$</sup>30</p>
+                <p class="card__pricing__price" id="enterprise-price"><sup>$</sup>30</p>
                 <p class="card__pricing__description">per user/month billed annually</p>
             </div>
             <ul class="card__list">
@@ -141,5 +143,6 @@
             <button class="button">Contact us</button>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
