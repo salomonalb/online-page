@@ -123,9 +123,8 @@ body {
 
 ::selection {
     color: white;
-    background-color: #0b2f73;
+    background-color: #0072fa;
 }
-
 
 root {
     --blue-main: #0072fa;
@@ -156,7 +155,7 @@ body {
     padding-bottom: .5rem;
     background-image: linear-gradient(to top, #020d3d , #0b2f73, #278993);
     transform: translateY(6rem);
-
+    transition: all 200ms;
 }
 
 .card__logo-wrapper {
@@ -207,12 +206,13 @@ span {
 
 .form {
     box-shadow: 1px 5px 10px #d1d1d1;
-    width: auto;
+    width: 50%;
     margin: auto;
     border-radius: 10px;
     padding: 1rem;
-    max-width: max-content;
+    max-width: 40rem;
     padding-top: 8rem;
+    min-width: 18rem;
 }
 .form__label {
     font-size: 14px;
@@ -220,15 +220,7 @@ span {
     margin-bottom: .5rem;
 }
 
-.form__label--inline {
-    display: inline-block;
-    width: 60%;;
-}
 
-.form__label--right {
-    width: 32%;
-    float: right;
-}
 
 .form__input {
     border: 1px solid #d1d1d1;
@@ -236,27 +228,62 @@ span {
     border-radius: 5px;
     width: 100%;
     margin-bottom: 1.5rem;
+    transition: all 100ms;
 }
-.form__input:focus {
-    outline: 2px solid;
-    outline-color: #0072fa;
+input:hover, select:hover {
+    transform: scale(1.025);
 }
-.form__input--right {
-    float: right;
+input:focus, select:focus {
+    transform: scale(1.025);
+    outline: 2px solid #0072fa;
+}
+
+
+
+.form__flex-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.form__sub-container {
+    width: 70%;
+    justify-content: space-around;
+}
+.form__sub-container--right {
+    width: 30%;
 }
 .form__input--small {
-    width: 32%;
+    width: 46%;
     display: inline-block;
 }
+.form__input--right {
+    width: 100%;
+} 
+
+
 .form__button {
-    background-image: linear-gradient(to right, #020d3d , #0b2f73, #278993);
-    color: #f6f6f6;
+    color: #0072fa;
+    border: 2px solid #0072fa;
     padding: 0.5rem;
     width: 100%;
     border-radius: 5px;
 }
 
-@media screen and (max-width: 555px) {
+.form__button:hover {
+    background-color: #0072fa;
+    color: #f6f6f6;
+    cursor: pointer;
+}
+
+select {
+    text-align: center;
+}
+select:hover {
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) {
     .card {
         transform: translateY(0px);
         margin-bottom: 2rem;
@@ -267,7 +294,29 @@ span {
     }
     .form {
         padding-top: 1rem;
-        margin: 1rem;
+        margin: auto;
     }
-}
-/* cambiar el tamaño de las labels de la tarjeta en el media query */
+    .form__flex-container {
+        flex-direction: column;
+    }
+    .form__sub-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .form__label--inline {
+        display: inline-block;
+        width: 100%;
+    }
+    .form__input--small {
+        width: 45%;
+        display: inline-block;
+    }
+    .form__input--right {
+        width: 100%;
+    }
+    .form__sub-container--right {
+        width: 100%;
+    }
+};

@@ -30,30 +30,36 @@
         <input type="text" id="card-number" class="form__input">
         <label for="card-holder" class="form__label">Card Holder</label>
         <input type="text" id="card-holder" class="form__input">
-        <label for="month year" class="form__label form__label--inline">Expiration Date</label>
-        <label for="cvv" class="form__label form__label--inline form__label--right">CVV</label>
-        <select name="month" id="month" class="form__input form__input--small">
-            <option value="01">01</option>
-            <option value="02">02</option>
-            <option value="03">03</option>
-            <option value="04">04</option>
-            <option value="05">05</option>
-            <option value="06">06</option>
-            <option value="07">07</option>
-            <option value="08">08</option>
-            <option value="09">09</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-        </select>
-        <select name="year" id="year" class="form__input form__input--small">
-            <option value="2022">2022</option>
-            <option value="2023">2023</option>
-            <option value="2024">2024</option>
-            <option value="2025">2025</option>
-            <option value="2026">2026</option>
-        </select>
-        <input type="text" id="cvv" class="form__input  form__input--small form__input--right">
+        <div class="form__flex-container">
+            <div class="form__sub-container">
+                <label for="month year" class="form__label form__label--inline">Expiration Date</label>
+                <select name="month" id="month" class="form__input form__input--small">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <select name="year" id="year" class="form__input form__input--small">
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                </select>
+            </div>
+            <div class="form__sub-container form__sub-container--right">
+                <label for="cvv" class="form__label form__label--inline form__label--right">CVV</label>
+                <input type="text" id="cvv" class="form__input  form__input--small form__input--right">
+            </div>
+        </div>
         <input type="submit" value="Submit" class="form__button">
     </form>
 </body>
