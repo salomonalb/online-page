@@ -1,0 +1,273 @@
+@charset "UTF-8";
+
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation: none !important;
+            animation: none !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+}
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+  }
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1rem;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos */
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+    font-family: 'Inter', sans-serif;
+
+  min-height: 100vh;
+  font-size: 100%;
+  /* opcional */
+  line-height: 1.5;
+  /* opcional */
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+/* ---------------------------------------------------------------------*/
+
+::selection {
+    color: white;
+    background-color: #0b2f73;
+}
+
+
+root {
+    --blue-main: #0072fa;
+    --white: #f6f6f6;
+    --light-gray: #d1d1d1;
+    --dark-gray: #4a4a4a;
+    --gradient-1: #020d3d;
+    --gradient-2: #0b2f73;
+    --gradient-3: #278993;
+    --main-font-size: 22px;
+    --small-font-size: 14px;
+    --font-weight: 400;
+}
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: var(--font-weight);
+    padding-bottom: 5rem;
+}
+
+/* Credit Card */
+.card {
+    color: white;
+    border-radius: 15px;
+    width: clamp(18rem, 18rem, 18rem);
+    margin: auto;
+    margin-top: 1rem;
+    padding-bottom: .5rem;
+    background-image: linear-gradient(to top, #020d3d , #0b2f73, #278993);
+    transform: translateY(6rem);
+
+}
+
+.card__logo-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+}
+.card__cc-logo {
+    width: 15%;
+}
+
+.card__visa-logo {
+    width: 20%;
+}
+
+.card__info {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 1rem;
+    font-size: 1rem;
+}
+span {
+    font-size: inherit;
+}
+.card__info--bottom {
+    font-size: 1rem;
+    width: max-content;
+    margin: 0;
+}
+.card__info--right {
+    margin-left: auto;
+}
+.card__text-wrapper {
+    columns: 2;
+    column-width: 50%;
+    margin: .5rem 1rem;
+}
+.card__label {
+    font-size: .6rem;
+    color: #d1d1d1;
+}
+.card__label--right {
+    text-align: right;
+}
+
+/* Form */
+
+.form {
+    box-shadow: 1px 5px 10px #d1d1d1;
+    width: auto;
+    margin: auto;
+    border-radius: 10px;
+    padding: 1rem;
+    max-width: max-content;
+    padding-top: 8rem;
+}
+.form__label {
+    font-size: 14px;
+    color: #4a4a4a;
+    margin-bottom: .5rem;
+}
+
+.form__label--inline {
+    display: inline-block;
+    width: 60%;;
+}
+
+.form__label--right {
+    width: 32%;
+    float: right;
+}
+
+.form__input {
+    border: 1px solid #d1d1d1;
+    padding: .5rem;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+.form__input:focus {
+    outline: 2px solid;
+    outline-color: #0072fa;
+}
+.form__input--right {
+    float: right;
+}
+.form__input--small {
+    width: 32%;
+    display: inline-block;
+}
+.form__button {
+    background-image: linear-gradient(to right, #020d3d , #0b2f73, #278993);
+    color: #f6f6f6;
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 555px) {
+    .card {
+        transform: translateY(0px);
+        margin-bottom: 2rem;
+        
+    }
+    .card__label {
+        font-size: .75rem;
+    }
+    .form {
+        padding-top: 1rem;
+        margin: 1rem;
+    }
+}
+/* cambiar el tamaño de las labels de la tarjeta en el media query */
