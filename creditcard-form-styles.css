@@ -288,9 +288,11 @@ select:hover {
     cursor: pointer;
 }
 .form__captcha {
-    width: 100%;
+    outline: 1px solid red;
+    width: 80%;
     margin: auto;
     margin-bottom: 1rem;
+    overflow: auto;
 
 
 }
