@@ -289,7 +289,7 @@ select:hover {
 }
 .form__captcha {
     outline: 1px solid red;
-    width: 80%;
+    width: 50%;
     margin: auto;
     margin-bottom: 1rem;
     overflow: hidden;
@@ -331,6 +331,9 @@ select:hover {
         width: 100%;
     }
     .form__sub-container--right {
+        width: 100%;
+    }
+    .form__captcha {
         width: 100%;
     }
 };
