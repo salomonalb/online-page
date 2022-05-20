@@ -287,7 +287,13 @@ select {
 select:hover {
     cursor: pointer;
 }
+.form__captcha {
+    max-width: 100%;
+    margin: auto;
+    margin-bottom: 1rem;
 
+
+}
 
 @media screen and (max-width: 768px) {
     .card {
