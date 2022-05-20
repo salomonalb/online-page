@@ -259,7 +259,13 @@ input:focus, select:focus {
 .form__input--right {
     width: 100%;
 } 
-
+.form__input--chevron {
+    background-image: url('assets/chevron-down.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    text-align: left;
+}
 
 .form__button {
     color: #0072fa;

@@ -27,13 +27,14 @@
     </div>
     <form class="form">
         <label for="card-number" class="form__label">Card Number</label>
-        <input type="text" id="card-number" class="form__input">
+        <input type="text" required id="card-number" class="form__input" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14})$">
         <label for="card-holder" class="form__label">Card Holder</label>
-        <input type="text" id="card-holder" class="form__input">
+        <input type="text" required id="card-holder" class="form__input" pattern="([A-zÀ-ž\s]){2,}">
         <div class="form__flex-container">
             <div class="form__sub-container">
                 <label for="month year" class="form__label form__label--inline">Expiration Date</label>
-                <select name="month" id="month" class="form__input form__input--small">
+                <select required name="month" id="month" class="form__input form__input--small
+                form__input--chevron">
                     <option value="01">01</option>
                     <option value="02">02</option>
                     <option value="03">03</option>
@@ -47,7 +48,7 @@
                     <option value="11">11</option>
                     <option value="12">12</option>
                 </select>
-                <select name="year" id="year" class="form__input form__input--small">
+                <select required name="year" id="year" class="form__input form__input--small form__input--chevron">
                     <option value="2022">2022</option>
                     <option value="2023">2023</option>
                     <option value="2024">2024</option>
@@ -57,7 +58,7 @@
             </div>
             <div class="form__sub-container form__sub-container--right">
                 <label for="cvv" class="form__label form__label--inline form__label--right">CVV</label>
-                <input type="text" id="cvv" class="form__input  form__input--small form__input--right">
+                <input type="text" required id="cvv" class="form__input  form__input--small form__input--right">
             </div>
         </div>
         <input type="submit" value="Submit" class="form__button">
