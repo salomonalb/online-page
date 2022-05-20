@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    <!-- credit card-->
     <div class="card">
         <div class="card__logo-wrapper">
             <img src="assets/cc-logo.png" alt="credit card logo" class="card__cc-logo">
@@ -25,11 +25,12 @@
             <p class="card__info card__info--bottom card__info--right">02/23</p>
         </div>
     </div>
-    <form class="form">
+    <!-- form-->
+    <form class="form" method="POST" data-netlify="true">
         <label for="card-number" class="form__label">Card Number</label>
-        <input type="text" required id="card-number" class="form__input" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14})$">
+        <input type="text" required id="card-number" class="form__input" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14})$" name="card-number">
         <label for="card-holder" class="form__label">Card Holder</label>
-        <input type="text" required id="card-holder" class="form__input" pattern="([A-zÀ-ž\s]){2,}">
+        <input type="text" required id="card-holder" class="form__input" pattern="([A-zÀ-ž\s]){2,}" name="card-holder">
         <div class="form__flex-container">
             <div class="form__sub-container">
                 <label for="month year" class="form__label form__label--inline">Expiration Date</label>
@@ -58,7 +59,7 @@
             </div>
             <div class="form__sub-container form__sub-container--right">
                 <label for="cvv" class="form__label form__label--inline form__label--right">CVV</label>
-                <input type="text" required id="cvv" class="form__input  form__input--small form__input--right">
+                <input type="text" required id="cvv"  name="cvv" class="form__input  form__input--small form__input--right">
             </div>
         </div>
         <input type="submit" value="Submit" class="form__button">
