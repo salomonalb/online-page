@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Credit Card Form</title>
+    <link rel="stylesheet" href="wickedcss.min.css">
     <link rel="stylesheet" href="creditcard-form-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +13,7 @@
 </head>
 <body>
     <!-- credit card-->
-    <div class="card">
+    <div class="card slideDown">
         <div class="card__logo-wrapper">
             <img src="assets/cc-logo.png" alt="credit card logo" class="card__cc-logo">
             <img src="assets/visa-logo.png" alt="visa logo" class="card__visa-logo">
@@ -26,7 +27,7 @@
         </div>
     </div>
     <!-- form-->
-    <form class="form" method="POST" data-netlify="true">
+    <form class="form slideUp" method="POST" data-netlify="true">
         <label for="card-number" class="form__label">Card Number</label>
         <input type="text" required id="card-number" class="form__input" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14})$" name="card-number">
         <label for="card-holder" class="form__label">Card Holder</label>

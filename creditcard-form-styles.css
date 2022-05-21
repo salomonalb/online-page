@@ -154,8 +154,9 @@ body {
     margin-top: 1rem;
     padding-bottom: .5rem;
     background-image: linear-gradient(to top, #020d3d , #0b2f73, #278993);
-    transform: translateY(6rem);
-    transition: all 200ms;
+    /*transform: translateY(6rem);*/
+    position: relative;
+    top: 6rem;
 }
 
 .card__logo-wrapper {
@@ -298,7 +299,8 @@ select:hover {
 
 @media screen and (max-width: 768px) {
     .card {
-        transform: translateY(0px);
+        /*transform: translateY(0px);*/
+        top: 0px;
         margin-bottom: 2rem;
         
     }
