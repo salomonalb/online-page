@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Screen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login-screen-styles.css">
+</head>
+<body>
+    <div class="login">
+        <img src="assets/logo.png" alt="logo" class="login__logo">
+        <p class="login__text login__text--big">Thank you for choosing us</p>
+        <p class="login__text">Welcome back! Please enter your details below</p>
+        <form class="login__form form">
+            <input type="email" class="form__input" placeholder="Enter your email" required>
+            <input type="password" class="form__input" placeholder="Password" required>
+            <input type="submit" class="form__input form__input--button" value="Log In">
+        </form>
+        <p class="login__divider">&nbsp;&nbsp;&nbsp;&nbsp;OR&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <div class="login__socials-container">
+            <a href="" class="login__social-button"> <img src="assets/google.png" alt="google logo" class="login__social-logo"> Log In with Google</a>
+            <a href="" class="login__social-button"> <img src="assets/facebook.png" alt="facebook logo" class="login__social-logo"> Log In with Facebook</a>
+            <a href="" class="login__social-button"> <img src="assets/twitter.png" alt="twitter logo" class="login__social-logo"> Log In with Twitter</a>
+        </div>
+        <p class="login__text">Don't have an account yet? <a href="" class="login__signup">Sign up now</a></p>
+    </div>
+    <div class="right-pane"></div>
+</body>
+</html>

@@ -1,0 +1,257 @@
+@charset "UTF-8";
+
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation: none !important;
+            animation: none !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+}
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+  }
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1rem;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos */
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+    font-family: 'Inter', sans-serif;
+
+  min-height: 100vh;
+  font-size: 100%;
+  /* opcional */
+  line-height: 1.5;
+  /* opcional */
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+/* ---------------------------------------------------------------------*/
+
+:root {
+    --black: #000;
+    --gray: #c4c4c4;
+    --main-font-size: 20px;
+    --small-font-size: 16px;
+    --font-weight-light: 400;
+    --font-weight-heavy: 500;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+::selection {
+    color: white;
+    background-color: var(--black);
+}
+.login {
+    padding: 5rem;
+    max-width: 35rem;
+}
+.login__logo {
+    width: 50px;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+.login__text {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-weight-light);
+    text-align: center;
+}
+.login__text--big {
+    font-size: var(--main-font-size);
+    font-weight: var(--font-weight-heavy);
+}
+
+.form__input {
+    border: 2px solid var(--gray);
+    width: 100%;
+    padding: 1rem;
+    margin: 2rem 0;
+    border-radius: 5px;
+    transition: all 200ms;
+}
+.form__input:focus {
+    outline: none;
+    border-color: var(--black);
+    transform: scale(1.025);
+}
+.form__input--button {
+    background-color: var(--black);
+    color: white;
+    font-weight: var(--font-weight-heavy);
+    border-color: var(--black);
+}
+.form__input--button:hover {
+    background-color: white;
+    color: var(--black);
+    transform: scale(1.025);
+    cursor: pointer;
+}
+
+.login__divider {
+    color: var(--gray);
+    font-weight: var(--font-weight-heavy);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.login__divider::before, .login__divider::after {
+    content: '';
+    flex: 1 1 auto;
+    border-bottom: 3px solid var(--gray);
+    border-radius: 5px;
+
+}
+
+.login__social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    font-weight: var(--font-weight-heavy);
+    border: 2px solid var(--gray);
+    width: 100%;
+    padding: .6rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    transition: all 200ms;
+}
+.login__social-button:hover {
+    border-color: var(--black);
+    transform: scale(1.025);
+}
+.login__social-logo {
+    display: inline-block;
+    width: 30px;
+}
+.login__signup {
+    text-decoration: underline;
+    font-weight: var(--font-weight-heavy);
+    transition: all 200ms;
+}
+.login__signup:hover {
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.right-pane {
+    display: none;
+}
+
+@media screen and (min-width: 1440px) {
+    .right-pane {
+        background-image: url('assets/Right Pane.jpg');
+        width: 50%;
+        max-width: 620px;
+        background-size:  100%;
+        background-repeat: no-repeat;
+        display: block;
+        flex-grow: 0;
+        
+    }
+    body {
+        justify-content: space-between;
+    }
+    .login {
+        margin: auto;
+    }
+}
