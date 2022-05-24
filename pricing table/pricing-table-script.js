@@ -30,7 +30,7 @@ let cards = document.getElementsByClassName('card');
 console.log(cards);
 
 function goToCreditCard() {
-    location.href = "creditcard-form.html";
+    location.href = "../credit card form/creditcard-form.html";
 }
 
 cards[0].addEventListener('click', goToCreditCard);

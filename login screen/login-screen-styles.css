@@ -239,7 +239,7 @@ body {
 
 @media screen and (min-width: 1440px) {
     .right-pane {
-        background-image: url('assets/Right Pane.jpg');
+        background-image: url('../assets/Right Pane.jpg');
         width: 50%;
         max-width: 620px;
         background-size:  100%;

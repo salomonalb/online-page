@@ -261,7 +261,7 @@ input:focus, select:focus {
     width: 100%;
 } 
 .form__input--chevron {
-    background-image: url('assets/chevron-down.png');
+    background-image: url('../assets/chevron-down.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
