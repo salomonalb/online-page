@@ -1,0 +1,59 @@
+$white: hsl(0, 0%, 100%);
+$light-gray: hsl(212, 45%, 89%);
+$grayish-blue: hsl(220, 15%, 55%);
+$dark-blue: hsl(218, 44%, 22%);
+$size-paragraph: 15px;
+$weight-light: 400;
+$weight-heavy: 700;
+
+@import url(/wickedcss.min.css);
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: $light-gray;
+    font-family: 'Outfit', sans-serif;
+}
+.card {
+    background-color: $white;
+    margin: auto;
+    border-radius: 20px;
+    padding: 1rem;
+    max-width: 20rem;
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+    transition: all 200ms;
+
+    &__image {
+        display: block;
+        border-radius: 10px;
+        width: 100%;
+    }
+    &__text-container {
+        padding: .7rem;
+    }
+    %card__text {
+        display: block;
+        width: 95%;
+        text-align: center;
+        margin: auto;
+        margin-top: 1.5rem;
+    }
+    &__title {
+        @extend %card__text;
+        font-weight: $weight-heavy;
+        color: $dark-blue;
+        font-size: 22px;
+    }
+    &__para {
+        @extend %card__text;
+        font-weight: $weight-light;
+        color: $grayish-blue;
+        font-size: $size-paragraph;
+    }
+    &:hover {
+        transform: scale(1.025);
+        cursor: pointer;
+    }
+}
