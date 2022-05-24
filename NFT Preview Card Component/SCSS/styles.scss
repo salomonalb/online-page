@@ -1,0 +1,130 @@
+@use '_reset.scss' as _r;
+@import url(../../wickedcss.min.css);
+
+$soft-blue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+$main-BG: hsl(217, 54%, 11%);
+$card-BG: hsl(216, 50%, 16%);
+$line: hsl(215, 32%, 27%);
+$white:hsl(0, 0%, 100%);
+$font-paragraph: 18px;
+$weight-light: 300;
+$weight-mid: 400;
+$weight-heavy: 600;
+
+body {
+    background-color: $main-BG;
+    font-family: 'Outfit', 'Helvetica', sans-serif;
+    font-size: $font-paragraph;
+}
+
+.nft-card {
+    width: 100%;
+    padding: 1.5rem;
+    padding-bottom: 1.8rem;
+    margin: auto;
+    margin-top: 3rem;
+    border-radius: 10px;
+    max-width: 21rem;
+    background-color: $card-BG;
+    position: relative;
+
+    &__image {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+    }
+    &__overlay {
+        width: 18rem;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        background-color: transparentize($color: $cyan, $amount: 1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 1.5rem;
+        padding: 7.5rem 0;
+        transition: all 400ms;
+
+        &:hover {
+            background-color: transparentize($color: $cyan, $amount: 0.7);
+            cursor: pointer;
+
+            & .nft-card__icon--see {
+                color: white;
+            }
+        }
+    }
+    &__title {
+        color: $white;
+        font-weight: $weight-heavy;
+        font-size: $font-paragraph * 1.35;
+        margin-bottom: 1rem;
+        transition: all 400ms;
+
+        &:hover {
+            color: $cyan;
+            cursor: pointer;
+        }
+    }
+    &__description {
+        color: $soft-blue;
+        font-weight: $weight-light;
+        font-size: $font-paragraph;
+    }
+    &__price {
+        color: $cyan;
+        font-size: $font-paragraph;
+    }
+    &__time {
+        color: $soft-blue;
+        font-weight: $weight-mid;
+        font-size: $font-paragraph;
+    }
+    &__icon {
+        &--eth {
+            width: 10%;
+        }
+        &--clock {
+            width: 15%;
+        }
+        &--see {
+            display: block;
+            width: 16%;
+            margin: auto;
+            color: transparent;
+            transition: all 400ms;
+        }
+    }
+    &__author-picture {
+        width: 10%;
+        border: 1px solid white;
+        border-radius: 50%;
+    }
+    &__author-name {
+        color: white;
+        font-size: $font-paragraph;
+        transition: all 400ms;
+
+        &:hover {
+            color: $cyan;
+            cursor: pointer;
+        }
+    }
+    
+}
+.flex-wrapper {
+    display: flex;
+    justify-content: start;
+    gap: .5rem;
+    align-items: center;
+
+    &--row {
+        justify-content: space-between;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $line;
+    }
+}
