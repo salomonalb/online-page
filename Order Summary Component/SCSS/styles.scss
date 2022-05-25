@@ -1,0 +1,115 @@
+@use '../../reset' as _r;
+@import url(../../wickedcss.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+$pale-blue: hsl(255, 100%, 94%);
+$birght-blue: hsl(245, 75%, 52%);
+$very-pale-blue: hsl(255, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+$font-weight-light: 500;
+$font-weight-mid: 700;
+$font-weight-heavy: 900;
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1rem;
+    padding: 1rem;
+    color: $dark-blue;
+    background-color: $pale-blue;
+}
+/*----Block---*/
+.order-component {
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 23rem;
+    margin: auto;
+    margin-top: 3rem;
+    background-color: white;
+    padding-bottom: 2rem;
+
+    /* -------Elements------- */
+    &__image {
+        margin-bottom: 2rem;
+    }
+    &__title {
+        font: {
+            weight: 900;
+            size: 1.4rem;
+        };
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    &__text {
+        color: $desaturated-blue;
+        text-align: center;
+        margin: auto;
+        display: block;
+        margin: 0 2rem;
+        hyphens: none;
+    }
+    &__summary {
+        display: flex;
+        justify-content: start;
+        background-color: $very-pale-blue;
+        margin: 1rem 1.5rem 0;
+        padding: 1rem;
+        border-radius: 15px;
+        gap: 1rem;
+    }
+    &__icon {
+        width: 17.5%;
+    }
+    &__action {
+        font-weight: $font-weight-mid;
+        color: $birght-blue;
+        text-decoration: underline;
+        margin-left: auto;
+        align-self: center;
+        &:hover {
+            color: lighten($color: $birght-blue, $amount: 20%);
+            text-decoration: none;
+        }
+    }
+    &__button {
+        color: white;
+        background-color: $birght-blue;
+        display: block;
+        text-align: center;
+        font-weight: $font-weight-mid;
+        padding: .8rem;
+        margin: 1.5rem 1.5rem 2rem;
+        border-radius: 15px;
+        &:hover {
+            background-color: lighten($color: $birght-blue, $amount: 20%);
+        };
+        box-shadow: 3px 15px 10px 2px $pale-blue;
+    }
+    /* ---- Modifiers ---- */
+    &__title--small {
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+    &__action--secondary {
+        display: block;
+        color: $desaturated-blue;
+        text-decoration: none;
+        text-align: center;
+        margin: auto;
+        width: max-content;
+        &:hover {
+            color: $dark-blue;
+        }
+    }
+    &__text--price {
+        margin:0;
+    }
+}
+@media screen and (max-width: 420px) {
+    .order-component__text {
+        margin: 0 3.87rem;
+        &--price {
+            margin: 0;
+        }
+    }
+}

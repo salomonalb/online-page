@@ -1,4 +1,4 @@
-@use '_reset.scss' as _r;
+@use '../../reset' as _r;
 @import url(../../wickedcss.min.css);
 
 $soft-blue: hsl(215, 51%, 70%);

@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url(../../wickedcss.min.css);
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
 /* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -123,129 +124,115 @@ body {
 
 /* ---------------------------------------------------------------------*/
 body {
-  background-color: #0d192b;
-  font-family: "Outfit", "Helvetica", sans-serif;
-  font-size: 18px;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  padding: 1rem;
+  color: #1f2f56;
+  background-color: #e8e0ff;
 }
 
-.nft-card {
-  width: 100%;
-  padding: 1.5rem;
-  padding-bottom: 1.8rem;
+/*----Block---*/
+.order-component {
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 23rem;
   margin: auto;
   margin-top: 3rem;
-  border-radius: 10px;
-  max-width: 21rem;
-  background-color: #14253d;
-  position: relative;
+  background-color: white;
+  padding-bottom: 2rem;
+  /* -------Elements------- */
+  /* ---- Modifiers ---- */
 }
-.nft-card__image {
-  width: 100%;
-  border-radius: 5px;
+.order-component__image {
+  margin-bottom: 2rem;
+}
+.order-component__title {
+  font-weight: 900;
+  font-size: 1.4rem;
+  text-align: center;
   margin-bottom: 1rem;
 }
-.nft-card__overlay {
-  width: 18rem;
-  border-radius: 5px;
-  margin-bottom: 1rem;
-  background-color: rgba(0, 255, 247, 0);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  top: 1.5rem;
-  padding: 7.5rem 0;
-  -webkit-transition: all 400ms;
-  transition: all 400ms;
-}
-.nft-card__overlay:hover {
-  background-color: rgba(0, 255, 247, 0.3);
-  cursor: pointer;
-}
-.nft-card__overlay:hover .nft-card__icon--see {
-  color: white;
-}
-.nft-card__title {
-  color: white;
-  font-weight: 600;
-  font-size: 24.3px;
-  margin-bottom: 1rem;
-  -webkit-transition: all 400ms;
-  transition: all 400ms;
-}
-.nft-card__title:hover {
-  color: #00fff7;
-  cursor: pointer;
-}
-.nft-card__description {
-  color: #8bacda;
-  font-weight: 300;
-  font-size: 18px;
-}
-.nft-card__price {
-  color: #00fff7;
-  font-size: 18px;
-}
-.nft-card__time {
-  color: #8bacda;
-  font-weight: 400;
-  font-size: 18px;
-}
-.nft-card__icon--eth {
-  width: 10%;
-}
-.nft-card__icon--clock {
-  width: 15%;
-}
-.nft-card__icon--see {
-  display: block;
-  width: 16%;
+.order-component__text {
+  color: #7280a7;
+  text-align: center;
   margin: auto;
-  color: transparent;
-  -webkit-transition: all 400ms;
-  transition: all 400ms;
+  display: block;
+  margin: 0 2rem;
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
 }
-.nft-card__author-picture {
-  width: 10%;
-  border: 1px solid white;
-  border-radius: 50%;
-}
-.nft-card__author-name {
-  color: white;
-  font-size: 18px;
-  -webkit-transition: all 400ms;
-  transition: all 400ms;
-}
-.nft-card__author-name:hover {
-  color: #00fff7;
-  cursor: pointer;
-}
-
-.flex-wrapper {
+.order-component__summary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  gap: 0.5rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  background-color: #f7f5ff;
+  margin: 1rem 1.5rem 0;
+  padding: 1rem;
+  border-radius: 15px;
+  gap: 1rem;
 }
-.flex-wrapper--row {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #2f415b;
+.order-component__icon {
+  width: 17.5%;
+}
+.order-component__action {
+  font-weight: 700;
+  color: #3829e0;
+  text-decoration: underline;
+  margin-left: auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+.order-component__action:hover {
+  color: #8b82ed;
+  text-decoration: none;
+}
+.order-component__button {
+  color: white;
+  background-color: #3829e0;
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  padding: 0.8rem;
+  margin: 1.5rem 1.5rem 2rem;
+  border-radius: 15px;
+  -webkit-box-shadow: 3px 15px 10px 2px #e8e0ff;
+          box-shadow: 3px 15px 10px 2px #e8e0ff;
+}
+.order-component__button:hover {
+  background-color: #8b82ed;
+}
+.order-component__title--small {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+.order-component__action--secondary {
+  display: block;
+  color: #7280a7;
+  text-decoration: none;
+  text-align: center;
+  margin: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.order-component__action--secondary:hover {
+  color: #1f2f56;
+}
+.order-component__text--price {
+  margin: 0;
+}
+
+@media screen and (max-width: 420px) {
+  .order-component__text {
+    margin: 0 3.87rem;
+  }
+  .order-component__text--price {
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
