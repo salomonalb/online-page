@@ -1010,11 +1010,63 @@ body {
   gap: 1.5rem;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1100px) {
   .stats-card {
+    margin-top: 8rem;
+    max-width: 70rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    text-align: left;
+    padding-bottom: 0;
+  }
+  .stats-card__desktop-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    margin-bottom: 4rem;
+  }
+  .stats-card__image {
+    margin: 0;
+    display: block;
+    line-height: 0;
+    min-width: 32rem;
+    max-width: 32rem;
+  }
+  .stats-card__accent-color-overlay {
+    padding: 13.3rem 16rem;
+  }
+  .stats-card__title {
+    max-width: 15ch;
+  }
+  .stats-card__text {
+    max-width: 37ch;
+    -webkit-hyphens: none;
+        -ms-hyphens: none;
+            hyphens: none;
+  }
+  .stats-card__stats-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 3rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

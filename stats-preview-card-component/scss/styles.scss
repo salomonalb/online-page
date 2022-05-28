@@ -71,8 +71,44 @@ body {
     }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1100px) {
     .stats-card {
+        margin-top: 8rem;
+        max-width: 70rem;
         display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        text-align: left;
+        padding-bottom: 0;
+
+        &__desktop-wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-top: 3rem;
+            margin-left: 3rem;
+            margin-bottom: 4rem;
+        }
+        &__image {
+            margin: 0;
+            display: block;
+            line-height: 0;
+            min-width: 32rem;
+            max-width: 32rem;
+        }
+        &__accent-color-overlay {
+            padding: 13.3rem 16rem;
+        }
+        &__title {
+            max-width: 15ch;
+        }
+        &__text {
+            max-width: 37ch;
+            hyphens: none;
+        }
+        &__stats-section {
+            display: flex;
+            flex-direction: row;
+            margin-top: 3rem;
+        }
     }
 }
