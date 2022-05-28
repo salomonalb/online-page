@@ -1,0 +1,78 @@
+@use '../../_reset' as r;
+@use '../../wickedcss.min.css' as w;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+$main-background: hsl(233, 47%, 7%);
+$card-background: hsl(244, 38%, 16%);
+$accent-color: hsl(277, 64%, 61%);
+$main-heading: hsl(0, 0%, 100%);
+$main-paragraph: hsla(0, 0%, 100%, 0.75);
+$stats-headings: hsla(0, 0%, 100%, 0.6);
+$font-size: 15px;
+$weight-light: 400;
+$weight-heavy: 700;
+
+body {
+    background-color: $main-background;
+    font-family: 'Inter', sans-serif;
+    font-size: $font-size;
+    color: $main-heading;
+    text-align: center;
+    padding: 1rem;
+}
+.stats-card {
+    background-color: $card-background;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    max-width: 23rem;
+    margin: auto;
+    position: relative;
+    padding-bottom: 2rem;
+
+    &__image {
+        overflow: hidden;
+        margin-bottom: 2rem;
+    }
+    &__accent-color-overlay {
+        padding: 8.45rem 11.5rem;
+        background: transparentize($color: darken($accent-color, 29%), $amount: 0.4);
+        position: absolute;
+        top: 0;
+    }
+    &__title {
+        font-weight: $weight-heavy;
+        font-size: 2rem;
+        margin: 0 2rem;
+
+        &--accent-color {
+            color: $accent-color;
+            font-size: inherit;
+            margin: 0;
+        }
+    }
+    &__text {
+        color: $main-paragraph;
+        margin-top: 1rem;
+        margin: 1rem 2rem 0;
+        &--stats {
+            color: $stats-headings;
+            font-family: 'Lexend Deca', sans-serif;
+            font-size: small;
+            font-weight: $weight-light;
+            letter-spacing: 1.3px;
+            margin-top: 0;
+        }
+    }
+    &__stats-section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .stats-card {
+        display: flex;
+    }
+}
