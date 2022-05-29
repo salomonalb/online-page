@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(../../wickedcss.min.css);
+/* reset */
 /* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -62,17 +62,15 @@ blockquote:before, blockquote:after, q:before, q:after {
   content: none;
 }
 
-/* Configuramos el texto que seleccionamos */
+/* Configuramos el texto que seleccionamos
 ::-moz-selection {
   background-color: var(--negro);
   color: var(--blanco);
 }
-
 ::selection {
   background-color: var(--negro);
   color: var(--blanco);
-}
-
+} */
 /* Nivelamos problemas de tipografías y colocación de formularios */
 form, input, textarea, select, button, label {
   font-family: inherit;
@@ -109,10 +107,10 @@ body {
   font-size: 100%;
   /* opcional */
   line-height: 1.5;
-  /* opcional */
+  /* opcional 
   -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto; */
   /* opcional */
   font-smooth: always;
   /* opcional */

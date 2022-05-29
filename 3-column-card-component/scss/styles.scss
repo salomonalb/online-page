@@ -1,0 +1,91 @@
+@use '../../_reset' as r;
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+
+$sedan-color: hsl(31, 77%, 52%);
+$suv-color: hsl(184, 100%, 22%);
+$luxury-color: hsl(179, 100%, 13%);
+$font-title: 'Big Shoulders Display', serif;
+$font-text: 'Lexend Deca', sans-serif;
+$paragraph-color: hsla(0, 0%, 100%, 0.75);
+$white-color: hsl(0, 0%, 95%);
+$font-size: 15px;
+$weight-light: 400;
+$weight-heavy: 700;
+
+body {
+    background-color: $white-color;
+    font-family: $font-text;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem auto;
+    border-radius: 10px;
+    overflow: hidden;
+    width: max-content;
+}
+
+.car-card {
+    padding: 2.5rem;
+    transition: all 200ms;
+    &--sedan {
+        background-color: $sedan-color;
+    }
+    &--suv {
+        background-color: $suv-color;
+    }
+    &--luxury {
+        background-color: $luxury-color;
+    }
+    &__car-icon {
+        margin-top: .6rem;
+    }
+    &__title {
+        font-family: $font-title;
+        color: $white-color;
+        font-weight: 700;
+        font-size: 2.5rem;
+        margin: 1.5rem 0;
+    }
+    &__paragraph {
+        color: $paragraph-color;
+        font-weight: 400;
+        font-size: $font-size;
+        width: 25ch;
+        line-height: 1.7;
+    }
+    &__button {
+        display: block;
+        width: 70%;
+        margin: 2.5rem auto .5rem;
+        padding: .7rem 1.7rem;
+        border: 3px solid $white-color;
+        border-radius: 50px;
+        background-color: $white-color;
+        font-size: $font-size;
+        transition: all 150ms;
+        &--sedan {
+            color: $sedan-color;
+        }
+        &--suv {
+            color: $suv-color;
+        }
+        &--luxury {
+            color: $luxury-color;
+        }
+        &:hover, &:focus {
+            background-color: transparent;
+            color: $white-color;
+            transform: scale(1.075);
+            outline: none;
+        }
+    }
+}
+
+@media screen and (min-width: 950px) {
+    .cards-container {
+        flex-direction: row;
+    }
+}

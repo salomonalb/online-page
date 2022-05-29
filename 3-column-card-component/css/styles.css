@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
 /* reset */
 /* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
 @media (prefers-reduced-motion: reduce) {
@@ -122,115 +122,92 @@ body {
 
 /* ---------------------------------------------------------------------*/
 body {
-  font-family: "Red Hat Display", sans-serif;
-  font-size: 1rem;
-  padding: 1rem;
-  color: #1f2f56;
-  background-color: #e8e0ff;
+  background-color: #f2f2f2;
+  font-family: "Lexend Deca", sans-serif;
 }
 
-/*----Block---*/
-.order-component {
-  border-radius: 15px;
-  overflow: hidden;
-  max-width: 23rem;
-  margin: auto;
-  margin-top: 3rem;
-  background-color: white;
-  padding-bottom: 2rem;
-  /* -------Elements------- */
-  /* ---- Modifiers ---- */
-}
-.order-component__image {
-  margin-bottom: 2rem;
-}
-.order-component__title {
-  font-weight: 900;
-  font-size: 1.4rem;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.order-component__text {
-  color: #7280a7;
-  text-align: center;
-  margin: auto;
-  display: block;
-  margin: 0 2rem;
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
-}
-.order-component__summary {
+.cards-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  background-color: #f7f5ff;
-  margin: 1rem 1.5rem 0;
-  padding: 1rem;
-  border-radius: 15px;
-  gap: 1rem;
-}
-.order-component__icon {
-  width: 17.5%;
-}
-.order-component__action {
-  font-weight: 700;
-  color: #3829e0;
-  text-decoration: underline;
-  margin-left: auto;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-.order-component__action:hover {
-  color: #8b82ed;
-  text-decoration: none;
-}
-.order-component__button {
-  color: white;
-  background-color: #3829e0;
-  display: block;
-  text-align: center;
-  font-weight: 700;
-  padding: 0.8rem;
-  margin: 1.5rem 1.5rem 2rem;
-  border-radius: 15px;
-  -webkit-box-shadow: 3px 15px 10px 2px #e8e0ff;
-          box-shadow: 3px 15px 10px 2px #e8e0ff;
-}
-.order-component__button:hover {
-  background-color: #8b82ed;
-}
-.order-component__title--small {
-  font-size: 1rem;
-  margin-bottom: 0;
-}
-.order-component__action--secondary {
-  display: block;
-  color: #7280a7;
-  text-decoration: none;
-  text-align: center;
-  margin: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 4rem auto;
+  border-radius: 10px;
+  overflow: hidden;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
-.order-component__action--secondary:hover {
-  color: #1f2f56;
+
+.car-card {
+  padding: 2.5rem;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
 }
-.order-component__text--price {
-  margin: 0;
+.car-card--sedan {
+  background-color: #e38826;
+}
+.car-card--suv {
+  background-color: #006970;
+}
+.car-card--luxury {
+  background-color: #004241;
+}
+.car-card__car-icon {
+  margin-top: 0.6rem;
+}
+.car-card__title {
+  font-family: "Big Shoulders Display", serif;
+  color: #f2f2f2;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin: 1.5rem 0;
+}
+.car-card__paragraph {
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 400;
+  font-size: 15px;
+  width: 25ch;
+  line-height: 1.7;
+}
+.car-card__button {
+  display: block;
+  width: 70%;
+  margin: 2.5rem auto 0.5rem;
+  padding: 0.7rem 1.7rem;
+  border: 3px solid #f2f2f2;
+  border-radius: 50px;
+  background-color: #f2f2f2;
+  font-size: 15px;
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
+}
+.car-card__button--sedan {
+  color: #e38826;
+}
+.car-card__button--suv {
+  color: #006970;
+}
+.car-card__button--luxury {
+  color: #004241;
+}
+.car-card__button:hover, .car-card__button:focus {
+  background-color: transparent;
+  color: #f2f2f2;
+  -webkit-transform: scale(1.075);
+          transform: scale(1.075);
+  outline: none;
 }
 
-@media screen and (max-width: 420px) {
-  .order-component__text {
-    margin: 0 3.87rem;
-  }
-  .order-component__text--price {
-    margin: 0;
+@media screen and (min-width: 950px) {
+  .cards-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 /*# sourceMappingURL=styles.css.map */
