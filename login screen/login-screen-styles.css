@@ -133,13 +133,14 @@ body {
     font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
+    hyphens: none;
 }
 ::selection {
     color: white;
     background-color: var(--black);
 }
 .login {
-    padding: 5rem;
+    padding: 4rem;
     max-width: 35rem;
 }
 .login__logo {

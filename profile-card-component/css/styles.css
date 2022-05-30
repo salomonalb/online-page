@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 /* reset */
 /* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
 @media (prefers-reduced-motion: reduce) {
@@ -121,130 +122,89 @@ body {
 
 /* ---------------------------------------------------------------------*/
 body {
-  background-color: hsl(217deg, 54%, 11%);
-  font-family: "Outfit", "Helvetica", sans-serif;
-  font-size: 18px;
-  padding-bottom: 3rem;
+  background-color: hsl(185deg, 75%, 39%);
+  background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain;
+  background-position: top -20rem left -15rem, bottom -20rem right -15rem;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
-.nft-card {
-  width: 100%;
-  padding: 1.5rem;
-  padding-bottom: 1.8rem;
-  margin: auto;
-  margin-top: 3rem;
-  border-radius: 10px;
-  max-width: 21rem;
-  background-color: hsl(216deg, 50%, 16%);
-  position: relative;
+.profile-card {
+  margin: 4rem auto;
+  overflow: hidden;
+  background-color: white;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  border-radius: 15px;
 }
-.nft-card__image {
-  width: 100%;
-  border-radius: 5px;
-  margin-bottom: 1rem;
-}
-.nft-card__overlay {
-  width: 18rem;
-  border-radius: 5px;
-  margin-bottom: 1rem;
-  background-color: rgba(0, 255, 247, 0);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  top: 1.5rem;
-  padding: 7.5rem 0;
-  -webkit-transition: all 400ms;
-  transition: all 400ms;
-}
-.nft-card__overlay:hover {
-  background-color: rgba(0, 255, 247, 0.3);
-  cursor: pointer;
-}
-.nft-card__overlay:hover .nft-card__icon--see {
-  color: white;
-}
-.nft-card__title {
-  color: hsl(0deg, 0%, 100%);
-  font-weight: 600;
-  font-size: 24.3px;
-  margin-bottom: 1rem;
-  -webkit-transition: all 400ms;
-  transition: all 400ms;
-}
-.nft-card__title:hover {
-  color: hsl(178deg, 100%, 50%);
-  cursor: pointer;
-}
-.nft-card__description {
-  color: hsl(215deg, 51%, 70%);
-  font-weight: 300;
-  font-size: 18px;
-}
-.nft-card__price {
-  color: hsl(178deg, 100%, 50%);
-  font-size: 18px;
-}
-.nft-card__time {
-  color: hsl(215deg, 51%, 70%);
-  font-weight: 400;
-  font-size: 18px;
-}
-.nft-card__icon--eth {
-  width: 10%;
-}
-.nft-card__icon--clock {
-  width: 15%;
-}
-.nft-card__icon--see {
-  display: block;
-  width: 16%;
-  margin: auto;
-  color: transparent;
-  -webkit-transition: all 400ms;
-  transition: all 400ms;
-}
-.nft-card__author-picture {
-  width: 10%;
-  border: 1px solid white;
+.profile-card__avatar {
+  width: 30%;
+  border: 4px solid white;
   border-radius: 50%;
+  margin: 0 auto -2.5rem;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  z-index: 2;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
 }
-.nft-card__author-name {
-  color: white;
-  font-size: 18px;
-  -webkit-transition: all 400ms;
-  transition: all 400ms;
-}
-.nft-card__author-name:hover {
-  color: hsl(178deg, 100%, 50%);
+.profile-card__avatar:hover {
   cursor: pointer;
 }
-
-.flex-wrapper {
+.profile-card__name, .profile-card__stats-number {
+  font-size: 18px;
+  font-weight: 700;
+  color: hsl(229deg, 23%, 23%);
+  text-align: center;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+.profile-card__name:hover, .profile-card__stats-number:hover {
+  cursor: pointer;
+  color: hsl(185deg, 75%, 39%);
+}
+.profile-card__age {
+  color: hsl(0deg, 0%, 59%);
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
+.profile-card__city, .profile-card__stats-title {
+  text-align: center;
+  color: hsl(227deg, 10%, 46%);
+  font-weight: 400;
+  font-size: 0.8rem;
+  margin: 0 auto 1.5rem;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+.profile-card__city:hover, .profile-card__stats-title:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.profile-card__stats-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  gap: 0.5rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 1.5rem;
+  border-top: 1px solid rgba(150, 150, 150, 0.3);
 }
-.flex-wrapper--row {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid hsl(215deg, 32%, 27%);
+.profile-card__stats-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  text-align: center;
+}
+.profile-card__stats-title {
+  font-size: 0.5rem;
+  letter-spacing: 1.5px;
+  margin: 0;
 }
 /*# sourceMappingURL=styles.css.map */
