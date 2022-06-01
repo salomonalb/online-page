@@ -1,14 +1,198 @@
+html {
+    font-size: 118.75%;
+}
+* {
+    box-sizing: border-box
+}
+
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
 $very-dark-magenta: hsl(300, 43%, 22%);
 $soft-pink: hsl(333, 80%, 67%);
 $dark-grayish-magenta: hsl(303, 10%, 53%);
 $light-grayish-magenta: hsl(300, 24%, 96%);
 $white: hsl(0, 0%, 100%);
-$font-size: 15px;
+$font-size: 1rem;
 $weight-light: 400;
 $weight-mid: 500;
 $weight-heavy: 700;
 
 body {
     font-family: 'League Spartan', sans-serif;
+    background: {
+        color: white;
+        image: url('../images/bg-pattern-top-mobile.svg'), url('../images/bg-pattern-bottom-mobile.svg');
+        repeat: no-repeat;
+        position: left top, right bottom;
+    };
+}
+
+%flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-proof {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    &__top-container {
+        @extend %flex;
+    }
+    &__text-container {
+        display: grid;
+    }
+    &__title {
+        text-align: center;
+        color: $very-dark-magenta;
+        width: 14ch;
+        margin: auto;
+        font-size: $font-size * 2.1;
+        font-weight: $weight-heavy;
+    }
+    &__description {
+        text-align: center;
+        color: $dark-grayish-magenta;
+        font-size: $font-size;
+        margin: 1rem;
+
+    }
+    &__ratings-container {
+        display: grid;
+        gap: 1rem;
+        margin: 1rem  1rem ;
+    }
+    &__testimonials-container {
+        @extend %flex;
+        gap: 1rem;
+        margin: 1rem  1rem ;
+    }
+}
+
+.rating-component {
+    background-color: $light-grayish-magenta;
+    padding: 1rem;
+    border-radius: 10px;
+
+    &__content-container {
+        @extend %flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    &__stars-container {
+        margin: 0;
+        width: max-content;
+    }
+    &__text {
+        display: block;
+        color: $very-dark-magenta;
+        font-weight: $weight-heavy;
+        font-size: $font-size;
+        margin: 0;
+        width: max-content;
+    }
+}
+
+.testimonial-card {
+    background-color: $very-dark-magenta;
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+
+    &__header {
+        display: flex;
+        gap: 1rem
+    }
+    &__picture {
+        display: block;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px
+    }
+    &__text-container {
+        display: grid;
+        gap: .5rem;
+    }
+    &__name {
+        font-size: $font-size;
+        margin: 0;
+    }
+    &__description {
+        font-size: $font-size;
+        color: $soft-pink;
+        margin: 0;
+    }
+    &__testimonial {
+        font-size: $font-size;
+        line-height: 1.5;
+        hyphens: auto;
+        font-size: $font-size;
+    }
+}
+
+@media screen and (min-width: 1210px) {
+    html {
+        font-size: 100%;
+    }
+    body {
+        background: {
+            image: url('../images/bg-pattern-top-desktop.svg'), url('../images/bg-pattern-bottom-desktop.svg');
+            repeat: no-repeat;
+            position: left top, right bottom;
+        };
+    }
+    %flex {
+        flex-direction: row;
+    }
+    .social-proof {
+        padding: 3rem;
+
+        &__top-container {
+            justify-content: space-around;
+        }
+
+        &__title {
+            text-align: left;
+            margin: 1rem;
+            font-size: $font-size * 3;
+        }
+        &__description {
+            text-align: left;
+            max-width: 40ch;
+            font-size: $font-size * 1.25;
+        }
+        &__ratings-container {
+            width: 32%;
+        }
+        &__testimonials-container {
+            justify-content: center;
+            margin-top: 7rem;
+        }
+    }
+    .rating-component {
+
+        &--1 {
+            position: relative;
+            right: 60px;
+        }
+        &--3 {
+            position: relative;
+            right: -30px;
+        }
+    }
+    .testimonial-card {
+        max-width: 20rem;
+        
+        &--2 {
+            position: relative;
+            top: 20px;
+        }
+        &--3 {
+            position: relative;
+            top: 40px;
+        }
+        &__testimonial {
+            hyphens: none;
+        }
+    }
 }
