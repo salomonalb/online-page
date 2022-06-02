@@ -73,7 +73,8 @@ body {
     padding: 3rem;
     border-top: 5px solid black;
     border-radius: 5px;
-    box-shadow: 8px 10px 20px -5px transparentize($color: $Very-Dark-Blue, $amount: 0.9), 8px 10px 20px -5px transparentize($color: $Blue, $amount: 0.8);
+    box-shadow: 8px 10px 20px -5px transparentize($color: $Very-Dark-Blue, $amount: 0.9),
+                8px 10px 20px -5px transparentize($color: $Blue, $amount: 0.8);
 
     &__title {
         font-size: $Font-size * 1.2;
