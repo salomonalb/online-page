@@ -9,6 +9,96 @@ $Very-Dark-Blue: hsl(234, 12%, 34%);
 $Grayish-Blue: hsl(229, 6%, 66%);
 $Very-Light-Gray: hsl(0, 0%, 98%);
 $Font-size: 15px;
-$weight-light: 200;
-$weight-mid: 400;
-$weight-heavy: 600;
+$Weight-light: 200;
+$Weight-mid: 400;
+$Weight-heavy: 600;
+
+:root {
+    font-size: 62.5%;
+}
+body {
+    background-color: $Very-Light-Gray;
+    font-family: 'Poppins', Arial, sans-serif;
+    padding-bottom: 5rem;
+}
+
+.features-section {
+    width: 100%;
+
+    &__title {
+        font-size: $Font-size * 1.5;
+        font-weight: $Weight-heavy;
+        text-align: center;
+        color: $Very-Dark-Blue;
+        width: max-content;
+        margin: auto {
+            top: 9rem;
+        };
+
+        &--light {
+            font-weight: $Weight-light;
+            display: block
+        }
+    }
+    &__description {
+        color: $Grayish-Blue;
+        width: 32ch;
+        font-size: $Font-size - 1px;
+        text-align: center;
+        margin: auto {
+            top: 3rem
+        }
+    }
+    &__cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-top: 6rem;
+        padding: {
+            left: 5rem;
+            right: 5rem;
+        };
+        
+        
+    }
+}
+
+.feature-card {
+    background-color: white;
+    width: 30rem;
+    margin: auto;
+    padding: 3rem;
+    border-top: 5px solid black;
+    border-radius: 5px;
+    box-shadow: 8px 10px 20px -5px transparentize($color: $Very-Dark-Blue, $amount: 0.9), 8px 10px 20px -5px transparentize($color: $Blue, $amount: 0.8);
+
+    &__title {
+        font-size: $Font-size * 1.2;
+        font-weight: $Weight-heavy;
+        text-align: center;
+        color: $Very-Dark-Blue;
+        width: max-content;
+    }
+    &__description {
+        color: $Grayish-Blue;
+        font-size: $Font-size - 2px;
+    }
+
+    &__icon {
+        margin-top: 3rem;
+        width: 6rem;
+        float: right;
+    }
+    &--1 {
+        border-color: $Cyan;
+    }
+    &--2 {
+        border-color: $Red;
+    }
+    &--3 {
+        border-color: $Orange;
+    }
+    &--4 {
+        border-color: $Blue;
+    }
+}
