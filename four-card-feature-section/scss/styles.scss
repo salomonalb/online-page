@@ -95,15 +95,35 @@ body {
     }
     &--1 {
         border-color: $Cyan;
+        transition: all 200ms;
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.050);
+        }
     }
     &--2 {
         border-color: $Red;
+        transition: all 200ms;
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.050);
+        }
     }
     &--3 {
         border-color: $Orange;
+        transition: all 200ms;
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.050);
+        }
     }
     &--4 {
         border-color: $Blue;
+        transition: all 200ms;
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.050);
+        }
     }
 }
 

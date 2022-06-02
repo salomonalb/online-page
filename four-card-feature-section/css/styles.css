@@ -203,15 +203,43 @@ body {
 }
 .feature-card--1 {
   border-color: hsl(180deg, 62%, 55%);
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+.feature-card--1:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 .feature-card--2 {
   border-color: hsl(0deg, 78%, 62%);
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+.feature-card--2:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 .feature-card--3 {
   border-color: hsl(34deg, 97%, 64%);
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+.feature-card--3:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 .feature-card--4 {
   border-color: hsl(212deg, 86%, 64%);
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+.feature-card--4:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 @media screen and (min-width: 720px) {
