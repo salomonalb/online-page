@@ -1,0 +1,127 @@
+@use "../../reset" as r;
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+$Cyan: hsl(179, 62%, 43%);
+$Bright-Yellow: hsl(71, 73%, 54%);
+$Light-Gray: hsl(204, 43%, 93%);
+$Grayish-Blue: hsl(218, 22%, 67%);
+$Font-size: 16px;
+$font-family: 'Karla', sans-serif;
+$weight-normal: 400;
+$weight-heavy: 700;
+
+
+@mixin card {
+    padding: 2rem 1.5rem;
+    width: 19.5rem;
+}
+
+body {
+    background-color: $Light-Gray;
+    font-family: $font-family;
+    font-size: $Font-size;
+}
+.pricing {
+    margin: 4rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    overflow: hidden;
+    width: min-content;
+}
+.description-card {
+    @include card;
+    background-color: white;
+    
+    &__title {
+        color: $Cyan;
+        font-weight: $weight-heavy;
+        margin-bottom: 1rem;
+        font-size: 1.33rem;
+    }
+    &__subtitle {
+        color: $Bright-Yellow;
+        font-weight: $weight-heavy;
+        margin-bottom: 1rem;
+    }
+    &__paragraph {
+        color: $Grayish-Blue;
+        font-size: 0.8rem;
+        line-height: 1.8
+    }
+}
+.pricing-card {
+    @include card;
+    background-color: $Cyan;
+    color: white;
+    
+    &__title {
+        font-weight: $weight-heavy;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    &__price-container {
+        display: flex;
+        gap: 0.8rem;
+        align-items: center;
+    }
+    &__price {
+        font-weight: $weight-heavy;
+        font-size: 2rem;
+    }
+    &__frecuency {
+        color: $Light-Gray;
+        font-size: 0.8rem;
+    }
+    &__paragraph {
+        font-size: 1rem;
+    }
+    &__button {
+        margin-top: 2rem;
+        display: block;
+        background-color: $Bright-Yellow;
+        padding: 0.8rem 0;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: $weight-heavy;
+    }
+}
+.benefits-card {
+    @include card;
+    background-color: lighten($color: $Cyan, $amount: 3%);
+    &__title {
+        color: white;
+        font-weight: $weight-heavy;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    &__benefits-list {
+        color: $Light-Gray;
+        font-size: 0.8rem;
+        line-height: 1.8
+    }
+}
+
+@media screen and (min-width: 656px) {
+    .pricing {
+        display: grid;
+        grid-template: min-content min-content / 1fr 1fr;
+        grid-template-areas: "desc desc" "price why";
+    }
+    .description-card {
+        grid-area: desc;
+        width: 19.5rem * 2;
+        height: min-content;
+
+        &__paragraph {
+            width: 55ch;
+            font-size: 0.9rem;
+        }
+    }
+    .pricing-card {
+        grid-area: price;
+    }
+    .benefits-card {
+        grid-area: why;
+    }
+}
