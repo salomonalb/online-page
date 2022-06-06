@@ -1,0 +1,58 @@
+@use '../../reset' as r;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+$Violet: hsl(257, 40%, 49%);
+$Soft-Magenta: hsl(300, 69%, 71%);
+$open-sans: 'Open Sans', sans-serif;
+$popins: 'Poppins', sans-serif;
+
+body {
+    background: {
+        image: url(../images/bg-mobile.svg);
+        repeat: no-repeat;
+        color: $Violet;
+    }
+}
+.logo {
+    width: unset;
+}
+.hero-section {
+    display: flex;
+    flex-direction: column;
+
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    &__title {
+        color: white;
+        font-family: $popins;
+        text-align: center;
+        font-weight: 700;
+    }
+    &__paragraph {
+        color: white;
+        font-family: $open-sans;
+        text-align: center;
+    }
+    &__button {
+        background-color: white;
+        color: $Violet;
+        font-family: $popins;
+        max-width: max-content;
+        display: block;
+        margin: auto;
+    }
+}
+.icon-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+.icon {
+    width: 5%;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 50%;
+    color: white;
+}
