@@ -10,15 +10,25 @@ body {
         image: url(../images/bg-mobile.svg);
         repeat: no-repeat;
         color: $Violet;
+        size: contain;
     }
 }
 .logo {
-    width: unset;
+    width: 8rem;
+    margin-left: 2rem;
+    margin-bottom: 3.5rem;
+    margin-top: 2rem;
+
 }
 .hero-section {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
 
+    &__image {
+        margin: 0 auto;
+        width: 19rem;
+        margin-bottom: 4rem;
+    }
     &__text-container {
         display: flex;
         flex-direction: column;
@@ -29,11 +39,15 @@ body {
         font-family: $popins;
         text-align: center;
         font-weight: 700;
+        font-size: 1.5rem;
+        padding: 0 3rem;
     }
     &__paragraph {
         color: white;
         font-family: $open-sans;
         text-align: center;
+        font-size: 0.97rem;
+        padding: 0 2.5rem;
     }
     &__button {
         background-color: white;
@@ -42,17 +56,21 @@ body {
         max-width: max-content;
         display: block;
         margin: auto;
+        font-size: 0.97rem;
+        padding: .5rem 3rem;
+        border-radius: 50px;
     }
 }
 .icon-container {
     display: flex;
     gap: 1rem;
     justify-content: center;
+    margin-top: 3rem;
 }
 .icon {
-    width: 5%;
-    border: 1px solid white;
-    padding: 5px;
+    width: 10%;
+    border: 2px solid white;
+    padding: 5px 10px;
     border-radius: 50%;
     color: white;
 }
