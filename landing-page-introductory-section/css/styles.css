@@ -126,7 +126,7 @@ body {
   background-repeat: no-repeat;
   background-color: hsl(257deg, 40%, 49%);
   background-size: contain;
-  overflow: auto;
+  overflow-x: hidden;
   padding: 0 2rem;
 }
 
@@ -195,6 +195,8 @@ body {
   font-size: 0.97rem;
   padding: 0.5rem 4rem;
   border-radius: 50px;
+  -webkit-box-shadow: 3px 3px 13px 3px #433172;
+          box-shadow: 3px 3px 13px 3px #433172;
   -webkit-transition: all 200ms;
   transition: all 200ms;
 }
