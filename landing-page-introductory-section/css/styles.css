@@ -125,12 +125,13 @@ body {
   background-image: url(../images/bg-mobile.svg);
   background-repeat: no-repeat;
   background-color: hsl(257deg, 40%, 49%);
-  background-size: contain;
+  background-size: cover;
+  overflow: hidden;
+  padding: 0 2rem;
 }
 
 .logo {
   width: 8rem;
-  margin-left: 2rem;
   margin-bottom: 3.5rem;
   margin-top: 2rem;
 }
@@ -139,12 +140,15 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .hero-section__image {
   margin: 0 auto;
-  width: 19rem;
+  width: unset;
+  max-width: 480px;
   margin-bottom: 4rem;
 }
 .hero-section__text-container {
@@ -203,5 +207,25 @@ body {
   padding: 5px 10px;
   border-radius: 50%;
   color: white;
+}
+
+@media screen and (min-width: 720px) {
+  body {
+    background-image: url("../images/bg-desktop.svg");
+    background-size: cover;
+  }
+
+  .hero-section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .icon-container {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

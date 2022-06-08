@@ -10,23 +10,25 @@ body {
         image: url(../images/bg-mobile.svg);
         repeat: no-repeat;
         color: $Violet;
-        size: contain;
+        size: cover;
     }
+    overflow: hidden;
+    padding: 0 2rem;
 }
 .logo {
     width: 8rem;
-    margin-left: 2rem;
     margin-bottom: 3.5rem;
     margin-top: 2rem;
 
 }
 .hero-section {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 
     &__image {
         margin: 0 auto;
-        width: 19rem;
+        width: unset;
+        max-width: 480px;
         margin-bottom: 4rem;
     }
     &__text-container {
@@ -73,4 +75,16 @@ body {
     padding: 5px 10px;
     border-radius: 50%;
     color: white;
+}
+@media screen and (min-width: 720px) {
+    body {
+        background-image: url('../images/bg-desktop.svg');
+        background-size: cover;
+    }
+    .hero-section {
+        flex-direction: row;
+    }
+    .icon-container {
+        justify-content: flex-end;
+    }
 }
