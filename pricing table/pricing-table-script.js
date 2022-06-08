@@ -1,11 +1,16 @@
 /* Prices */
 
+/* Getting the elements by their id. */
 let monthly = document.getElementById('monthly');
 let annually = document.getElementById('annually');
 let basic = document.getElementById('basic-price');
 let pro = document.getElementById('pro-price');
 let enterprise = document.getElementById('enterprise-price');
 
+/**
+ * If the monthly radio button is checked, change the prices to the monthly prices. If the annually
+ * radio button is checked, change the prices to the annual prices.
+ */
 function changePrice() {
 if (monthly.checked) {
     console.log('monthly is checked');
@@ -20,12 +25,16 @@ if (monthly.checked) {
 }
 };
 
+/* Listening for the DOM to load and then it is listening for the input of the monthly and annually
+radio buttons. */
 document.addEventListener('DOMContentLoaded', changePrice)
 monthly.addEventListener('input', changePrice);
 annually.addEventListener('input', changePrice);
 
-/* from prices to credit card */
 
+/**
+ * When the user clicks on a card, the page will redirect to the credit card form page.
+ */
 let cards = document.getElementsByClassName('card');
 console.log(cards);
 

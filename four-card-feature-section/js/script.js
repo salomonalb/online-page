@@ -1,3 +1,4 @@
+/* Getting the elements by their id's and storing them in variables. */
 let header = document.getElementById('header');
 
 let card1 = document.getElementById('card1');
@@ -5,6 +6,7 @@ let card2 = document.getElementById('card2');
 let card3 = document.getElementById('card3');
 let card4 = document.getElementById('card4');
 
+/* Checking the window size and adding the appropriate class to the elements. */
 let windowSize = window.innerWidth;
 
 if (windowSize < 720) {

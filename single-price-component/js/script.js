@@ -1,3 +1,4 @@
+/* Adding a class to the divs depending on the screen size. */
 let descriptionCard = document.getElementById('description-card');
 let pricingCard = document.getElementById('pricing-card');
 let benefitsCard = document.getElementById('benefits-card');

@@ -125,8 +125,8 @@ body {
   background-image: url(../images/bg-mobile.svg);
   background-repeat: no-repeat;
   background-color: hsl(257deg, 40%, 49%);
-  background-size: cover;
-  overflow: hidden;
+  background-size: contain;
+  overflow: auto;
   padding: 0 2rem;
 }
 
@@ -147,9 +147,9 @@ body {
 }
 .hero-section__image {
   margin: 0 auto;
-  width: unset;
-  max-width: 480px;
+  width: 100%;
   margin-bottom: 4rem;
+  max-width: 480px;
 }
 .hero-section__text-container {
   display: -webkit-box;
@@ -160,6 +160,10 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1rem;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin: auto;
 }
 .hero-section__title {
   color: white;
@@ -167,14 +171,17 @@ body {
   text-align: center;
   font-weight: 700;
   font-size: 1.5rem;
-  padding: 0 3rem;
+  width: 100%;
+  max-width: 17ch;
+  margin: auto;
 }
 .hero-section__paragraph {
   color: white;
   font-family: "Open Sans", sans-serif;
   text-align: center;
-  font-size: 0.97rem;
-  padding: 0 2.5rem;
+  font-size: 1.025rem;
+  max-width: 33ch;
+  margin: auto;
 }
 .hero-section__button {
   background-color: white;
@@ -186,8 +193,14 @@ body {
   display: block;
   margin: auto;
   font-size: 0.97rem;
-  padding: 0.5rem 3rem;
+  padding: 0.5rem 4rem;
   border-radius: 50px;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+.hero-section__button:hover {
+  background-color: hsl(300deg, 69%, 71%);
+  color: white;
 }
 
 .icon-container {
@@ -199,17 +212,30 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .icon {
-  width: 10%;
-  border: 2px solid white;
-  padding: 5px 10px;
-  border-radius: 50%;
+  display: block;
+  overflow: visible;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  width: 0.8rem;
+  height: 0.8rem;
   color: white;
+  padding: 0.3rem;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.icon:hover {
+  color: hsl(300deg, 69%, 71%);
+  border-color: hsl(300deg, 69%, 71%);
+  cursor: pointer;
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 916px) {
   body {
     background-image: url("../images/bg-desktop.svg");
     background-size: cover;
@@ -220,6 +246,34 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    gap: 2rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .hero-section__text-container {
+    margin: 0;
+    margin-top: 3.5vw;
+  }
+  .hero-section__title {
+    text-align: left;
+    margin-left: 0;
+  }
+  .hero-section__paragraph {
+    text-align: left;
+  }
+  .hero-section__button {
+    margin-left: 0;
+  }
+  .hero-section__image {
+    width: 50%;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    margin: 0;
   }
 
   .icon-container {

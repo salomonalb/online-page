@@ -10,9 +10,9 @@ body {
         image: url(../images/bg-mobile.svg);
         repeat: no-repeat;
         color: $Violet;
-        size: cover;
+        size: contain;
     }
-    overflow: hidden;
+    overflow: auto;
     padding: 0 2rem;
 }
 .logo {
@@ -27,14 +27,16 @@ body {
 
     &__image {
         margin: 0 auto;
-        width: unset;
-        max-width: 480px;
+        width: 100%;
         margin-bottom: 4rem;
+        max-width: 480px;
     }
     &__text-container {
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        max-width: max-content;
+        margin: auto;
     }
     &__title {
         color: white;
@@ -42,14 +44,17 @@ body {
         text-align: center;
         font-weight: 700;
         font-size: 1.5rem;
-        padding: 0 3rem;
+        width: 100%;
+        max-width: 17ch;
+        margin: auto;
     }
     &__paragraph {
         color: white;
         font-family: $open-sans;
         text-align: center;
-        font-size: 0.97rem;
-        padding: 0 2.5rem;
+        font-size: 1.025rem;
+        max-width: 33ch;
+        margin: auto;
     }
     &__button {
         background-color: white;
@@ -59,8 +64,13 @@ body {
         display: block;
         margin: auto;
         font-size: 0.97rem;
-        padding: .5rem 3rem;
+        padding: .5rem 4rem;
         border-radius: 50px;
+        transition: all 200ms;
+        &:hover {
+            background-color: $Soft-Magenta;
+            color: white;
+        }
     }
 }
 .icon-container {
@@ -68,22 +78,58 @@ body {
     gap: 1rem;
     justify-content: center;
     margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 .icon {
-    width: 10%;
-    border: 2px solid white;
-    padding: 5px 10px;
-    border-radius: 50%;
+    display: block;
+    overflow: visible;
+    box-sizing: content-box;
+    width: .8rem;
+    height: .8rem;
     color: white;
+    padding: .3rem;
+    transition: all 200ms;
+    border: 1px solid white;
+    border-radius: 50%;
+
+    &:hover {
+        color: $Soft-Magenta;
+        border-color: $Soft-Magenta;
+        cursor: pointer;
+    }
 }
-@media screen and (min-width: 720px) {
+
+@media screen and (min-width: 916px) {
     body {
         background-image: url('../images/bg-desktop.svg');
         background-size: cover;
     }
     .hero-section {
         flex-direction: row;
+        gap: 2rem;
+        align-items: flex-start;
+        justify-content: center;
+        &__text-container {
+            margin: 0;
+            margin-top: 3.5vw;
+        }
+        &__title {
+            text-align: left;
+            margin-left:0 ;
+        }
+        &__paragraph {
+            text-align: left;
+        }
+        &__button {
+            margin-left: 0;
+        }
+        &__image {
+            width: 50%;
+            max-width: max-content;
+            margin:0;
+        }
     }
+    
     .icon-container {
         justify-content: flex-end;
     }
