@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+@import url('./_reset.scss');
+
+$Moderate-violet: hsl(263, 55%, 52%);
+$Very-dark-grayish-blue: hsl(217, 19%, 35%);
+$Very-dark-blackish-blue: hsl(219, 29%, 14%);
+$White: hsl(0, 0%, 100%);
+$Light-gray: hsl(0, 0%, 81%);
+$Light-grayish-blue: hsl(210, 46%, 95%);
+$font-size: 13px;
+$weight-mid: 500;
+$weight-heavy: 600;
+/*
+Note for text colors:
+1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+*/
+
+body {
+    font-size: $font-size;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: $Light-grayish-blue;
+}
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.testimonial-card {
+    padding: 1.5rem 2rem 2rem;
+    border-radius: 10px;
+    max-width: 300px;
+    margin: auto;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    &__picture {
+        border-radius: 50%;
+        width: min-content;
+    }
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+        gap: .25rem;
+    }
+    &__name {
+        font-size: .9rem;
+        margin: 0;
+        font-weight: $weight-heavy;
+    }
+    &__status {
+        font-size: .9rem;
+        margin: 0;
+        font-weight: $weight-mid;
+    }
+    &__big-paragraph {
+        font-size: 1.5rem;
+        font-weight: $weight-heavy;
+        margin: 0 {
+            top: 1.5rem;
+            bottom: 1.5rem;
+        };
+    }
+    &__small-paragraph {
+        font-size: .9rem;
+        font-weight: $weight-mid;
+        line-height: 1.5;
+        margin: 0;
+    }
+    &--dark-bg {
+        color: $White;
+
+        .testimonial-card__status {
+            color: transparentize($color: $White, $amount: 0.5)
+        }
+        .testimonial-card__small-paragraph {
+            color: transparentize($color: $White, $amount: 0.3)
+        }
+    }
+    &--light-bg {
+        color: $Very-dark-blackish-blue;
+
+        .testimonial-card__status {
+            color: transparentize($color: $Very-dark-blackish-blue, $amount: 0.5)
+        }
+        .testimonial-card__small-paragraph {
+            color: transparentize($color: $Very-dark-blackish-blue, $amount: 0.3)
+        }
+    }
+    &--1 {
+        background: {
+            image: url('../images/bg-pattern-quotation.svg');
+            color: $Moderate-violet;
+            repeat: no-repeat;
+            position: top right 1rem;
+            size: 8rem;
+        }
+
+    }
+    &--2 {
+        background-color: $Very-dark-grayish-blue;
+    }
+    &--4 {
+        background-color: $Very-dark-blackish-blue;
+    }
+    &--3, &--5 {
+        background-color: $White;
+    }
+}
+
+@media screen and (min-width: 530px) {
+    .testimonials-container {
+        display: grid;
+        grid-template: min-content min-content min-content min-content / 1fr 1fr;
+        grid-template-areas: "purple purple" 
+        "grey white1"
+        "black black"
+        "white2 white2";
+    }
+    .testimonial-card{
+        max-width: unset;
+        margin:0;
+        &--1{
+            grid-area: purple;
+        }
+        &--2 {
+            grid-area: grey;
+        }
+        &--3 {
+            grid-area: white1;
+        }
+        &--4 {
+            grid-area: black;
+        }
+        &--5 {
+            grid-area: white2;
+        }
+    }
+} 
+
+@media screen and (min-width: 790px) {
+    .testimonials-container {
+        display: grid;
+        grid-template: min-content min-content min-content / 1fr 1fr 1fr;
+        grid-template-areas: "purple purple grey" 
+        "white1 black black"
+        "white2 white2 white2";
+    }
+}
+
+@media screen and (min-width: 1140px) {
+    .testimonials-container {
+        display: grid;
+        grid-template: min-content min-content / 1fr 1fr 1fr 1fr;
+        grid-template-areas: "purple purple grey white2" 
+        "white1 black black white2"
+    }
+    .testimonial-card--5 {
+        margin: 0;
+    }
+}
