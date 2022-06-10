@@ -14,13 +14,23 @@ body {
     color: white;
     background-color: $Very-Dark-Blue;
     background-image: url('../images/bg-mobile.png');
-    padding: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 1.5rem{
+    };
+
 }
 
 .cards-container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    max-width: max-content;
+    margin: auto;
 }
 
 %card {
@@ -47,6 +57,11 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.025);
+        }
     }
 }
 
@@ -96,7 +111,7 @@ body {
 .gb-left-box {
     background-color: white;
     position: absolute;
-    top: 8.8rem;
+    bottom: -20%;
     left: 4rem;
     margin: auto;
     display: flex;
@@ -115,5 +130,45 @@ body {
         color: $Grayish-Blue;
         font-weight: 700;
         font-size: $Font-size;
+    }
+}
+@media screen and (min-width: 900px) {
+    body {
+        background-image: url('../images/bg-desktop.png');
+        background-size: 100% 50%;
+        background-position: bottom;
+    }
+    .cards-container {
+        flex-direction: row;
+        max-width: unset;
+        justify-content: center;
+    }
+    .gb-left-box {
+        top:-25%;
+        bottom:unset;
+        left: unset;
+        right: 7%;
+    }
+    .storage-card {
+        padding-bottom: unset;
+        width: 540px;
+        &__text {
+            text-align: left;
+        }
+    }
+    .menu-card {
+        width: 311px;
+    }
+    .gb-left-box__triangle {
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid white;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid white;
+        transform: rotate(135deg);
+        position: absolute;
+        right: -20px;
+        top: 51px;
     }
 }
