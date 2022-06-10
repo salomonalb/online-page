@@ -1,0 +1,119 @@
+@use './reset';
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+$Pale-blue: hsl(243, 100%, 93%);
+$Grayish-Blue: hsl(229, 7%, 55%);
+$Dark-Blue: hsl(228, 56%, 26%);
+$Very-Dark-Blue: hsl(229, 57%, 11%);
+$Font-size: 14px;
+
+/* Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%)
+*/
+body {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    background-color: $Very-Dark-Blue;
+    background-image: url('../images/bg-mobile.png');
+    padding: 1.5rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+%card {
+    background-color: $Dark-Blue;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.menu-card {
+    @extend %card;
+    border-top-right-radius: 80px;
+
+    &__icons-container {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    &__icon-background {
+        background-color: $Very-Dark-Blue;
+        padding: .5rem;
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.storage-card {
+    @extend %card;
+    position: relative;
+    padding-bottom: 3.5rem;
+    &__text {
+        font-size: $Font-size;
+        font-weight: 400;
+        color: $Pale-blue;
+        text-align: center;
+        
+        &--bold {
+            font-weight: 700;
+        }
+    }
+    &__text-container {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__bar-background {
+        margin-top: 1rem;
+        background-color: darken($color: $Dark-Blue, $amount: 8%);
+        padding: 4px;
+        border-radius: 10px;
+    }
+    &__bar {
+        height: 14px;
+        width: 80%;
+        border-radius: 8px;
+        background-image: linear-gradient(to right, hsl(6, 100%, 80%),  hsl(335, 100%, 65%));
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 2px;
+        align-items: center;
+
+        &::after {
+            content: "";
+            border: 6px solid white;
+            border-radius: 100%;
+            align-self: center;
+        }
+    }
+}
+.gb-left-box {
+    background-color: white;
+    position: absolute;
+    top: 8.8rem;
+    left: 4rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: .5rem 1rem;
+    max-width: max-content;
+    gap: 1rem;
+    border-radius: 10px;
+
+    &__number {
+        color: black;
+        font-weight: 700;
+        font-size: 2.5rem;
+    }
+    &__text {
+        color: $Grayish-Blue;
+        font-weight: 700;
+        font-size: $Font-size;
+    }
+}
