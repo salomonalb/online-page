@@ -1,0 +1,154 @@
+@import './_reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+$Strong-Cyan: hsl(171, 66%, 44%);
+$Light-Blue: hsl(233, 100%, 69%);
+$Font-size: 1.8rem;
+$weight-light: 400;
+$weight-bold: 600;
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Bai Jamjuree', Arial, Helvetica, sans-serif;
+    font-size: $Font-size;
+}
+
+.page__header {
+    background: {
+        image: url('../images/bg-header-mobile.png');
+        repeat: no-repeat;
+        size: contain;
+    }
+    padding: {
+        top: 12rem;
+        left: 3.5rem;
+        right: 3.5rem;
+    }
+}
+.logo {
+    margin:  auto;
+    margin-bottom: 7rem;
+}
+
+.main-title {
+    font-size: 3rem;
+}
+.second-title {
+    font-size: 2.5rem;
+}
+.third-title {
+    font-size: 2.12rem;
+}
+
+/* text*/
+.text-component {
+    &__title {
+        font-weight: $weight-bold;
+        color: rgb(61, 61, 61);
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    &__paragraph {
+        color: darkgray;
+        text-align: center;
+        max-width: 50ch;
+        margin: auto;
+    }
+}
+/* buttons */
+.cta-component {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+.button {
+    color: white;
+    font-weight: $weight-bold;
+    width: max-content;
+    margin: auto;
+    padding: 2rem 8rem ;
+    border-radius: 60px;
+    &--ios {
+        background-color: $Strong-Cyan;
+    }
+    &--mac {
+        background-color: $Light-Blue;
+    }
+}
+
+.page__section {
+    padding:0 3.5rem;
+    margin-top: 17rem;
+}
+.image {
+    max-width: 100%;
+}
+.--devices .image {
+    margin: auto;
+    margin-top: 7rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7rem;
+    gap: 7rem;
+}
+.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+}
+.authority {
+    margin-bottom: 15rem;
+}
+.footer {
+    margin-top: 15rem;
+    background-color: rgb(228, 228, 228)
+    ;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    &__logo {
+        width: 55px;
+        height: 55px;
+        margin: 5rem auto;
+    }
+    &__list {
+        width: max-content;
+        margin: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    &__link {
+        color:  rgb(78, 77, 77);
+    }
+    &__social-media {
+        display: flex;
+        gap: 1rem;
+        width: max-content;
+        margin: 5rem auto;
+    }
+}
+
+
+@media screen and (min-width: 645px) {
+    .authority {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
