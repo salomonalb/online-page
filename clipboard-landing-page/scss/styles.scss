@@ -14,6 +14,7 @@ html {
 body {
     font-family: 'Bai Jamjuree', Arial, Helvetica, sans-serif;
     font-size: $Font-size;
+    fill: currentColor;
 }
 
 .page__header {
@@ -74,9 +75,20 @@ body {
     border-radius: 60px;
     &--ios {
         background-color: $Strong-Cyan;
+        box-shadow: 2px 3px 2px darken($color: $Strong-Cyan, $amount: 20%), 8px 8px 18px 15px lighten($color: $Strong-Cyan, $amount: 45%);
+        &:hover {
+            background-color: lighten($color: $Strong-Cyan, $amount: 12.5%);
+            cursor: pointer;
+        }
     }
     &--mac {
         background-color: $Light-Blue;
+        box-shadow: 2px 3px 2px darken($color: $Light-Blue, $amount: 40%), 8px 8px 18px 15px lighten($color: $Light-Blue, $amount: 22%);
+        &:hover {
+            background-color: lighten($color: $Light-Blue, $amount: 8%);
+            cursor: pointer;
+            
+        }
     }
 }
 
@@ -120,6 +132,7 @@ body {
     ;
     padding-top: 5rem;
     padding-bottom: 5rem;
+    color:  rgb(78, 77, 77);
     &__logo {
         width: 55px;
         height: 55px;
@@ -135,20 +148,64 @@ body {
     }
     &__link {
         color:  rgb(78, 77, 77);
+        &:hover {
+            text-decoration: underline;
+        }
     }
     &__social-media {
         display: flex;
-        gap: 1rem;
+        gap: 3rem;
         width: max-content;
         margin: 5rem auto;
     }
 }
-
+.icon:hover {
+    color: $Strong-Cyan;
+    cursor: pointer;
+}
 
 @media screen and (min-width: 645px) {
     .authority {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+    }
+    .content-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .text-component__paragraph {
+        max-width: 30ch;
+    }
+    .page__header {
+        background-image: url('../images/bg-header-desktop.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .cta-component {
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+    .button {
+        margin: 0;
+    }
+    .footer {
+        display: flex;
+        flex-direction: row;
+        &__list {
+            display: block;
+            column-count: 3;
+            column-width: 2rem;
+            line-height: 5rem;
+            text-align: left;
+        }
+    }
+}
+@media screen and (min-width: 1241px) {
+    .left {
+        text-align: left;
     }
 }
