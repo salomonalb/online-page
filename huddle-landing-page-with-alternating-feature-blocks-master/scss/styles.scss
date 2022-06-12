@@ -229,7 +229,6 @@ body {
         &__dir-container {
             flex-direction: row;
             justify-content: space-between;
-            outline: 1px solid red;
             align-items: center;
         }
         &__text-container {
@@ -244,4 +243,18 @@ body {
             max-width: 50%;
         }
     }
+    .card {
+        flex-direction: row;
+        align-items: center;
+        &__image {
+            max-width: 50%;
+        }
+        &__title, &__paragraph {
+            text-align: left;
+        }
+        &--dir {
+            flex-direction: row-reverse;
+        }
+    }
+
 }

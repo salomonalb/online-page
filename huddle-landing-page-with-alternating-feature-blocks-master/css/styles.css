@@ -404,7 +404,6 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    outline: 1px solid red;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -421,6 +420,28 @@ body {
   .hero-section__image {
     margin: 0;
     max-width: 50%;
+  }
+
+  .card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .card__image {
+    max-width: 50%;
+  }
+  .card__title, .card__paragraph {
+    text-align: left;
+  }
+  .card--dir {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
 }
 /*# sourceMappingURL=styles.css.map */
