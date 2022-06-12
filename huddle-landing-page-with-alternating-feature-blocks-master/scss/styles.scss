@@ -6,3 +6,73 @@ $Very-Pale-Cyan: hsl(193, 100%, 96%);
 $Very-Dark-Cyan: hsl(192, 100%, 9%);
 $Grayish-Blue: hsl(208, 11%, 55%);
 $Font-size: 1.8rem;
+html {
+    font-size: 10px;
+}
+body {
+    font-size: $Font-size;
+}
+%buttons-text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    
+}
+.hero-section {
+    padding: 5rem 3rem;
+    background: {
+        image: url(../images/bg-hero-mobile.svg);
+        repeat: no-repeat;
+        size: contain;
+        color: $Very-Pale-Cyan;
+    };
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        width: 10rem;
+    }
+    &__header-button {
+        background-color: white;
+        @extend %buttons-text;
+        padding: .5rem 2rem;
+        border-radius: 50px;
+        font-size: 1.4rem;
+        box-shadow: 0 1px 10px 1px transparentize($color: $Grayish-Blue, $amount: 0.6);
+    }
+    &__dir-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 12rem;
+        gap: 5rem;
+        
+    }
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+    }
+    &__title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-family: 'Poppins', sans-serif;
+    }
+    &__paragraph {
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+    }
+    &__image {
+        max-width: 100%;
+        margin: auto;
+    }
+    &__button {
+        @extend %buttons-text;
+        background-color: $Pink;
+        color: white;
+        padding: 1.5rem 6rem;
+        border-radius: 50px;
+    }
+}

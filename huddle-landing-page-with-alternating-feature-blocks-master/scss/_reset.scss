@@ -26,8 +26,8 @@
 
 /* Evitamos problemas con las imagenes */
 img, picture, video, iframe, figure {
-  /*max-width: 100%;
-  width: 100%; */
+  max-width: 100%;
+  /*width: 100%; */
   display: block;
   /* opcional */
   -o-object-fit: cover;

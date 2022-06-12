@@ -27,8 +27,8 @@
 
 /* Evitamos problemas con las imagenes */
 img, picture, video, iframe, figure {
-  /*max-width: 100%;
-  width: 100%; */
+  max-width: 100%;
+  /*width: 100%; */
   display: block;
   /* opcional */
   -o-object-fit: cover;
@@ -121,4 +121,87 @@ body {
 }
 
 /* ---------------------------------------------------------------------*/
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.8rem;
+}
+
+.hero-section__button, .hero-section__header-button {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+.hero-section {
+  padding: 5rem 3rem;
+  background-image: url(../images/bg-hero-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: hsl(193deg, 100%, 96%);
+}
+.hero-section__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hero-section__logo {
+  width: 10rem;
+}
+.hero-section__header-button {
+  background-color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 50px;
+  font-size: 1.4rem;
+  -webkit-box-shadow: 0 1px 10px 1px rgba(128, 141, 153, 0.4);
+          box-shadow: 0 1px 10px 1px rgba(128, 141, 153, 0.4);
+}
+.hero-section__dir-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 12rem;
+  gap: 5rem;
+}
+.hero-section__text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hero-section__title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: "Poppins", sans-serif;
+}
+.hero-section__paragraph {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+.hero-section__image {
+  max-width: 100%;
+  margin: auto;
+}
+.hero-section__button {
+  background-color: hsl(322deg, 100%, 66%);
+  color: white;
+  padding: 1.5rem 6rem;
+  border-radius: 50px;
+}
 /*# sourceMappingURL=styles.css.map */
