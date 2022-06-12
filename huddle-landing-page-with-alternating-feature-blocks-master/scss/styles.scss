@@ -41,6 +41,10 @@ body {
         border-radius: 50px;
         font-size: 1.4rem;
         box-shadow: 0 1px 10px 1px transparentize($color: $Grayish-Blue, $amount: 0.6);
+        &:hover {
+            cursor: pointer;
+            color: $Grayish-Blue;
+        }
     }
     &__dir-container {
         display: flex;
@@ -74,6 +78,10 @@ body {
         color: white;
         padding: 1.5rem 6rem;
         border-radius: 50px;
+        &:hover {
+            cursor: pointer;
+            background-color: lighten($color: $Pink, $amount: 10%)
+        }
     }
 }
 
@@ -135,6 +143,10 @@ body {
         padding: 1.5rem 3rem;
         border-radius: 50px;
         box-shadow: 0 1px 15px 2px hsla(0, 0%, 0%, 0.05);
+        &:hover {
+            cursor: pointer;
+            background-color: lighten($color: $Pink, $amount: 10%)
+        }
     }
 }
 
@@ -169,6 +181,9 @@ body {
         margin-top: 6rem;
         line-height: 3;
     }
+    &__link:hover {
+        text-decoration: underline;
+    }
     &__socials-container {
         display: flex;
         flex-direction: row;
@@ -187,6 +202,11 @@ body {
         transition: all 200ms;
         border: 1px solid white;
         border-radius: 50%;
+        &:hover {
+            cursor: pointer;
+            color: $Pink;
+            border-color: $Pink;
+        }
     }
     &__copyright {
         padding-top: 3rem;
