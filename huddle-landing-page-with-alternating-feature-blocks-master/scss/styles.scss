@@ -86,7 +86,7 @@ body {
 }
 .card {
     border-radius: 20px;
-    box-shadow: 0 0 15px 2px hsla(0, 0%, 0%, 0.05);
+    box-shadow: 0 0 12.5px 2px hsla(0, 0%, 0%, 0.05);
     padding: 3rem 4rem;
     display: flex;
     flex-direction: column-reverse;
@@ -112,28 +112,85 @@ body {
 .call-card {
     border-radius: 20px;
     box-shadow: 0 0 15px 2px hsla(0, 0%, 0%, 0.05);
-    padding: 3rem 4rem;
+    padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
     align-items: center;
+    position: relative;
+    top: 10rem;
+    background-color: white;
+
+
     &__title {
         text-align: center;
-        font-size: 2.12rem;
+        font-size: 1.6rem;
         font-family: 'Poppins', sans-serif;
     }
     &__button {
         @extend %buttons-text;
+        font-size: 1.4rem;
         background-color: $Pink;
         color: white;
-        padding: 1.5rem 6rem;
+        padding: 1.5rem 3rem;
         border-radius: 50px;
+        box-shadow: 0 1px 15px 2px hsla(0, 0%, 0%, 0.05);
     }
 }
 
 
 .footer {
     padding: 5rem 3rem;
+    padding-top: 10rem;
     background-color: $Very-Dark-Cyan;
     color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: $Font-size;
+
+    &__info-list {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        gap: 3rem;
+    }
+    &__logo {
+        width: max-content;
+    }
+    &__info-container {
+        display: flex;
+        align-items: start;
+        gap: 3rem;
+    }
+    &__info-icon {
+        margin-top: 5px;
+    }
+    &__link-list {
+        margin-top: 6rem;
+        line-height: 3;
+    }
+    &__socials-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 6rem;
+    }
+    &__social-icon {
+        display: block;
+        overflow: visible;
+        box-sizing: content-box;
+        width: 3rem;
+        height: 3rem;
+        color: white;
+        padding: 1rem;
+        transition: all 200ms;
+        border: 1px solid white;
+        border-radius: 50%;
+    }
+    &__copyright {
+        padding-top: 3rem;
+        font-size: 1.4rem;
+        text-align: center;
+    }
 }
