@@ -171,8 +171,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 12rem;
   gap: 5rem;
 }
@@ -188,18 +192,22 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 50rem;
+  margin: auto;
 }
 .hero-section__title {
   text-align: center;
   font-size: 2.5rem;
   font-family: "Poppins", sans-serif;
+  max-width: 20ch;
 }
 .hero-section__paragraph {
   font-family: "Open Sans", sans-serif;
   text-align: center;
 }
 .hero-section__image {
-  max-width: 100%;
+  width: 100%;
+  max-width: 50rem;
   margin: auto;
 }
 .hero-section__button {
@@ -385,5 +393,34 @@ body {
   padding-top: 3rem;
   font-size: 1.4rem;
   text-align: center;
+}
+
+@media screen and (min-width: 905px) {
+  .hero-section__dir-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    outline: 1px solid red;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero-section__text-container {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0;
+  }
+  .hero-section__title, .hero-section__paragraph {
+    text-align: left;
+  }
+  .hero-section__image {
+    margin: 0;
+    max-width: 50%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
