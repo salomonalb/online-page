@@ -259,6 +259,11 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1.5rem;
+  max-width: 50rem;
+}
+.card__image {
+  width: 100%;
+  max-width: 50rem;
 }
 .card__title {
   text-align: center;
@@ -395,7 +400,7 @@ body {
   text-align: center;
 }
 
-@media screen and (min-width: 905px) {
+@media screen and (min-width: 769px) {
   .hero-section__dir-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -419,7 +424,8 @@ body {
   }
   .hero-section__image {
     margin: 0;
-    max-width: 50%;
+    width: 50%;
+    max-width: 60rem;
   }
 
   .card {
@@ -432,7 +438,7 @@ body {
             align-items: center;
   }
   .card__image {
-    max-width: 50%;
+    width: 50%;
   }
   .card__title, .card__paragraph {
     text-align: left;
@@ -442,6 +448,11 @@ body {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+  }
+
+  .call-card {
+    width: 50%;
+    max-width: 50rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

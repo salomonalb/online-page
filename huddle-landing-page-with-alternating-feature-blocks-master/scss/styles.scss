@@ -112,6 +112,11 @@ body {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
+        max-width: 50rem;
+    }
+    &__image {
+        width: 100%;
+        max-width: 50rem;
     }
     &__title {
         text-align: center;
@@ -223,7 +228,7 @@ body {
     }
 }
 
-@media screen and (min-width: 905px) {
+@media screen and (min-width: 769px) {
     .hero-section{
 
         &__dir-container {
@@ -240,14 +245,16 @@ body {
         }
         &__image {
             margin: 0;
-            max-width: 50%;
+            width: 50%;
+            max-width: 60rem;
         }
     }
     .card {
         flex-direction: row;
         align-items: center;
         &__image {
-            max-width: 50%;
+            width: 50%;
+            
         }
         &__title, &__paragraph {
             text-align: left;
@@ -255,6 +262,10 @@ body {
         &--dir {
             flex-direction: row-reverse;
         }
+    }
+    .call-card {
+        width: 50%;
+        max-width: 50rem;
     }
 
 }
