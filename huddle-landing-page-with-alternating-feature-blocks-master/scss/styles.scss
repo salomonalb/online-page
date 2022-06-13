@@ -190,6 +190,9 @@ body {
     &__info-icon {
         margin-top: 5px;
     }
+    &__info-text {
+        max-width: 36ch;
+    }
     &__link-list {
         margin-top: 6rem;
         line-height: 3;
@@ -266,6 +269,16 @@ body {
     .call-card {
         width: 50%;
         max-width: 50rem;
-    }
+    }}
+@media screen and (min-width: 1025px) {
+    .footer {
+        display: flex;
+        justify-content: space-between;
 
+        &__container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+        }
+        }
 }

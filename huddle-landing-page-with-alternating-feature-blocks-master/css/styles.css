@@ -354,6 +354,9 @@ body {
 .footer__info-icon {
   margin-top: 5px;
 }
+.footer__info-text {
+  max-width: 36ch;
+}
 .footer__link-list {
   margin-top: 6rem;
   line-height: 3;
@@ -453,6 +456,28 @@ body {
   .call-card {
     width: 50%;
     max-width: 50rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 /*# sourceMappingURL=styles.css.map */
