@@ -8,3 +8,32 @@ $Moderate-Cyan: hsl(170, 45%, 43%);
 $Light-Grayish-Blue: hsl(240, 75%, 98%);
 $Light-Gray: hsl(0, 0%, 75%);
 
+html {
+    font-size: 10px;
+}
+
+.header {
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10rem;
+    &__logo {
+        width: 8rem;
+    }
+    /*&__navigation {
+    }*/
+    &__link-list {
+        display: flex;
+        justify-content: space-between;
+        gap: 2.5rem;
+    }
+    &__link {
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.3rem;
+        color: $Very-Dark-Blue;
+        &:hover {
+            border-bottom: 1px solid;
+        }
+    }
+}
