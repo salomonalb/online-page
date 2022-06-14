@@ -1,5 +1,5 @@
 @use './reset';
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
 
 $Very-Dark-Blue: hsl(243, 87%, 12%);
 $Desaturated-Blue: hsl(238, 22%, 44%);
@@ -14,6 +14,7 @@ html {
 
 .header {
     padding: 2.5rem;
+    padding-bottom: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -35,5 +36,61 @@ html {
         &:hover {
             border-bottom: 1px solid;
         }
+    }
+}
+
+.hero {
+    padding: 2.5rem {
+        top:0;
+    };
+    &__illustration {
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    &__title {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 2.5rem;
+        color: $Very-Dark-Blue;
+        font-weight: 700;
+        text-align: center;
+    }
+    &__paragraph {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.4rem;
+        color: $Very-Dark-Blue;
+        font-weight: 400;
+        text-align: center;
+        padding: 0 1rem;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    &__input {
+        border: 1px solid $Very-Dark-Blue;
+        padding: 1.5rem 2rem;
+        border-radius: 5px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.3rem;
+        /*
+        box-shadow: 0 0 0 1px black;
+        */
+    }
+    &__button {
+        padding: {
+            top:1.5rem;
+            bottom:1.5rem;
+        };
+        background-color: $Bright-Blue;
+        color: white;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 1.3rem;
     }
 }
