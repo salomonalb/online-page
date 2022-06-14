@@ -218,10 +218,78 @@ html {
 .hero__button {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  /*
+  box-shadow: 0 0 0 1px black;
+  */
   background-color: hsl(224deg, 93%, 58%);
   color: white;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 1.3rem;
+  border-radius: 5px;
+}
+
+.b-section {
+  background-color: hsl(240deg, 75%, 98%);
+  padding: 2.5rem;
+  padding-top: 10rem;
+  /* clip path maybe */
+}
+.b-section__image {
+  margin-bottom: 10rem;
+}
+.b-section__text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+}
+.b-section__paragraph-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+}
+.b-section__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.b-section__paragraph {
+  color: hsl(238deg, 22%, 44%);
+  font-size: 1.4rem;
+  font-family: "Open Sans", sans-serif;
+}
+.b-section__link {
+  color: hsl(170deg, 45%, 43%);
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  border-bottom: 2px solid hsl(170deg, 45%, 43%);
+  padding-bottom: 3px;
+  padding-right: 20px;
+  background-image: url(../images/icon-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  background-position: right top;
+}
+
+.card {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -86,11 +86,68 @@ html {
         padding: {
             top:1.5rem;
             bottom:1.5rem;
+            /*
+        box-shadow: 0 0 0 1px black;
+        */
         };
         background-color: $Bright-Blue;
         color: white;
         font-family: 'Raleway', sans-serif;
         font-weight: 700;
         font-size: 1.3rem;
+        border-radius: 5px;
     }
+}
+
+.b-section {
+    background-color: $Light-Grayish-Blue;
+    padding: 2.5rem {
+        top: 10rem;
+    };
+    /* clip path maybe */
+    &__image {
+        margin-bottom: 10rem;
+    }
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+    &__paragraph-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    &__title {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    &__paragraph {
+        color: $Desaturated-Blue;
+        font-size: 1.4rem;
+        font-family: 'Open Sans', sans-serif;
+    }
+    &__link {
+        color: $Moderate-Cyan;
+        font-size: 1rem;
+        font-family: 'Open Sans', sans-serif;
+        border-bottom: 2px solid $Moderate-Cyan;
+        padding-bottom: 3px;
+        padding-right: 20px;
+        background: {
+            image: url(../images/icon-arrow.svg);
+            repeat: no-repeat;
+            size: 1.5rem;
+            position: right top;
+        };
+    }
+}
+.card {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 5px;
+    
 }
