@@ -103,6 +103,7 @@ html {
     background-color: $Light-Grayish-Blue;
     padding: 2.5rem {
         top: 10rem;
+        bottom: 10rem;
     };
     /* clip path maybe */
     &__image {
@@ -146,8 +147,49 @@ html {
     }
 }
 .card {
-    background-color: white;
-    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 28rem; 
     border-radius: 5px;
+    background: {
+        color: white;
+        image: url('../images/icon-quotes.svg');
+        repeat: no-repeat;
+        position: top 2rem left 2.5rem;
+    }
+    margin:auto;
+    padding: 2.5rem {
+        top: 5rem;
+    }
     
+
+    &__paragraph {
+        font-size: 1.025rem;
+        font-family: 'Open Sans', sans-serif;
+        color: $Very-Dark-Blue;
+    }
+    &__container {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 1rem;
+    }
+    &__avatar {
+        width: 2.5rem;
+        border-radius: 50%;
+    }
+    
+    &__name {
+        font-size: 1rem;
+        font-family: 'Open Sans', sans-serif;
+        color: $Very-Dark-Blue;
+        font-weight: 700;
+    }
+    &__role {
+        font-size: .7rem;
+        font-family: 'Open Sans', sans-serif;
+        color: $Very-Dark-Blue;
+        font-weight: 400;
+    }
 }
