@@ -289,6 +289,7 @@ html {
 }
 
 .card {
+  /* box shadow */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -339,5 +340,70 @@ html {
   font-family: "Open Sans", sans-serif;
   color: hsl(243deg, 87%, 12%);
   font-weight: 400;
+}
+
+.cta {
+  background-color: hsl(238deg, 22%, 44%);
+  padding: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+.cta__text-container {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+.cta__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  text-align: center;
+}
+.cta__paragraph {
+  text-align: center;
+  font-size: 1.35rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+.cta__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 2rem;
+}
+.cta__input {
+  padding: 1rem 1.5rem;
+  border-radius: 3px;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8rem;
+  background-color: white;
+  color: hsl(0deg, 0%, 75%);
+}
+.cta__button {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: hsl(224deg, 93%, 58%);
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 3px;
 }
 /*# sourceMappingURL=styles.css.map */

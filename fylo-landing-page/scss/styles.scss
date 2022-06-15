@@ -147,6 +147,7 @@ html {
     }
 }
 .card {
+    /* box shadow */
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -191,5 +192,60 @@ html {
         font-family: 'Open Sans', sans-serif;
         color: $Very-Dark-Blue;
         font-weight: 400;
+    }
+}
+
+.cta {
+    background-color: $Desaturated-Blue;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    &__text-container {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    &__title {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 1.7rem;
+        text-align: center;
+    }
+    &__paragraph {
+        text-align: center;
+        font-size: 1.35rem;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 0 2rem;
+        
+    }
+    &__input {
+        padding: 1rem 1.5rem;
+        border-radius: 3px;
+        font-family: 'Raleway', sans-serif;
+        font-size: .8rem;
+        background-color: white;
+        color: $Light-Gray;
+    }
+    &__button {
+        padding: {
+            top:1rem;
+            bottom:1rem;
+
+        };
+        background-color: $Bright-Blue;
+        color: white;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 1.1rem;
+        border-radius: 3px;
     }
 }
