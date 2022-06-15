@@ -351,6 +351,7 @@ html {
         flex-direction: row-reverse;
         justify-content: space-between;
         padding: 0;
+        padding-bottom: 16rem;
         margin: 0 8rem;
         align-items: center;
 
@@ -389,17 +390,55 @@ html {
     .b-section {
         display: flex;
         flex-direction: row-reverse;
+        padding: 16rem 8rem;
+        margin: 0;
+        justify-content: space-between;
 
         &__image {
-            width: 50%;
+            width: 100%;
+            margin: 0;
+            max-width: 64.5rem;
         }
         &__text-container {
             align-items: start;
+            margin: 0;
+            max-width: 58rem;
+        }
+        &__title {
+            text-align: left;
+            font-size: 3.5rem;
+            font-family: 'Raleway', sans-serif;
+        }
+        &__paragraph {
+            text-align: left;
+            font-size: 1.6rem;
+            color: $Very-Dark-Blue;
+            &-container {
+                max-width: 53rem;
+            }
+        }
+        &__link {
+            font-size: 1.2rem;
         }
     }
     .card {
         margin-left: 0;
+        max-width: 36rem;
+        &__paragraph {
+            font-size: 1.4rem;
+        }
+        &__avatar {
+            width: 3rem;
+            height: 3rem;
+        }
+        &__name {
+            font-size: 1.2rem;
+        }
+        &__role {
+            font-size: 1rem;
+        }
     }
+
     .cta {
         flex-direction: row;
         &__text-container {

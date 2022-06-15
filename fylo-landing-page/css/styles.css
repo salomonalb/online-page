@@ -541,6 +541,7 @@ html {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 0;
+    padding-bottom: 16rem;
     margin: 0 8rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -589,18 +590,57 @@ html {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+    padding: 16rem 8rem;
+    margin: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .b-section__image {
-    width: 50%;
+    width: 100%;
+    margin: 0;
+    max-width: 64.5rem;
   }
   .b-section__text-container {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
+    margin: 0;
+    max-width: 58rem;
+  }
+  .b-section__title {
+    text-align: left;
+    font-size: 3.5rem;
+    font-family: "Raleway", sans-serif;
+  }
+  .b-section__paragraph {
+    text-align: left;
+    font-size: 1.6rem;
+    color: hsl(243deg, 87%, 12%);
+  }
+  .b-section__paragraph-container {
+    max-width: 53rem;
+  }
+  .b-section__link {
+    font-size: 1.2rem;
   }
 
   .card {
     margin-left: 0;
+    max-width: 36rem;
+  }
+  .card__paragraph {
+    font-size: 1.4rem;
+  }
+  .card__avatar {
+    width: 3rem;
+    height: 3rem;
+  }
+  .card__name {
+    font-size: 1.2rem;
+  }
+  .card__role {
+    font-size: 1rem;
   }
 
   .cta {
