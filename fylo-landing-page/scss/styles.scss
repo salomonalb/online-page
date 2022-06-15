@@ -342,7 +342,10 @@ html {
             
         }
         &__link {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            &-list {
+                gap: 6rem;
+            }
         }
         
     }
@@ -441,21 +444,47 @@ html {
 
     .cta {
         flex-direction: row;
+        padding: 8rem;
+        justify-content: space-between;
+
         &__text-container {
-            margin: 0;
+            margin: 0 0;
         }
         &__title {
             text-align: left;
+            font-size: 3rem;
+        }
+        &__text-container {
+            max-width: 46rem;
+            gap: 3rem;
         }
         &__paragraph {
             text-align: left;
+            font-size: 1.5rem;
+        }
+        &__form {
+            margin: 0;
+            padding: 0;
+            max-width: 50rem;
+        }
+        &__input {
+            max-width: 50rem;
+            padding: 2rem;
+            font-size: 1rem;
+        }
+        &__button {
+            font-size: 1.4rem;
+            padding: 2rem 3rem;
+            max-width: 20rem;
         }
     }
+
     .footer {
         display: grid;
         grid-template-areas:"logo logo logo logo"
                             "info list1 list2 social";
         row-gap: 2rem;
+        padding: 10rem 8rem;
         &__logo-container {
             grid-area: logo;
         }

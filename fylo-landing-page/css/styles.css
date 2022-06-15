@@ -526,7 +526,10 @@ html {
     width: 16rem;
   }
   .header__link {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+  }
+  .header__link-list {
+    gap: 6rem;
   }
 
   .hero {
@@ -648,15 +651,40 @@ html {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding: 8rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .cta__text-container {
-    margin: 0;
+    margin: 0 0;
   }
   .cta__title {
     text-align: left;
+    font-size: 3rem;
+  }
+  .cta__text-container {
+    max-width: 46rem;
+    gap: 3rem;
   }
   .cta__paragraph {
     text-align: left;
+    font-size: 1.5rem;
+  }
+  .cta__form {
+    margin: 0;
+    padding: 0;
+    max-width: 50rem;
+  }
+  .cta__input {
+    max-width: 50rem;
+    padding: 2rem;
+    font-size: 1rem;
+  }
+  .cta__button {
+    font-size: 1.4rem;
+    padding: 2rem 3rem;
+    max-width: 20rem;
   }
 
   .footer {
@@ -664,6 +692,7 @@ html {
     display: grid;
         grid-template-areas: "logo logo logo logo" "info list1 list2 social";
     row-gap: 2rem;
+    padding: 10rem 8rem;
   }
   .footer__logo-container {
     grid-area: logo;
