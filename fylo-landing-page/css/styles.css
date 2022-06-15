@@ -512,7 +512,21 @@ html {
 }
 @media screen and (min-width: 1037px) {
   html {
-    font-size: 14px;
+    font-size: 10px;
+  }
+
+  .header {
+    margin: 6rem 8rem 10rem;
+    padding: 0;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .header__logo {
+    width: 16rem;
+  }
+  .header__link {
+    font-size: 1.5rem;
   }
 
   .hero {
@@ -523,22 +537,48 @@ html {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0;
+    margin: 0 8rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .hero__title {
     text-align: left;
+    font-size: 3.5rem;
+    font-family: "Raleway", sans-serif;
   }
   .hero__paragraph {
     text-align: left;
     padding: 0;
+    font-size: 1.6rem;
   }
   .hero__illustration {
     width: 50%;
+    margin: 0;
+    max-width: 63.5rem;
+  }
+  .hero__text-container {
+    margin: 0;
+    max-width: 52rem;
   }
   .hero__form {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .hero__input {
+    width: 32rem;
+    padding: 1.5rem 2rem;
+  }
+  .hero__button {
+    width: 20rem;
+    font-size: 1.6rem;
+    padding: 1.6rem;
   }
 
   .b-section {
@@ -568,6 +608,15 @@ html {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .cta__text-container {
+    margin: 0;
+  }
+  .cta__title {
+    text-align: left;
+  }
+  .cta__paragraph {
+    text-align: left;
   }
 
   .footer {
