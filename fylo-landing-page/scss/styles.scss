@@ -249,3 +249,51 @@ html {
         border-radius: 3px;
     }
 }
+.footer {
+    color: white;
+    padding: 5rem;
+    background-color: $Very-Dark-Blue;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    &__block-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    &__row-container {
+        display: flex;
+        justify-content: flex-start;
+        gap: 1.5rem;
+        align-items: center;
+    }
+    &__icon {
+        width: max-content;
+    }
+    &__text {
+        font-size: 1.6rem;
+    }
+    &__link {
+        font-size: 1.6rem;
+        line-height: 2;
+    }
+    &__socials-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+    &__social-icon {
+        display: block;
+        overflow: visible;
+        box-sizing: content-box;
+        width: 1.5rem;
+        height: 1.5rem;
+        color: white;
+        padding: 1rem;
+        transition: all 200ms;
+        border: 1px solid white;
+        border-radius: 50%;
+    }
+}
