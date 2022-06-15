@@ -45,12 +45,16 @@ html {
     };
     &__illustration {
         width: 100%;
+        max-width: 37.5rem;
+        margin: auto;
         margin-bottom: 5rem;
     }
     &__text-container {
         display: flex;
         flex-direction: column;
         gap: 4rem;
+        max-width: 37.5rem;
+        margin: auto;
     }
     &__title {
         font-family: 'Open Sans', sans-serif;
@@ -78,18 +82,17 @@ html {
         border-radius: 5px;
         font-family: 'Raleway', sans-serif;
         font-size: 1.3rem;
-        /*
-        box-shadow: 0 0 0 1px black;
-        */
+        
+        box-shadow: 2px 2px 5px 2px transparentize($color: black, $amount: 0.96),
+                    inset 2px 2px 5px 2px transparentize($color: black, $amount: 0.96),;
+        
     }
     &__button {
         padding: {
             top:1.5rem;
             bottom:1.5rem;
-            /*
-        box-shadow: 0 0 0 1px black;
-        */
         };
+        box-shadow: 2px 2px 5px 2px transparentize($color: black, $amount: 0.92);
         background-color: $Bright-Blue;
         color: white;
         font-family: 'Raleway', sans-serif;
@@ -104,16 +107,24 @@ html {
     padding: 2.5rem {
         top: 10rem;
         bottom: 10rem;
-    };
+    }
     /* clip path maybe */
+
+
     &__image {
+        width: 100%;
+        margin: auto;
         margin-bottom: 10rem;
+        max-width: 37.5rem;
+        
     }
     &__text-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 3rem;
+        max-width: 37.5rem;
+        margin: auto;
     }
     &__paragraph-container {
         display: flex;
@@ -136,8 +147,8 @@ html {
         font-size: 1rem;
         font-family: 'Open Sans', sans-serif;
         border-bottom: 2px solid $Moderate-Cyan;
-        padding-bottom: 3px;
-        padding-right: 20px;
+        padding-bottom: .3rem;
+        padding-right: 2rem;
         background: {
             image: url(../images/icon-arrow.svg);
             repeat: no-repeat;
@@ -163,7 +174,7 @@ html {
     padding: 2.5rem {
         top: 5rem;
     }
-    
+    box-shadow: 2px 2px 8px 4px transparentize($color: black, $amount: 0.96);
 
     &__paragraph {
         font-size: 1.025rem;
@@ -201,12 +212,15 @@ html {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+    
 
     &__text-container {
         color: white;
         display: flex;
         flex-direction: column;
         gap: 2.5rem;
+        max-width: 37.5rem;
+        margin: auto;
     }
     &__title {
         font-family: 'Raleway', sans-serif;
@@ -225,6 +239,10 @@ html {
         flex-direction: column;
         gap: 1.5rem;
         padding: 0 2rem;
+        width: 100%;
+        max-width: 33.5rem;
+        margin: auto;
+
         
     }
     &__input {
@@ -247,6 +265,7 @@ html {
         font-weight: 700;
         font-size: 1.1rem;
         border-radius: 3px;
+        box-shadow: 2px 2px 5px 2px transparentize($color: black, $amount: 0.92);
     }
 }
 .footer {
@@ -272,9 +291,11 @@ html {
         width: max-content;
     }
     &__text {
+        font-family: 'Open Sans', sans-serif;
         font-size: 1.6rem;
     }
     &__link {
+        font-family: 'Open Sans', sans-serif;
         font-size: 1.6rem;
         line-height: 2;
     }
@@ -295,5 +316,71 @@ html {
         transition: all 200ms;
         border: 1px solid white;
         border-radius: 50%;
+    }
+}
+@media screen and (min-width: 426px) {
+    html {
+        font-size: 12px;
+    }
+}
+@media screen and (min-width: 769px) {
+    html {
+        font-size: 13px;
+    }
+}
+@media screen and (min-width: 1037px) {
+    html {
+        font-size: 14px;
+    }
+    .hero {
+        display: flex;
+        flex-direction: row-reverse;
+
+        &__title {
+            text-align: left;
+        }
+        &__paragraph {
+            text-align: left;
+            padding: 0;
+        }
+        &__illustration {
+            width: 50%;
+        }
+
+        &__form {
+            flex-direction: row;
+        }
+    }
+    .b-section {
+        display: flex;
+        flex-direction: row-reverse;
+
+        &__image {
+            width: 50%;
+        }
+        &__text-container {
+            align-items: start;
+        }
+    }
+    .card {
+        margin-left: 0;
+    }
+    .cta {
+        flex-direction: row;
+    }
+    .footer {
+        display: grid;
+        grid-template-areas:"logo logo logo logo"
+                            "info list1 list2 social";
+        row-gap: 2rem;
+        &__logo-container {
+            grid-area: logo;
+        }
+        &__block-container {
+            grid-area: info;
+        }
+        &__socials-container {
+            grid-area: social;
+        }
     }
 }
