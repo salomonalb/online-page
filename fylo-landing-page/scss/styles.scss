@@ -12,6 +12,8 @@ html {
     font-size: 10px;
 }
 
+/*hovers, focus */
+
 .header {
     padding: 2.5rem;
     padding-bottom: 0;
@@ -112,10 +114,16 @@ html {
 
 
     &__image {
+        /*
         width: 100%;
         margin: auto;
         margin-bottom: 10rem;
         max-width: 37.5rem;
+        */
+        width: 100%;
+        max-width: 37.5rem;
+        margin: auto;
+        margin-bottom: 5rem;
         
     }
     &__text-container {
@@ -323,14 +331,11 @@ html {
         font-size: 12px;
     }
 }
+
+
 @media screen and (min-width: 769px) {
     html {
-        font-size: 13px;
-    }
-}
-@media screen and (min-width: 1037px) {
-    html {
-        font-size: 10px;
+        font-size: 6px;
     }
     .header {
         margin: 6rem 8rem 10rem;
@@ -371,7 +376,7 @@ html {
         &__illustration {
             width: 50%;
             margin: 0;
-            max-width: 63.5rem;
+            max-width: unset;
         }
         &__text-container {
             margin: 0;
@@ -396,11 +401,16 @@ html {
         padding: 16rem 8rem;
         margin: 0;
         justify-content: space-between;
+        gap: 8rem;
 
         &__image {
-            width: 100%;
+            /*width: 50%;
             margin: 0;
-            max-width: 64.5rem;
+            max-width: unset;*/
+            width: 50%;
+            
+            padding: 0.1rem;
+            max-width: unset;
         }
         &__text-container {
             align-items: start;
@@ -409,7 +419,7 @@ html {
         }
         &__title {
             text-align: left;
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-family: 'Raleway', sans-serif;
         }
         &__paragraph {
@@ -494,5 +504,25 @@ html {
         &__socials-container {
             grid-area: social;
         }
+    }
+}
+@media screen and (min-width: 901px) {
+    html {
+        font-size: 7px;
+    }
+}
+@media screen and (min-width: 1025px) {
+    html {
+        font-size: 8px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    html {
+        font-size: 9px;
+    }
+}
+@media screen and (min-width: 1300px) {
+    html {
+        font-size: 10px;
     }
 }
