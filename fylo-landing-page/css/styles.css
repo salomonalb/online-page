@@ -231,6 +231,10 @@ html {
   font-size: 1.3rem;
   border-radius: 5px;
 }
+.hero__button:hover {
+  background-color: #628af9;
+  cursor: pointer;
+}
 
 .b-section {
   background-color: hsl(240deg, 75%, 98%);
@@ -300,6 +304,10 @@ html {
   background-repeat: no-repeat;
   background-size: 1.5rem;
   background-position: right top;
+}
+.b-section__link:hover {
+  -webkit-filter: opacity(70%);
+          filter: opacity(70%);
 }
 
 .card {
@@ -429,6 +437,10 @@ html {
   -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.08);
           box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.08);
 }
+.cta__button:hover {
+  background-color: #628af9;
+  cursor: pointer;
+}
 
 .footer {
   color: white;
@@ -479,6 +491,9 @@ html {
   font-size: 1.6rem;
   line-height: 2;
 }
+.footer__link:hover {
+  border-bottom: 1px solid;
+}
 .footer__socials-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -505,6 +520,11 @@ html {
   transition: all 200ms;
   border: 1px solid white;
   border-radius: 50%;
+}
+.footer__social-icon:hover {
+  color: hsl(224deg, 93%, 58%);
+  border-color: hsl(224deg, 93%, 58%);
+  cursor: pointer;
 }
 
 @media screen and (min-width: 426px) {

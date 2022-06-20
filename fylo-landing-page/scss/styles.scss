@@ -101,6 +101,10 @@ html {
         font-weight: 700;
         font-size: 1.3rem;
         border-radius: 5px;
+        &:hover {
+            background-color: lighten($color: $Bright-Blue, $amount: 10%);
+            cursor: pointer;
+        }
     }
 }
 
@@ -163,6 +167,9 @@ html {
             size: 1.5rem;
             position: right top;
         };
+        &:hover {
+            filter: opacity(70%);
+        }
     }
 }
 .card {
@@ -274,6 +281,10 @@ html {
         font-size: 1.1rem;
         border-radius: 3px;
         box-shadow: 2px 2px 5px 2px transparentize($color: black, $amount: 0.92);
+        &:hover {
+            background-color: lighten($color: $Bright-Blue, $amount: 10%);
+            cursor: pointer;
+        }
     }
 }
 .footer {
@@ -306,6 +317,10 @@ html {
         font-family: 'Open Sans', sans-serif;
         font-size: 1.6rem;
         line-height: 2;
+        &:hover {
+            border-bottom: 1px solid;
+            
+        }
     }
     &__socials-container {
         display: flex;
@@ -324,6 +339,11 @@ html {
         transition: all 200ms;
         border: 1px solid white;
         border-radius: 50%;
+        &:hover {
+            color: $Bright-Blue;
+            border-color: $Bright-Blue;
+            cursor: pointer;
+        }
     }
 }
 @media screen and (min-width: 426px) {
