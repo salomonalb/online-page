@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* reset */
 /* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;700&display=swap");
 @media (prefers-reduced-motion: reduce) {
   * {
     -webkit-animation: none !important;
@@ -137,6 +137,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 2.4rem;
+  margin-bottom: 12rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -149,8 +150,41 @@ body {
   color: hsl(322deg, 100%, 66%);
   padding: 0.6rem 2rem;
   border: 1px solid hsl(322deg, 100%, 66%);
-  border-radius: 50px;
+  border-radius: 5rem;
   -webkit-box-shadow: 0 0 3px 1px rgba(255, 82, 191, 0.1);
           box-shadow: 0 0 3px 1px rgba(255, 82, 191, 0.1);
+}
+
+.hero {
+  margin: 0 4rem;
+}
+.hero__text-container {
+  margin-bottom: 10rem;
+}
+.hero__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: hsl(192deg, 100%, 9%);
+  margin-bottom: 3rem;
+}
+.hero__text {
+  color: hsl(192deg, 100%, 9%);
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 5rem;
+}
+.hero__button {
+  background-color: hsl(322deg, 100%, 66%);
+  color: white;
+  margin: auto;
+  padding: 1.2rem 4rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 5rem;
+  -webkit-box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
 }
 /*# sourceMappingURL=styles.css.map */
