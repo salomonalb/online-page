@@ -239,6 +239,7 @@ body {
         &:invalid {
             outline: 2px solid red;
             content: "valid mail please";
+            
             &+.form__alert {
                 display: block;
                 position: absolute;
