@@ -265,4 +265,27 @@ body {
   font-weight: 600;
   text-align: center;
 }
+
+.cta {
+  margin: 8rem 4rem 25rem;
+}
+.cta__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: hsl(192deg, 100%, 9%);
+  margin-bottom: 3rem;
+}
+.cta__button {
+  background-color: hsl(322deg, 100%, 66%);
+  color: white;
+  margin: auto;
+  padding: 1.2rem 4rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 5rem;
+  -webkit-box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
+}
 /*# sourceMappingURL=styles.css.map */

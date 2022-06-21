@@ -128,5 +128,28 @@ body {
             text-align: center;
         }
     }
+}
 
+.cta {
+    margin: 8rem 4rem 25rem;
+
+    &__title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.2rem;
+        font-weight: 700;
+        text-align: center;
+        color: $Very-Dark-Cyan;
+        margin-bottom: 3rem;
+    }
+    &__button {
+
+        background-color: $pink-color;
+        color: white;
+        margin: auto;
+        padding: 1.2rem 4rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border-radius: 5rem;
+        box-shadow: 0 2px 5px 1px transparentize($color: #000000, $amount: .85);
+    }
 }
