@@ -172,9 +172,10 @@ body {
 .hero__text {
   color: hsl(192deg, 100%, 9%);
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-family: "Open Sans", sans-serif;
   margin-bottom: 5rem;
+  font-weight: 600;
 }
 .hero__button {
   background-color: hsl(322deg, 100%, 66%);
@@ -232,5 +233,36 @@ body {
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
+}
+
+.curved-divider {
+  width: 100%;
+}
+
+.features .card {
+  padding: 8rem 4rem 8rem;
+}
+.features .card--white {
+  margin-top: 6rem;
+}
+.features .card--blue {
+  background-color: hsl(207deg, 100%, 98%);
+}
+.features .card__image {
+  margin-bottom: 6rem;
+}
+.features .card__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: hsl(192deg, 100%, 9%);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.features .card__text {
+  color: hsl(192deg, 100%, 9%);
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */

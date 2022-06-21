@@ -51,9 +51,10 @@ body {
     &__text {
         color: $Very-Dark-Cyan;
         text-align: center;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         font-family: 'Open Sans', sans-serif;
         margin-bottom: 5rem;
+        font-weight: 600;
     }
     &__button {
         background-color: $pink-color;
@@ -92,5 +93,40 @@ body {
         font-size: 1.2rem;
         text-align: center;
         align-self: stretch;
-    } 
+    }
+}
+
+.curved-divider {
+    width: 100%;
+}
+.features {
+    
+    .card {
+        padding: 8rem 4rem 8rem;
+        
+        &--white {
+            margin-top: 6rem
+        }
+        &--blue {
+            background-color: $Very-Pale-Blue;
+        }
+        &__image {
+            margin-bottom: 6rem;
+        }
+        &__title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: $Very-Dark-Cyan;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        &__text {
+            color: $Very-Dark-Cyan;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+
 }
