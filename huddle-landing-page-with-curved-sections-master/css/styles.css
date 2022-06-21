@@ -154,6 +154,11 @@ body {
   -webkit-box-shadow: 0 0 3px 1px rgba(255, 82, 191, 0.1);
           box-shadow: 0 0 3px 1px rgba(255, 82, 191, 0.1);
 }
+.header__button:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 5px 3px rgba(255, 82, 191, 0.2);
+          box-shadow: 0 0 5px 3px rgba(255, 82, 191, 0.2);
+}
 
 .hero {
   margin: 0 4rem;
@@ -189,6 +194,10 @@ body {
   border-radius: 5rem;
   -webkit-box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
           box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
+}
+.hero__button:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
 .hero__stats-container {
   margin-top: 12rem;
@@ -293,6 +302,10 @@ body {
   -webkit-box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
           box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
 }
+.cta__button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
 
 .footer {
   color: white;
@@ -337,9 +350,14 @@ body {
 .footer__social-icon {
   width: 2rem;
 }
+.footer__social-icon:hover {
+  cursor: pointer;
+  color: hsl(207deg, 100%, 98%);
+}
 
 .form {
   margin-bottom: 10rem;
+  position: relative;
 }
 .form__title {
   font-size: 1.6rem;
@@ -361,6 +379,20 @@ body {
   margin: 2rem 0 1.5rem;
   padding: 1.5rem 0;
   border-radius: 0.5rem;
+  color: hsl(192deg, 100%, 9%);
+}
+.form__email-input:invalid {
+  outline: 2px solid red;
+  content: "valid mail please";
+}
+.form__email-input:invalid + .form__alert {
+  display: block;
+  position: absolute;
+  color: red;
+  bottom: 0;
+}
+.form__alert {
+  display: none;
 }
 .form__button {
   background-color: hsl(322deg, 100%, 66%);
@@ -373,6 +405,10 @@ body {
   border-radius: 0.5rem;
   -webkit-box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
           box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
+}
+.form__button:hover {
+  cursor: pointer;
+  background-color: hsl(321deg, 100%, 78%);
 }
 
 @media screen and (min-width: 426px) {

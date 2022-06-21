@@ -31,6 +31,11 @@ body {
         border: 1px solid $pink-color;
         border-radius: 5rem;
         box-shadow: 0 0 3px 1px transparentize($color: $pink-color, $amount: 0.9);
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 0 5px 3px transparentize($color: $pink-color, $amount: 0.8);
+        }
     }
 }
 
@@ -68,6 +73,11 @@ body {
         font-weight: 600;
         border-radius: 5rem;
         box-shadow: 0 2px 5px 1px transparentize($color: #000000, $amount: .85);
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
     }
     &__stats-container {
         margin-top: 12rem;
@@ -153,6 +163,10 @@ body {
         font-weight: 600;
         border-radius: 5rem;
         box-shadow: 0 2px 5px 1px transparentize($color: #000000, $amount: .85);
+        &:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
     }
 }
 
@@ -190,11 +204,16 @@ body {
     }
     &__social-icon {
         width: 2rem;
+        &:hover {
+            cursor: pointer;
+            color: $Very-Pale-Blue;
+        }
     }
 }
 
 .form {
     margin-bottom: 10rem;
+    position: relative;
 
     &__title {
         font-size: 1.6rem;
@@ -214,6 +233,22 @@ body {
         margin: 2rem 0 1.5rem;
         padding: 1.5rem 0;
         border-radius: .5rem;
+        color: $Very-Dark-Cyan;
+
+
+        &:invalid {
+            outline: 2px solid red;
+            content: "valid mail please";
+            &+.form__alert {
+                display: block;
+                position: absolute;
+                color: red;
+                bottom: 0;
+            }
+        }
+    }
+    &__alert {
+        display: none;
     }
     &__button {
         background-color: $pink-color;
@@ -225,6 +260,10 @@ body {
         font-weight: 600;
         border-radius: .5rem;
         box-shadow: 0 2px 5px 1px transparentize($color: #000000, $amount: .85);
+        &:hover {
+            cursor: pointer;
+            background-color: $Light-Pink
+        }
     }
 }
 
