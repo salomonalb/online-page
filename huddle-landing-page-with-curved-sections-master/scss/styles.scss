@@ -241,9 +241,9 @@ body {
     }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 769px) {
     html {
-        font-size: 62.5%;
+        font-size: 43%;
     }
     .header {
         margin: 8rem;
@@ -316,6 +316,7 @@ body {
     .cta {
         &__title {
                 font-size: 3rem;
+                margin-bottom: 6rem;
         }
         &__button {
             font-size: 1.6rem;
@@ -370,5 +371,21 @@ body {
             place-self: center;
             width: 100%;
         }
+    }
+}
+
+@media screen and (min-width: 920px) {
+    html {
+        font-size: 50%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    html {
+        font-size: 56.25%;
+    }
+}
+@media screen and (min-width: 1300px) {
+    html {
+        font-size: 62.5%;
     }
 }

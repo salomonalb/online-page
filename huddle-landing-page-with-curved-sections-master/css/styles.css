@@ -385,9 +385,9 @@ body {
     font-size: 75%;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 769px) {
   html {
-    font-size: 62.5%;
+    font-size: 43%;
   }
 
   .header {
@@ -485,6 +485,7 @@ body {
 
   .cta__title {
     font-size: 3rem;
+    margin-bottom: 6rem;
   }
   .cta__button {
     font-size: 1.6rem;
@@ -551,7 +552,7 @@ body {
     width: 100%;
   }
 }
-@media screen and (min-width: 1025px){
+@media screen and (min-width: 769px){
 
   .form__title {
     -ms-grid-row: 1;
@@ -571,6 +572,21 @@ body {
   .form__button {
     -ms-grid-row: 3;
     -ms-grid-column: 3;
+  }
+}
+@media screen and (min-width: 920px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  html {
+    font-size: 62.5%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
