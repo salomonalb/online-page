@@ -53,8 +53,11 @@ body {
         text-align: center;
         font-size: 1.3rem;
         font-family: 'Open Sans', sans-serif;
+        margin: auto;
         margin-bottom: 5rem;
         font-weight: 600;
+        max-width: 55ch;
+        
     }
     &__button {
         background-color: $pink-color;
@@ -99,8 +102,7 @@ body {
 .curved-divider {
     width: 100%;
 }
-.features {
-    
+/* .features {} */
     .card {
         padding: 8rem 4rem 8rem;
         
@@ -125,10 +127,11 @@ body {
             color: $Very-Dark-Cyan;
             font-size: 1.3rem;
             font-weight: 600;
+            margin: auto;
             text-align: center;
+            max-width: 60ch;
         }
     }
-}
 
 .cta {
     margin: 8rem 4rem 20rem;
@@ -169,6 +172,7 @@ body {
         hyphens: none;
         font-size: 1.4rem;
         font-weight: 400;
+        max-width: 40ch;
     }
     &__row-container {
         margin-top: 4rem;
@@ -202,6 +206,7 @@ body {
         hyphens: none;
         font-size: 1.4rem;
         font-weight: 400;
+        max-width: 41ch;
     }
     &__email-input {
         background-color: white;
@@ -220,5 +225,64 @@ body {
         font-weight: 600;
         border-radius: .5rem;
         box-shadow: 0 2px 5px 1px transparentize($color: #000000, $amount: .85);
+    }
+}
+
+
+@media screen and (min-width: 426px) {
+    html {
+        font-size: 68.75%;
+    }
+}
+
+@media screen and (min-width: 566px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    html {
+        font-size: 62.5%;
+    }
+    .header {
+        &__logo {
+            width: 24rem;
+        }
+
+    }
+    .hero__stats-container {
+        flex-direction: row;
+    }
+    .hero__image {
+        width: 100%;
+        max-width: 103rem;
+        margin: auto;
+    }
+    .card--blue {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .card--white {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .card__title {
+        text-align: left;
+    }
+    .card__text {
+        text-align: left;
+    }
+    .card__image {
+        max-width: 53rem;
+    }
+    .footer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
     }
 }

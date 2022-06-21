@@ -174,8 +174,10 @@ body {
   text-align: center;
   font-size: 1.3rem;
   font-family: "Open Sans", sans-serif;
+  margin: auto;
   margin-bottom: 5rem;
   font-weight: 600;
+  max-width: 55ch;
 }
 .hero__button {
   background-color: hsl(322deg, 100%, 66%);
@@ -239,19 +241,20 @@ body {
   width: 100%;
 }
 
-.features .card {
+/* .features {} */
+.card {
   padding: 8rem 4rem 8rem;
 }
-.features .card--white {
+.card--white {
   margin-top: 6rem;
 }
-.features .card--blue {
+.card--blue {
   background-color: hsl(207deg, 100%, 98%);
 }
-.features .card__image {
+.card__image {
   margin-bottom: 6rem;
 }
-.features .card__title {
+.card__title {
   font-family: "Poppins", sans-serif;
   font-size: 1.8rem;
   font-weight: 700;
@@ -259,11 +262,13 @@ body {
   text-align: center;
   margin-bottom: 1.5rem;
 }
-.features .card__text {
+.card__text {
   color: hsl(192deg, 100%, 9%);
   font-size: 1.3rem;
   font-weight: 600;
+  margin: auto;
   text-align: center;
+  max-width: 60ch;
 }
 
 .cta {
@@ -307,6 +312,7 @@ body {
           hyphens: none;
   font-size: 1.4rem;
   font-weight: 400;
+  max-width: 40ch;
 }
 .footer__row-container {
   margin-top: 4rem;
@@ -347,6 +353,7 @@ body {
           hyphens: none;
   font-size: 1.4rem;
   font-weight: 400;
+  max-width: 41ch;
 }
 .form__email-input {
   background-color: white;
@@ -366,5 +373,95 @@ body {
   border-radius: 0.5rem;
   -webkit-box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
           box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (min-width: 426px) {
+  html {
+    font-size: 68.75%;
+  }
+}
+@media screen and (min-width: 566px) {
+  html {
+    font-size: 75%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .header__logo {
+    width: 24rem;
+  }
+
+  .hero__stats-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .hero__image {
+    width: 100%;
+    max-width: 103rem;
+    margin: auto;
+  }
+
+  .card--blue {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .card--white {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .card__title {
+    text-align: left;
+  }
+
+  .card__text {
+    text-align: left;
+  }
+
+  .card__image {
+    max-width: 53rem;
+  }
+
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
