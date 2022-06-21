@@ -329,6 +329,46 @@ body {
     .footer {
         display: flex;
         flex-direction: row-reverse;
-        justify-content: space-between;
+        justify-content: space-around;
+
+        &__text {
+            font-size: 1.6rem;
+        }
+        &__logo {
+            width: 24rem;
+        }
+        &__social-icon {
+            width: 3rem;
+        }
+    }
+    .form {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: "title ." "text ." "input button";
+        column-gap: 4rem;
+        &__title {
+            font-size: 2rem;
+            grid-area: title;
+            margin: 0;
+        }
+        &__text {
+            font-size: 1.5rem;
+            grid-area: text;
+        }
+        &__email-input {
+            padding: 1.8rem 0;
+            grid-area: input;
+            margin: 0;
+            place-self: center;
+        }
+        &__button {
+            vertical-align: bottom;
+            display: inline-block;
+            font-size: 1.5rem;
+            padding: 2rem 4rem;
+            grid-area: button;
+            place-self: center;
+            width: 100%;
+        }
     }
 }
