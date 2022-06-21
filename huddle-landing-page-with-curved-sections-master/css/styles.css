@@ -450,9 +450,8 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 
   .card--white {
@@ -466,21 +465,30 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 
   .card__title {
     text-align: left;
+    font-size: 3rem;
   }
 
   .card__text {
     text-align: left;
+    font-size: 1.4rem;
   }
 
   .card__image {
     max-width: 53rem;
+  }
+
+  .cta__title {
+    font-size: 3rem;
+  }
+  .cta__button {
+    font-size: 1.6rem;
+    padding: 3rem 10rem;
   }
 
   .footer {

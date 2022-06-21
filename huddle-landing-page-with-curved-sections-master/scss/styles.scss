@@ -290,31 +290,42 @@ body {
             font-size: 1.9rem;
         }
     }
-    
-    
-
-
     .card--blue {
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     .card--white {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     .card__title {
         text-align: left;
+        font-size: 3rem;
     }
     .card__text {
         text-align: left;
+        font-size: 1.4rem;
     }
     .card__image {
         max-width: 53rem;
     }
+    .cta {
+        &__title {
+                font-size: 3rem;
+        }
+        &__button {
+            font-size: 1.6rem;
+            padding: 3rem 10rem;
+        }
+    }
+
+
+
+
     .footer {
         display: flex;
         flex-direction: row-reverse;
