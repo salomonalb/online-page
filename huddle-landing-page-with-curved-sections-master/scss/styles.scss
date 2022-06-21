@@ -65,4 +65,32 @@ body {
         border-radius: 5rem;
         box-shadow: 0 2px 5px 1px transparentize($color: #000000, $amount: .85);
     }
+    &__stats-container {
+        margin-top: 12rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10rem;
+    }
+    &__stats-block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    &__stats-image {
+        width: 3rem;
+    }
+    &__stats-number {
+        font-size: 5rem;
+        font-weight: 700;
+        color: $Very-Dark-Cyan;
+    }
+    &__stats-text {
+        color: gray;
+        font-size: 1.2rem;
+        text-align: center;
+        align-self: stretch;
+    } 
 }

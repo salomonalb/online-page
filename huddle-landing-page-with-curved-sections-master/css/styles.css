@@ -187,4 +187,50 @@ body {
   -webkit-box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
           box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
 }
+.hero__stats-container {
+  margin-top: 12rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10rem;
+}
+.hero__stats-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1rem;
+}
+.hero__stats-image {
+  width: 3rem;
+}
+.hero__stats-number {
+  font-size: 5rem;
+  font-weight: 700;
+  color: hsl(192deg, 100%, 9%);
+}
+.hero__stats-text {
+  color: gray;
+  font-size: 1.2rem;
+  text-align: center;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
 /*# sourceMappingURL=styles.css.map */
