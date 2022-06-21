@@ -157,9 +157,41 @@ body {
     color: white;
     background-color: $Very-Dark-Cyan;
     padding: 6rem 3rem;
+
+    &__logo {
+        width: 20rem;
+        margin-bottom: 2rem;
+    }
+    &__info {
+        font-style: normal;
+    }
+    &__text {
+        hyphens: none;
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+    &__row-container {
+        margin-top: 4rem;
+    }
+    &__info-row {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        margin-top: 2rem;
+    }
+    &__socials-container {
+        display: flex;
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+    &__social-icon {
+        width: 2rem;
+    }
 }
 
 .form {
+    margin-bottom: 10rem;
+
     &__title {
         font-size: 1.6rem;
         text-transform: uppercase;

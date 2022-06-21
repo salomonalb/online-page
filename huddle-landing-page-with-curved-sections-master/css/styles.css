@@ -294,7 +294,47 @@ body {
   background-color: hsl(192deg, 100%, 9%);
   padding: 6rem 3rem;
 }
+.footer__logo {
+  width: 20rem;
+  margin-bottom: 2rem;
+}
+.footer__info {
+  font-style: normal;
+}
+.footer__text {
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.footer__row-container {
+  margin-top: 4rem;
+}
+.footer__info-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+.footer__socials-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+.footer__social-icon {
+  width: 2rem;
+}
 
+.form {
+  margin-bottom: 10rem;
+}
 .form__title {
   font-size: 1.6rem;
   text-transform: uppercase;
