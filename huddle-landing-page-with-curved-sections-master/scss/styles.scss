@@ -7,3 +7,28 @@ $Light-Pink: hsl(321, 100%, 78%);
 $Light-Red: hsl(0, 100%, 63%);
 $Very-Dark-Cyan: hsl(192, 100%, 9%);
 $Very-Pale-Blue: hsl(207, 100%, 98%);
+
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 2.4rem;
+    align-items: center;
+
+    &__logo {
+        width: 9.8rem;
+    }
+    &__button {
+        font-size: 1rem;
+        color: $pink-color;
+        padding: .6rem 2rem;
+        border: 1px solid $pink-color;
+        border-radius: 50px;
+        box-shadow: 0 0 3px 1px transparentize($color: $pink-color, $amount: 0.9);
+    }
+}

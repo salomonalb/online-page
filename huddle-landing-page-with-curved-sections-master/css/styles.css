@@ -121,4 +121,36 @@ body {
 }
 
 /* ---------------------------------------------------------------------*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 2.4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__logo {
+  width: 9.8rem;
+}
+.header__button {
+  font-size: 1rem;
+  color: hsl(322deg, 100%, 66%);
+  padding: 0.6rem 2rem;
+  border: 1px solid hsl(322deg, 100%, 66%);
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 3px 1px rgba(255, 82, 191, 0.1);
+          box-shadow: 0 0 3px 1px rgba(255, 82, 191, 0.1);
+}
 /*# sourceMappingURL=styles.css.map */
