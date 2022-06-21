@@ -131,7 +131,7 @@ body {
 }
 
 .cta {
-    margin: 8rem 4rem 25rem;
+    margin: 8rem 4rem 20rem;
 
     &__title {
         font-family: 'Poppins', sans-serif;
@@ -142,7 +142,6 @@ body {
         margin-bottom: 3rem;
     }
     &__button {
-
         background-color: $pink-color;
         color: white;
         margin: auto;
@@ -150,6 +149,44 @@ body {
         font-size: 1.2rem;
         font-weight: 600;
         border-radius: 5rem;
+        box-shadow: 0 2px 5px 1px transparentize($color: #000000, $amount: .85);
+    }
+}
+
+.footer {
+    color: white;
+    background-color: $Very-Dark-Cyan;
+    padding: 6rem 3rem;
+}
+
+.form {
+    &__title {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        font-weight: 700;
+    }
+    &__text {
+        hyphens: none;
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+    &__email-input {
+        background-color: white;
+        width: 100%;
+        margin: 2rem 0 1.5rem;
+        padding: 1.5rem 0;
+        border-radius: .5rem;
+    }
+    &__button {
+        background-color: $pink-color;
+        color: white;
+        width: 50%;
+        margin-left: auto;
+        padding: 1.2rem 4rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border-radius: .5rem;
         box-shadow: 0 2px 5px 1px transparentize($color: #000000, $amount: .85);
     }
 }
