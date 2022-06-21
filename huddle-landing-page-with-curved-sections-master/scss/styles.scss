@@ -246,19 +246,54 @@ body {
         font-size: 62.5%;
     }
     .header {
+        margin: 8rem;
+        margin-bottom: 24rem;
         &__logo {
             width: 24rem;
         }
+        &__button {
+            font-size: 1.4rem;
+            padding: 1.3rem 3.3rem;
+        }
+    }
+    .hero {
+        &__text-container {
+            margin-bottom: 10rem;
+        }
+        &__title {
+            font-size: 4rem;
+            margin-bottom: 5rem;
+        }
+        &__text {
+            font-size: 1.6rem;
+        }
+        &__button {
+            font-size: 1.6rem;
+            padding: 3rem 10rem;
+        }
+        &__image {
+            width: 100%;
+            max-width: 103rem;
+            margin: auto;
+        }
+        &__stats-container {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        &__stats-number {
+            font-size: 7rem;
+        }
+        &__stats-image {
+            width: 5rem;
+        }
+        &__stats-text {
+            font-size: 1.9rem;
+        }
+    }
+    
+    
 
-    }
-    .hero__stats-container {
-        flex-direction: row;
-    }
-    .hero__image {
-        width: 100%;
-        max-width: 103rem;
-        margin: auto;
-    }
+
     .card--blue {
         display: flex;
         flex-direction: row-reverse;
