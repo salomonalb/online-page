@@ -10,6 +10,10 @@
 /*(app background)*/
 /*(submit button background)*/
 /*(radio button outline)*/
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: "Rubik", sans-serif;
   background-color: hsl(270deg, 20%, 96%);
@@ -17,5 +21,81 @@ body {
 
 .phone {
   background-color: white;
+  width: 25rem;
+  margin: auto;
+  position: relative;
+  padding: 1rem;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+.phone__notch {
+  width: 13rem;
+  background-color: white;
+  padding-top: 3rem;
+  margin: auto;
+  border-radius: 1.5rem;
+  position: absolute;
+  top: -0.25rem;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.app {
+  background-color: hsl(270deg, 20%, 96%);
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.app__avatar {
+  width: 2rem;
+}
+.app__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: -webkit-gradient(linear, right top, left top, from(hsl(293deg, 100%, 63%)), to(hsl(264deg, 100%, 61%)));
+  background-image: linear-gradient(to left, hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem 1.5rem 1rem;
+  border-radius: 0.5rem;
+}
+.app__back {
+  height: 2rem;
+}
+.app__avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid hsl(270deg, 20%, 96%);
+  border-radius: 50%;
+}
+.app__text-container {
+  margin-left: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.app__name {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(270deg, 20%, 96%);
+}
+.app__status {
+  margin: 0;
+  font-size: 0.9rem;
+  color: hsl(276deg, 100%, 81%);
+}
+.app__options {
+  height: 2rem;
+  margin-left: auto;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -37,6 +37,10 @@ $very-vark-desaturated-violet: hsl(271, 36%, 24%);
 /*(radio button outline)*/
 $very-light-magenta: hsl(289, 100%, 72%);
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     font-family: 'Rubik', sans-serif;
     background-color: $light-grayish-violet;
@@ -44,4 +48,68 @@ body {
 
 .phone {
     background-color: white;
+    width: 25rem;
+    margin: auto;
+    position: relative;
+    padding: 1rem;
+    border-radius: 3rem;
+    overflow: hidden;
+
+    &__notch {
+        width: 13rem;
+        background-color: white;
+        padding-top: 3rem;
+        margin: auto;
+        border-radius: 1.5rem;
+        position: absolute;
+        top: -.25rem;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+.app {
+    background-color: $light-grayish-violet;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    &__avatar {
+        width: 2rem;
+    }
+    &__header {
+        display: flex;
+        background-image: linear-gradient(to left, $light-magenta,
+        $light-violet);
+        align-items: center;
+        padding: 3rem 1.5rem 1rem;
+        border-radius: .5rem;
+    }
+    &__back {
+        height: 2rem;
+    }
+    &__avatar {
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 1px solid $light-grayish-violet;
+        border-radius: 50%;
+    }
+    &__text-container {
+        margin-left: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__name {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 700;
+        color: $light-grayish-violet;
+    }
+    &__status {
+        margin: 0;
+        font-size: .9rem;
+        color: $pale-violet;
+    }
+    &__options {
+        height: 2rem;
+        margin-left: auto;
+    }
 }
