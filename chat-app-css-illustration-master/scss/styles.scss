@@ -1,0 +1,47 @@
+@import url('./_reset.scss');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+$font-size: 16px;
+
+/*(sub-heading at the top of the app UI)*/
+$pale-violet:  hsl(276, 100%, 81%);
+
+/*(chat on the left)*/
+$moderate-violet: hsl(276, 55%, 52%);
+
+/*(chat on the right)*/
+$desaturated-dark-violet: hsl(271, 15%, 43%);
+
+/*(placeholder text)*/
+$grayish-blue:  hsl(206, 6%, 79%);
+
+/*(main heading)*/
+$very-dark-desaturated-violet:  hsl(271, 36%, 24%);
+
+/*(paragraph)*/
+$dark-grayish-violet: hsl(270, 7%, 64%);
+
+/*These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient*/
+
+$light-magenta: hsl(293, 100%, 63%);
+$light-violet: hsl(264, 100%, 61%);
+
+$white: hsl(0, 0%, 100%);
+
+/*(app background)*/
+$light-grayish-violet: hsl(270, 20%, 96%);
+
+/*(submit button background)*/
+$very-vark-desaturated-violet: hsl(271, 36%, 24%);
+
+/*(radio button outline)*/
+$very-light-magenta: hsl(289, 100%, 72%);
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: $light-grayish-violet;
+}
+
+.phone {
+    background-color: white;
+}
