@@ -27,6 +27,8 @@ body {
   padding: 1rem;
   border-radius: 3rem;
   overflow: hidden;
+  -webkit-box-shadow: 0.7rem 0.7rem 1rem 0.1rem rgba(0, 0, 0, 0.14);
+          box-shadow: 0.7rem 0.7rem 1rem 0.1rem rgba(0, 0, 0, 0.14);
 }
 .phone__notch {
   width: 13rem;
@@ -60,6 +62,8 @@ body {
           align-items: center;
   padding: 3rem 1.5rem 1rem;
   border-radius: 0.5rem;
+  -webkit-box-shadow: 0 0 0.6rem 0.3rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 0.6rem 0.3rem rgba(0, 0, 0, 0.15);
 }
 .app__back {
   height: 2rem;
@@ -71,7 +75,7 @@ body {
   border-radius: 50%;
 }
 .app__text-container {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,5 +101,101 @@ body {
 .app__options {
   height: 2rem;
   margin-left: auto;
+}
+.app__message {
+  margin: 1rem;
+  color: hsl(276deg, 55%, 52%);
+  font-size: 0.8rem;
+  background-color: #ebe7ef;
+  padding: 0.8rem;
+  width: 45%;
+  border-radius: 0.8rem;
+  border-bottom-left-radius: 0;
+}
+.app__message--sent, .app__message--sent--small {
+  margin: 1rem 1rem 1rem auto;
+  color: hsl(271deg, 15%, 43%);
+  font-size: 0.8rem;
+  background-color: white;
+  padding: 0.8rem;
+  width: 40%;
+  border-radius: 0.8rem;
+  border-bottom-right-radius: 0;
+  -webkit-box-shadow: 0 0.3rem 0.3rem 0.15rem rgba(0, 0, 0, 0.04);
+          box-shadow: 0 0.3rem 0.3rem 0.15rem rgba(0, 0, 0, 0.04);
+}
+.app__message--sent--small {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.app__images-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 1rem;
+}
+.app__image {
+  width: 4rem;
+  border-radius: 0.9rem;
+}
+.app__radio-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  background-image: -webkit-gradient(linear, left top, right top, from(hsl(293deg, 100%, 63%)), to(hsl(264deg, 100%, 61%)));
+  background-image: linear-gradient(to right, hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
+  margin: 1rem;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 0.8rem;
+  background-color: #ebe7ef;
+  padding: 0.9rem;
+  width: 60%;
+  border-radius: 0.8rem;
+  border-bottom-left-radius: 0;
+  -webkit-box-shadow: 0 0.3rem 0.2rem 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 0.3rem 0.2rem 0 rgba(0, 0, 0, 0.12);
+}
+.app__radio-button-check {
+  height: 2rem;
+}
+.app__radio-button-price {
+  margin-left: auto;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.app__text-input {
+  background-color: white;
+  margin: 2rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+  border-radius: 2rem;
+  position: relative;
+  color: lightgray;
+}
+.app__send-button {
+  position: absolute;
+  right: 0.4rem;
+  bottom: 0.4rem;
+  height: 2.5rem;
+  display: -ms-inline-grid;
+  display: inline-grid;
+  place-items: center;
+  width: 2.5rem;
+  border-radius: 50%;
+  background-color: hsl(271deg, 36%, 24%);
+}
+.app__send-icon {
+  height: 2rem;
 }
 /*# sourceMappingURL=styles.css.map */

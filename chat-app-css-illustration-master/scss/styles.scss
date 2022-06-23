@@ -54,6 +54,7 @@ body {
     padding: 1rem;
     border-radius: 3rem;
     overflow: hidden;
+    box-shadow: .7rem .7rem 1rem .1rem transparentize($color: #000000, $amount: 0.86);
 
     &__notch {
         width: 13rem;
@@ -81,6 +82,7 @@ body {
         align-items: center;
         padding: 3rem 1.5rem 1rem;
         border-radius: .5rem;
+        box-shadow: 0 0 .6rem .3rem transparentize($color: #000000, $amount: 0.85);
     }
     &__back {
         height: 2rem;
@@ -92,7 +94,7 @@ body {
         border-radius: 50%;
     }
     &__text-container {
-        margin-left: 1.5rem;
+        margin-left: 1rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -111,5 +113,92 @@ body {
     &__options {
         height: 2rem;
         margin-left: auto;
+    }
+    &__message {
+        margin: 1rem;
+        color: $moderate-violet;
+        font-size: .8rem;
+        background-color: darken($color: $light-grayish-violet, $amount: 4%);
+        padding: .8rem;
+        width: 45%;
+        border-radius: .8rem;
+        border-bottom-left-radius: 0;
+        
+        
+    }
+    &__message--sent {
+        margin: 1rem 1rem 1rem auto;
+        color: $desaturated-dark-violet;
+        font-size: .8rem;
+        background-color: white;
+        padding: .8rem;
+        width: 40%;
+        border-radius: .8rem;
+        border-bottom-right-radius: 0;
+        box-shadow: 0 .3rem .3rem .15rem transparentize($color: #000000, $amount: 0.96);
+
+        &--small {
+            @extend .app__message--sent;
+            width: max-content;
+        }
+    }
+    &__images-wrapper {
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-end;
+        margin: 1rem;
+    }
+    &__image {
+        width: 4rem;
+        border-radius: .9rem;
+    }
+    &__radio-button {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        background-image: linear-gradient(to right, $light-magenta,
+        $light-violet);
+        margin: 1rem;
+        color: $white;
+        font-size: .8rem;
+        background-color: darken($color: $light-grayish-violet, $amount: 4%);
+        padding: .9rem;
+        width: 60%;
+        border-radius: .8rem;
+        border-bottom-left-radius: 0;
+        box-shadow: 0 .3rem .2rem 0 transparentize($color: #000000, $amount: 0.88);
+    }
+    &__radio-button-check {
+        height: 2rem;
+    }
+    &__radio-button-price {
+        margin-left: auto;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    &__text-input {
+        background-color: white;
+        margin: 2rem 1rem;
+        display: flex;
+        padding: 1rem ;
+        border-radius: 2rem;
+        position: relative;
+        color: lightgray;
+
+    }
+    &__send-button {
+        position: absolute;
+        right: .4rem;
+        bottom: .4rem;
+        height: 2.5rem;
+        display: inline-grid;
+        place-items: center;
+        width: 2.5rem;
+        border-radius: 50%;
+        background-color: $very-vark-desaturated-violet;
+        
+    }
+    &__send-icon {
+        height: 2rem;
     }
 }
