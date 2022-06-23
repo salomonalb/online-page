@@ -60,7 +60,7 @@ main {
 
 .app {
   background-color: hsl(270deg, 20%, 96%);
-  border-radius: 1.5rem;
+  border-radius: 2rem;
   overflow: hidden;
 }
 .app__avatar {
