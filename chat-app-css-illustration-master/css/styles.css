@@ -239,4 +239,18 @@ main {
   margin-bottom: 10rem;
   line-height: 2;
 }
+
+@media screen and (min-width: 682px) {
+  .title, .paragraph {
+    text-align: left;
+  }
+
+  .phone, .text-container {
+    margin: 0;
+  }
+
+  main {
+    margin-top: 6rem;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
