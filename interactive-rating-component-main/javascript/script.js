@@ -1,3 +1,4 @@
+/* Getting the elements from the HTML and assigning them to variables. */
 const numberOne = document.getElementById('one')
 const numberTwo = document.getElementById('two')
 const numberThree = document.getElementById('three')
@@ -5,9 +6,13 @@ const numberFour = document.getElementById('four')
 const numberFive = document.getElementById('five')
 const submitButton = document.getElementById('submit')
 const root = document.getElementById('root');
+/* Setting the value of the variable value to 0. */
 let value = 0;
 
 
+/* Adding an event listener to each of the number buttons. When the button is clicked, it checks to see
+if the button is selected. If it is not selected, it sets the button to selected and sets all the
+other buttons to not selected. If the button is selected, it sets the button to not selected. */
 numberOne.addEventListener('click', () => {
     let selected = numberOne.getAttribute('data-selected')
     console.log(selected)
@@ -89,6 +94,10 @@ numberFive.addEventListener('click', () => {
     }
 })
 
+/* An event listener that is listening for a click on the submit button. When the button is clicked, it
+checks to see if a number has been selected. If a number has been selected, it replaces the HTML in
+the root element with a thank you message. If a number has not been selected, it alerts the user
+that they must select a number. */
 submitButton.addEventListener('click', ()=> {
     if (value) {
         root.innerHTML = `<article class="rating-card">
