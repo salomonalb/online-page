@@ -26,6 +26,7 @@ numberOne.addEventListener('click', () => {
         value = 1
     } else {
         numberOne.setAttribute('data-selected', 'false')
+        value = 0
     }
 })
 
@@ -42,6 +43,7 @@ numberTwo.addEventListener('click', () => {
         value = 2
     } else {
         numberTwo.setAttribute('data-selected', 'false')
+        value = 0
     }
 })
 
@@ -58,6 +60,7 @@ numberThree.addEventListener('click', () => {
         value = 3
     } else {
         numberThree.setAttribute('data-selected', 'false')
+        value = 0
     }
 })
 
@@ -74,6 +77,7 @@ numberFour.addEventListener('click', () => {
         value = 4
     } else {
         numberFour.setAttribute('data-selected', 'false')
+        value = 0
     }
 })
 
@@ -91,6 +95,7 @@ numberFive.addEventListener('click', () => {
         value = 5
     } else {
         numberFive.setAttribute('data-selected', 'false')
+        value = 0
     }
 })
 
@@ -100,7 +105,7 @@ the root element with a thank you message. If a number has not been selected, it
 that they must select a number. */
 submitButton.addEventListener('click', ()=> {
     if (value) {
-        root.innerHTML = `<article class="rating-card">
+        root.innerHTML = `<article class="rating-card slideRight">
     <img class="rating-card__illustration" src="images/illustration-thank-you.svg" alt="illustration">
     <p class="rating-card__user-selection">You selected ${value} out of 5</p>
     <h2 class="rating-card__title--submited">Thank you!</h2>

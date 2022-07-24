@@ -113,6 +113,7 @@ body {
   letter-spacing: 2px;
   -webkit-transition: all 150ms;
   transition: all 150ms;
+  font-weight: 700;
 }
 .rating-card__submit:hover {
   background-color: hsl(0deg, 0%, 100%);
