@@ -95,6 +95,13 @@ body {
           transform: scale(1.125);
   cursor: pointer;
 }
+.rating-card__number[data-selected=true] {
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+  -webkit-transform: scale(1.125);
+          transform: scale(1.125);
+  cursor: pointer;
+}
 .rating-card__submit {
   width: 100%;
   background-color: hsl(25deg, 97%, 53%);

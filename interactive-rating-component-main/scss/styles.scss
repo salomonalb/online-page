@@ -87,10 +87,15 @@ body {
         border-radius: 50%;
         color: $medium-grey;
         transition: all 150ms;
-        
         &:hover {
             color: $white;
             background-color: $light-grey;
+            transform: scale(1.125);
+            cursor: pointer;
+        }
+        &[data-selected="true"] {
+            background-color: $orange;
+            color: $white;
             transform: scale(1.125);
             cursor: pointer;
         }
@@ -129,3 +134,4 @@ body {
     }
 
 }
+
