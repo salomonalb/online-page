@@ -95,6 +95,18 @@ body {
             left: -6%;
         }
     }
+    &__box-illustration {
+        display: none;
+        @media screen and (min-width: 1440px) {
+            display: block;
+            position: absolute;
+            top: 33rem;
+            left: 14%;
+            z-index: 6;
+            width: 12rem;
+        }
+        
+    }
     &__faq-container {
         width: 100%;
         max-width: 36rem;
