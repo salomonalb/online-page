@@ -90,7 +90,7 @@ body {
         &:hover {
             color: $white;
             background-color: $light-grey;
-            transform: scale(1.125);
+            transform: scale(1.025);
             cursor: pointer;
         }
         &[data-selected="true"] {

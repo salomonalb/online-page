@@ -91,8 +91,8 @@ body {
 .rating-card__number:hover {
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(217deg, 12%, 63%);
-  -webkit-transform: scale(1.125);
-          transform: scale(1.125);
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
   cursor: pointer;
 }
 .rating-card__number[data-selected=true] {
