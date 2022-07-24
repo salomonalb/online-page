@@ -51,27 +51,64 @@ body {
     padding-bottom: 5rem;
     border-radius: 2.5rem;
     position: relative;
+    max-width: 92rem;
+    min-width: 21rem;
+    display: flex;
+    
+    @media screen and (min-width: 1440px) {
+        margin: auto;
+        margin-block: 5rem;
+        overflow: hidden;
+        padding-top: 5rem;
+    }
 
+    &__illustration-section-container {
+        max-width: 39rem;
+        
+        @media screen and (min-width: 1440px) {
+            position: relative;
+            padding-inline: 19.5rem;
+        }
+    }
     &__illustration {
         width: 23rem;
         position: absolute;
         top: -11rem;
         left: 50%;
         transform: translateX(-50%);
-        
+        @media screen and (min-width: 1440px) {
+            width: 100%;
+            top: 10rem;
+            left: 25%;
+            z-index: 5;
+        }
     }
     &__illustration-shadow {
+        width: 23rem;
         position: absolute;
         top: 0;
         left: 50%;
         transform: translateX(-50%);
+        @media screen and (min-width: 1440px) {
+            width: 200%;
+            top: -16rem;
+            left: -6%;
+        }
+    }
+    &__faq-container {
+        width: 100%;
+        max-width: 36rem;
+        margin: auto;
     }
     &__title {
         font-size: 2.5rem;
         color: $very-dark-desaturated-blue;
         text-align: center;
         margin-top: 3rem;
-        margin-bottom: 3rem
+        margin-bottom: 3rem;
+        @media screen and (min-width: 1440px) {
+            text-align: left;
+        }
     }
     &__accordion {
         border-bottom: 2px solid $light-grayish-blue;
