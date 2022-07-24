@@ -1,10 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-img {
+img, picture {
     display: block;
 }
 /* --------------- */ 
 
+/* text */ 
+$very-dark-desaturated-blue: hsl(238, 29%, 16%);
+$soft-red: hsl(14, 88%, 65%);
+$font-family: 'Kumbh Sans', sans-serif;
+
+/* Background gradient: */
+
+$soft-violet: hsl(273, 75%, 66%);
+$soft-blue: hsl(240, 73%, 65%);
+
+/* text */
+$very-dark-grayish-blue: hsl(237, 12%, 33%);
+$vark-grayish-blue: hsl(240, 6%, 50%);
+$font-size: 1.2rem;
+
+/* Divider */
+
+$light-grayish-blue: hsl(240, 5%, 91%);
+
+
+/* ----------------- */
+html {
+    font-size: 10px;
+}
+
+body {
+    background: linear-gradient(to top, $soft-blue, $soft-violet);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: $font-family;
+}
+.faq-card {
+    background-color: white;
+    margin-top: 16rem;
+    margin-inline: 2.5rem;
+    margin-bottom: 8rem;
+    padding: 3rem;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    border-radius: 2.5rem;
+    position: relative;
+
+    &__illustration {
+        width: 23rem;
+        position: absolute;
+        top: -11rem;
+        left: 5.5rem;
+        
+    }
+    &__illustration-shadow {
+        position: absolute;
+        top: 0;
+        left: 5rem;
+    }
+    &__title {
+        font-size: 2.5rem;
+        color: $very-dark-desaturated-blue;
+        text-align: center;
+        margin-top: 3rem;
+        margin-bottom: 3rem
+    }
+    &__accordion {
+        border-bottom: 2px solid $light-grayish-blue;
+        padding-block: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr min-content;
+        grid-template-areas: "q q i" "a a i";
+
+    }
+    &__question {
+        font-size: 1.25rem;
+        font-weight: 400;
+        color: $very-dark-desaturated-blue;
+        grid-area: q;
+        margin-bottom: 1rem;
+
+    }
+    &__icon {
+        grid-area: i;
+        margin-top: 0.5rem;
+    }
+    &__answer {
+        display: none;
+        grid-area: a;
+        color: $very-dark-grayish-blue;
+        font-size: 1.125rem;
+    }
+}
+
+.question-open {
+    font-weight: 700;
+}
+.icon-open {
+    transform: rotate(180deg);
+}
+.answer-open {
+    display: block;
+}
