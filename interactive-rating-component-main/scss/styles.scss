@@ -34,6 +34,12 @@ body {
     padding-inline: 2.5rem;
     padding-block: 3rem;
     border-radius: 15px;
+    max-width: fit-content;
+    @media screen and (min-width: 426px) {
+        margin-inline: auto;
+        margin-top: 5rem
+        
+    }
 
     &__icon-container {
         background-color: $grayish-blue;
@@ -58,6 +64,7 @@ body {
         font-weight: 400;
         color: $medium-grey;
         margin-bottom: 3rem;
+        max-width: 35ch;
 
         &--submited {
             @extend .rating-card__paragraph;
@@ -79,6 +86,14 @@ body {
         padding-block: 1.5rem;
         border-radius: 50%;
         color: $medium-grey;
+        transition: all 150ms;
+        
+        &:hover {
+            color: $white;
+            background-color: $light-grey;
+            transform: scale(1.125);
+            cursor: pointer;
+        }
     }
     &__submit {
         width: 100%;
@@ -89,6 +104,14 @@ body {
         margin-bottom: 1.5rem;
         border-radius: 100px;
         letter-spacing: 2px;
+        transition: all 150ms;
+        
+        &:hover {
+            background-color: $white;
+            color: $orange;
+            cursor: pointer;
+            transform: scale(1.012);
+        }
     }
     &__illustration {
         display: block;
@@ -106,4 +129,3 @@ body {
     }
 
 }
-
