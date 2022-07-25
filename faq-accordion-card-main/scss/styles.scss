@@ -33,6 +33,8 @@ $light-grayish-blue: hsl(240, 5%, 91%);
 /* ----------------- */
 html {
     font-size: 10px;
+    overflow-y: scroll;
+    padding-bottom: 20rem;
 }
 
 body {
@@ -41,12 +43,13 @@ body {
     background-attachment: fixed;
     font-family: $font-family;
     padding-inline: 2.5rem;
+    padding-bottom: 10rem;
 }
 .faq-card {
     background-color: white;
     margin-top: 16rem;
     margin-inline: auto;
-    margin-bottom: 8rem;
+    margin-bottom: 10rem;
     padding: 3rem;
     padding-top: 10rem;
     padding-bottom: 5rem;
@@ -100,6 +103,7 @@ body {
         }
     }
     &__wrapper {
+        margin-bottom: 10rem;
         position: relative;
         width: fit-content;
         margin: auto;
@@ -125,8 +129,14 @@ body {
         /* change the with for each viewport  and
         add some bottom padding to the main card or
         to the wrapper */
-        @media screen and (max-width: 320px) {
+        @media screen and (min-width: 320px) {
             width: 21rem;
+        }
+        @media screen and (min-width: 375px) {
+            width: 26rem;
+        }
+        @media screen and (min-width: 470px) {
+            width: 36rem;
         }
         @media screen and (min-width: 870px) {
             width: 36rem;
