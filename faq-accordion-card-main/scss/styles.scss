@@ -38,7 +38,7 @@ html {
 body {
     background: linear-gradient(to top, $soft-blue, $soft-violet);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-attachment: fixed;
     font-family: $font-family;
     padding-inline: 2.5rem;
 }
@@ -70,8 +70,6 @@ body {
         max-width: 39rem;
         
         @media screen and (min-width: 870px) {
-
-
             position: relative;
             padding-inline: 19.5rem;
         }
@@ -83,8 +81,6 @@ body {
         left: 50%;
         transform: translateX(-50%);
         @media screen and (min-width: 870px) {
-
-
             width: 100%;
             top: 10rem;
             left: 25%;
@@ -98,24 +94,33 @@ body {
         left: 50%;
         transform: translateX(-50%);
         @media screen and (min-width: 870px) {
-
-
             width: 200%;
             top: -16rem;
             left: -6%;
         }
     }
+    &__wrapper {
+        position: relative;
+        width: fit-content;
+        margin: auto;
+    }
     &__box-illustration {
         display: none;
         @media screen and (min-width: 870px) {
-
-
             display: block;
             position: absolute;
-            top: 33rem;
-            left: 14%;
+            bottom: 16rem;
+            left: -6.8rem;
+            z-index: 10;
+            width: 14rem;
+            /*
+            ;
+            top: 23rem;
+            left: -25%;
             z-index: 6;
-            width: 12rem;
+            
+            visibility: visible;
+            z-index: 10;*/
         }
         
     }
@@ -131,8 +136,6 @@ body {
         margin-top: 3rem;
         margin-bottom: 3rem;
         @media screen and (min-width: 870px) {
-
-
             text-align: left;
         }
     }
