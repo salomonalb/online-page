@@ -103,31 +103,34 @@ body {
         position: relative;
         width: fit-content;
         margin: auto;
+        overflow: visible;
+        height: 47rem;
     }
     &__box-illustration {
         display: none;
         @media screen and (min-width: 870px) {
             display: block;
             position: absolute;
-            bottom: 16rem;
+            bottom: 7rem;
             left: -6.8rem;
             z-index: 10;
             width: 14rem;
-            /*
-            ;
-            top: 23rem;
-            left: -25%;
-            z-index: 6;
-            
-            visibility: visible;
-            z-index: 10;*/
         }
         
     }
     &__faq-container {
-        width: 100%;
-        max-width: 36rem;
+
+        
         margin: auto;
+        /* change the with for each viewport  and
+        add some bottom padding to the main card or
+        to the wrapper */
+        @media screen and (max-width: 320px) {
+            width: 21rem;
+        }
+        @media screen and (min-width: 870px) {
+            width: 36rem;
+        }
     }
     &__title {
         font-size: 2.5rem;
@@ -140,14 +143,18 @@ body {
         }
     }
     &__accordion {
-        /* test */
-        
-        /* ** */
         border-bottom: 2px solid $light-grayish-blue;
         padding-block: 2rem;
         display: grid;
         grid-template-columns: 1fr 1fr min-content;
         grid-template-areas: "q q i" "a a i";
+        
+        &:hover {
+            cursor: pointer;
+        }
+        &:hover .faq-card__question {
+            color: $soft-red;
+        }
 
     }
     &__question {
@@ -179,3 +186,6 @@ body {
 .answer-open {
     display: block;
 }
+
+/* make the wrapper a fixed height but allow overflow to be shown 
+this way you can set the position of the box and still open the accordions */
