@@ -39,15 +39,15 @@ body {
     margin: auto;
     background-color: white;
     border-radius: 1.5rem;
-    
+
     &__image-container {
         height: 20rem;
         overflow: hidden;
         border-top-right-radius: 1.5rem;
         border-top-left-radius: 1.5rem;
-    }
-    &__image{
-
+        background-image: url(../images/drawers.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
     }
     &__text-container {
         margin-inline: 3.5rem;
@@ -63,6 +63,7 @@ body {
     }
     &__grid-container {
         display: grid;
+        align-items: center;
         grid-template-columns: min-content max-content 1fr min-content;
         grid-template-areas:"avatar author . share" 
                             "avatar date   . share";
@@ -93,5 +94,42 @@ body {
         height: 3.3rem;
         border-radius: 40%;
         background-color: $Light-Grayish-Blue;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .card {
+        flex-direction: row;
+        max-width: 73rem;
+        &__image-container {
+            flex-shrink: 0;
+            margin: 0;
+            height: unset;
+            border-bottom-left-radius: 1.5rem;
+            border-top-right-radius: 0px;
+            width: 28rem;
+            
+        }
+        &__content-wrapper {
+            width: 44rem;
+            flex-shrink: 0;
+        }
+        &__text-container {
+            padding: 0;
+            margin-inline: 4rem;
+            margin-top: 4rem;
+        }
+        &__title {
+            font-size: 2rem;
+        }
+        &__paragraph {
+            font-size: 1.3rem;
+        }
+        &__author {
+            font-size: 1.3rem;
+        }
+        &__date {
+            font-size: 1.3rem;
+        }
     }
 }
