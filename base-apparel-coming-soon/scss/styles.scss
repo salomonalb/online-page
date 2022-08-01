@@ -46,7 +46,7 @@ header {
     background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 }
 .image {
-    filter: brightness(5%);
+    /*filter: brightness(5%);*/
     max-width: 100%;
     margin: auto;
 }
@@ -80,4 +80,44 @@ header {
     max-width: 31ch;
     margin-inline: auto;
     margin-block: 3rem 4rem;
+}
+.form {
+    max-width: min-content;
+    margin: auto;
+    position: relative;
+    margin-bottom: 5rem;
+}
+.email-input {
+    background-color: transparent;
+    border: 1px solid transparentize($color: $DesaturatedRed, $amount: 0.5);
+    padding-inline: 2rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+    border-radius: 250px;
+    font-size: 1.2rem;
+    font-family: inherit;
+    width: 31ch;
+    
+
+    &::placeholder {
+        font-size: 1.3rem;
+        color: transparentize($color: $DesaturatedRed, $amount: 0.5);
+    }
+}
+
+.submit {
+    border: none;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%) );
+    padding-inline: 2rem;
+    padding-block: 0.8rem;
+    border-radius: 25rem;
+    box-shadow: 0 8px 15px 1.5px transparentize($color: $DesaturatedRed, $amount: 0.4);
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &:hover {
+        opacity: 0.7;
+        cursor: pointer;
+    }
 }
