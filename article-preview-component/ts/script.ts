@@ -1,20 +1,18 @@
 "use strict"
+
 const shareButton = document.getElementById('share-button');
 const shareComponent = document.getElementById('share-component');
-const card = document.getElementById('card')
+const main = document.getElementsByTagName('main')[0];
+const shareButton2 = document.getElementById('share-button2')
 
-shareButton?.addEventListener('click', () => {
-    shareComponent?.classList.remove('js-toggle-visibility');
+
+
+
+shareButton?.addEventListener('click', ()=> {
+    shareComponent?.classList.toggle('hidden');
 })
 
-window.addEventListener('click', (event) => {
-    if (event.target === shareComponent) {
-        shareComponent?.classList.add('js-toggle-visibility');
-    } else if (event.target === document.body) {
-        shareComponent?.classList.add('js-toggle-visibility');
-    } else if (event.target === card) {
-        shareComponent?.classList.add('js-toggle-visibility');
-    }
+shareButton2?.addEventListener('click', () => {
+    shareComponent?.classList.add('hidden')
 })
-
 

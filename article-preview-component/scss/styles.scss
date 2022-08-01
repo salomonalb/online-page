@@ -107,18 +107,18 @@ body {
 }
 
 .share-component {
+    display: flex;
     width: 100%;
     max-width: 33rem;
     margin: auto;
-    display: flex;
     padding-inline: 3.5rem;
-    padding-block: 2rem;
+    padding-block: 2.2rem;
     align-items: center;
     background-color: $very-Dark-Grayish-Blue;
     border-bottom-left-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
     position: relative;
-    transform: translateY(-7.5rem);
+    transform: translateY(-7.9rem);
 
     @media screen and (min-width: 906px) {
     transform: none;
@@ -150,9 +150,11 @@ body {
     }
     &__facebook, &__pinterest, &__twitter {
         margin-right: 1rem;
+        transition: all 200ms;
         
         &:hover {
             cursor: pointer;
+            transform: scale(1.125);
         }
     }
     &__share-button {
@@ -174,9 +176,7 @@ body {
     }
 }
 
-.js-toggle-visibility {
-    display: none;
-}
+
 
 @media screen and (min-width: 906px) {
     .card {
@@ -213,4 +213,8 @@ body {
             font-size: 1.3rem;
         }
     }
+}
+
+.hidden {
+    display: none;
 }
