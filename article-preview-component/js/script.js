@@ -1,1 +1,1 @@
-"use strict";
+"use strict";const shareButton=document.getElementById("share-button"),shareComponent=document.getElementById("share-component"),card=document.getElementById("card");null==shareButton||shareButton.addEventListener("click",(()=>{null==shareComponent||shareComponent.classList.remove("js-toggle-visibility")})),window.addEventListener("click",(e=>{(e.target===shareComponent||e.target===document.body||e.target===card)&&(null==shareComponent||shareComponent.classList.add("js-toggle-visibility"))}));
