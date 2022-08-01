@@ -8,9 +8,7 @@
 img, svg {
     display: block;
 }
-.image {
-    filter: brightness(5%);
-}
+
 
 /* ----- */
 
@@ -32,7 +30,7 @@ html {
 body {
     font-size: $Font-size;
     font-family: $font-fam;
-    
+    color: $DarkGrayishRed;
 }
 
 header {
@@ -44,5 +42,42 @@ header {
     width: 10rem;
     height: 2.2rem;
 }
+.image-container {
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+.image {
+    filter: brightness(5%);
+    max-width: 100%;
+    margin: auto;
+}
 
+.text-container {
+    max-width: 100%;
+    margin: auto;
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    padding: 3.2rem;
+}
+.title {
+    font-size: 3rem;
+    text-align: center;
+    line-height: 1.2;
+}
+.title-line {
+    display: block;
+    letter-spacing: 15px;
+}
+.--light {
+    font-weight: 300;
+    color: $DesaturatedRed;
+    letter-spacing: 12.5px;
+}
 
+.paragraph {
+    color: $DesaturatedRed;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    text-align: center;
+    max-width: 31ch;
+    margin-inline: auto;
+    margin-block: 3rem 4rem;
+}
