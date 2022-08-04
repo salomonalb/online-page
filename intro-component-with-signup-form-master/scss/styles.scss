@@ -39,10 +39,11 @@ body {
 
     &__text-container {
         margin-top: 10rem;
+        margin-bottom: 7rem;
         margin-inline: auto;
         display: flex;
         flex-direction: column;
-        gap: 4rem;
+        gap: 3rem;
     }
     &__heading {
         font-size: 2.4rem;
@@ -57,5 +58,24 @@ body {
         text-align: center;
         max-width: 32ch;
         margin-inline: auto;
+    }
+    &__form-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+    &__banner {
+        background-color: $blue;
+        padding-block: 2.4rem;
+        padding-inline: 8rem;
+        color: white;
+        font-size: 1.3rem;
+        text-align: center;
+        border-radius: 1rem;
+        box-shadow: 0 8px 0 0 transparentize($color: #000000, $amount: .8);
+        
+        & .bold {
+            font-weight: 700;
+        }
     }
 }
