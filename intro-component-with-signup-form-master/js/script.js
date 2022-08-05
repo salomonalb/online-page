@@ -8,6 +8,25 @@ const submitButton = document.getElementById('submit');
 
 const formInputs = [nameInput, lastnameInput, emailInput, passwordInput]
 
+formInputs.forEach((input)=> {
+    input.addEventListener('input', event => {
+        input.value.length >= 1
+        ? input.classList.remove('--error')
+        : input.classList.add('--error')
+    })
+})
+
+
+emailInput.addEventListener('invalid', () => {
+    emailInput.classList.add('--error');
+})
+
+/* nameInput.addEventListener('input', (event) => {
+    nameInput.value.length >= 1 
+    ? nameInput.classList.remove('--error')
+    : nameInput.classList.add('--error')
+}) */
+
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -24,6 +43,11 @@ form.addEventListener('submit', (event) => {
     if (emailInput.value.length < 1) {
         emailInput.classList.add('--error');
     }
+
+
+
+    
+
 })
 
 
