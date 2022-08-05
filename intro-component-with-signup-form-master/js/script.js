@@ -16,43 +16,27 @@ formInputs.forEach((input)=> {
     })
 })
 
-
 emailInput.addEventListener('invalid', () => {
     emailInput.classList.add('--error');
 })
 
-/* nameInput.addEventListener('input', (event) => {
-    nameInput.value.length >= 1 
-    ? nameInput.classList.remove('--error')
-    : nameInput.classList.add('--error')
-}) */
-
-
 form.addEventListener('submit', (event) => {
-    event.preventDefault();
 
     if (nameInput.value.length < 1) {
         nameInput.classList.add('--error');
+        event.preventDefault();
     }
     if (lastnameInput.value.length < 1) {
         lastnameInput.classList.add('--error');
+        event.preventDefault();
     }
     if (passwordInput.value.length < 1) {
         passwordInput.classList.add('--error');
+        event.preventDefault();
     }
     if (emailInput.value.length < 1) {
         emailInput.classList.add('--error');
+        event.preventDefault();
     }
-
-
-
-    
-
 })
-
-
-/* regular expression for the email */
-/* onchange event for the inputs to add or remove the error class
-but onlyafter trying to submite once, maybe add the event listener inside the first event listener for submitting the form. */
-/* if values are correct submit the form */ 
 
