@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+
+
+/* fix bug that changes thw width of the form when adding the error classes */ 
+
 $red: hsl(0, 100%, 74%);
 $green: hsl(154, 59%, 51%);
 $blue: hsl(248, 32%, 49%);
@@ -148,7 +152,7 @@ $breakpoint: 1020px;
         color: red;
         text-align: right;
         font-style: italic;
-        margin-right: 3px;
+        /*margin-right: 3px;*/
         font-size: 1rem;
         display: none;
 
@@ -204,5 +208,8 @@ $breakpoint: 1020px;
 
     &:focus {
         outline: 2px solid red;
+    }
+    &::placeholder {
+        color: red;
     }
 }
