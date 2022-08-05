@@ -30,40 +30,72 @@ body {
     background-position: center;
     background-size: cover;
     background-color: $red;
+    @media screen and (min-width: 426px) {
+        background-image: url(../images/bg-intro-desktop.png);
+    } 
 }
+
+$breakpoint: 1020px;
 
 .hero {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    flex-direction: column;
     padding-inline: 2.4rem;
     margin-bottom: 6rem;
+    margin-inline: auto;
+    max-width: 126rem;
+    gap: 7rem;
+    @media screen and (min-width: $breakpoint) {
+        flex-direction: row;
+        margin-top: 12rem;
+    }
+
 
     &__text-container {
         margin-top: 10rem;
-        margin-bottom: 7rem;
         margin-inline: auto;
         display: flex;
         flex-direction: column;
         gap: 3rem;
+        @media screen and (min-width: $breakpoint) {
+            margin-top: 18rem;
+        }
+        
     }
     &__heading {
         font-size: 2.4rem;
+        font-size: clamp(2.4rem, 6.4vw, 3.8rem );
         color: white;
         max-width: 14ch;
         margin-inline: auto;
         text-align: center;
+        text-shadow: 0 0 4px transparentize($color: #000000, $amount: .8);
+        @media screen and (min-width: $breakpoint) {
+            text-align: left;
+            margin-inline: 0;
+        }
+
     }
     &__paragraph {
         font-size: 1.5rem;
+        font-size: clamp(1.5rem, 4vw, 1.8rem );
         color: white;
         text-align: center;
         max-width: 32ch;
         margin-inline: auto;
+        text-shadow: 0 0 4px transparentize($color: #000000, $amount: .8);
+        @media screen and (min-width: $breakpoint) {
+            text-align: left;
+            max-width: 78ch;
+        }
     }
     &__form-container {
         display: flex;
         flex-direction: column;
         gap: 2.4rem;
+        max-width: 54rem;
+        margin-inline: auto;
     }
     &__banner {
         background-color: $blue;
