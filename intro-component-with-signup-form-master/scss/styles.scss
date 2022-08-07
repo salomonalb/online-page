@@ -34,7 +34,7 @@ body {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    background-color: $red;
+    background-color: $green;
     @media screen and (min-width: 426px) {
         background-image: url(../images/bg-intro-desktop.png);
     } 
@@ -100,7 +100,7 @@ $breakpoint: 1020px;
         flex-direction: column;
         gap: 2.4rem;
         max-width: 54rem;
-        margin-inline: auto;
+        margin-inline: min(72.4rem, auto);
     }
     &__banner {
         background-color: $blue;
@@ -150,14 +150,15 @@ $breakpoint: 1020px;
         margin-top: -1.2rem;
         margin-bottom: 1.25rem;
         color: red;
-        text-align: right;
+        text-align: left;
         font-style: italic;
-        /*margin-right: 3px;*/
+        margin-right: 3px;
         font-size: 1rem;
-        display: none;
+        display: block;
+        width: 200%;
 
         .--error+& {
-            display: block;
+            display: inline-block;
         }
     }
     &__button {
