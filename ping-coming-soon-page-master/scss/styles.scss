@@ -37,6 +37,7 @@ $font-family: 'Libre Franklin', sans-serif;
         display: block;
         max-width: 100%;
         width: 5.5rem;
+        width: clamp(5.5rem, 14.5vw, 8.8rem);
         margin: auto;
     }
     &__main-container {
@@ -46,6 +47,7 @@ $font-family: 'Libre Franklin', sans-serif;
     }
     &__title {
         font-size: 2rem;
+        font-size: clamp(2rem, 5vw ,4rem);
         font-weight: 300;
         color: $Gray;
         text-align: center;
@@ -59,6 +61,7 @@ $font-family: 'Libre Franklin', sans-serif;
     }
     &__paragraph {
         font-size: 1.1rem;
+        font-size: clamp(1.1rem, 3vw, 2rem);
         text-align: center;
     }
     &__form {
@@ -93,10 +96,12 @@ $font-family: 'Libre Franklin', sans-serif;
 
     &__alert {
         display: none; /*modify */
-        @extend .landing-page__paragraph;
+        font-size: 1.1rem;
+        text-align: center;
         color: $Light-Red;
         font-style: italic;
         margin-top: .5rem;
+
         @media screen and (min-width: 769px) {
             text-align: left;
             margin-left: 2.8rem;
