@@ -1,5 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+img, svg{
+    display: block;
+    max-width: 100%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+$Blue: hsl(223, 87%, 63%);
+$Pale-Blue: hsl(223, 100%, 88%);
+$Light-Red: hsl(354, 100%, 66%);
+$Gray: hsl(0, 0%, 59%);
+$Very-Dark-Blue: hsl(209, 33%, 12%);
+$font-size: 2rem;
+$font-family: 'Libre Franklin', sans-serif;
+
+.landing-page {
+    padding-inline: 4.7rem;
+    font-size: $font-size;
+    font-family: $font-family;
+
+    &__header {
+        margin-top: 8.5rem;
+        margin-inline: auto;
+    }
+    &__logo {
+        width: 5.5rem;
+        margin: auto;
+    }
+    &__main-container {
+        margin-inline: auto;
+    }
+    &__title {
+        font-size: 2rem;
+        font-weight: 300;
+        color: $Gray;
+        text-align: center;
+        margin-top: 5rem;
+        margin-bottom: 2.5rem;
+        
+        &--highlight {
+            color: black;
+            font-weight: 700;
+        }
+    }
+    &__paragraph {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
 }
