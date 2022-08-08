@@ -6,7 +6,7 @@
     margin: 0;
 }
 
-img, svg{
+svg{
     display: block;
     max-width: 100%;
 }
@@ -33,11 +33,14 @@ $font-family: 'Libre Franklin', sans-serif;
         margin-inline: auto;
     }
     &__logo {
+        display: block;
+        max-width: 100%;
         width: 5.5rem;
         margin: auto;
     }
     &__main-container {
         margin-inline: auto;
+        margin-bottom: 10rem;
     }
     &__title {
         font-size: 2rem;
@@ -58,7 +61,7 @@ $font-family: 'Libre Franklin', sans-serif;
     }
     &__form {
         margin-top: 3.5rem;
-        margin-bottom: 7rem;
+        margin-bottom: 6rem;
         display: grid;
     }
     &__email-input {
@@ -78,8 +81,13 @@ $font-family: 'Libre Franklin', sans-serif;
     &__alert {
         display: none; /*modify */
         @extend .landing-page__paragraph;
-        color: red;
+        color: $Light-Red;
         font-style: italic;
+        margin-top: .5rem;
+
+        .error+& {
+            display: inline-block;
+        }
     }
     &__button {
         margin-top: 1rem;
@@ -90,6 +98,55 @@ $font-family: 'Libre Franklin', sans-serif;
         border-radius: 25rem;
         padding-inline: 3rem;
         padding-block: 1.25rem;
+        box-shadow: 0 3px 10px 2px transparentize($color: $Blue, $amount: .6);
+        
+        &:hover {
+            cursor: pointer;
+            background-color: lighten($color: $Blue, $amount: 5%);
+        }
     }
+    &__illustration {
+        display: block;
+        max-width: 100%;
+    }
+    
+    &__footer {
+        margin-inline: auto;
+        margin-bottom: 3.5rem;
+    }
+    &__socials-container {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+    &__copyright {
+        font-size: 1rem;
+        color: $Gray;
+        text-align: center;
+    }
+    &__icon {
+        width: 4rem;
+        height: 4rem;
+        border: 1px solid $Pale-Blue;
+        border-radius: 50%;
+        padding: .8rem;
+        color: $Blue;
 
+        &:hover {
+            cursor: pointer;
+            color: white;
+            background-color: $Blue;
+        }
+    }
+    
+}
+.error {
+    border: 1px solid $Light-Red;
+    
+}
+.lading-page__copyright {
+    font-size: 1rem;
+        color: $Gray;
+        text-align: center;
 }
