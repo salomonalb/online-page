@@ -72,12 +72,14 @@ $font-family: 'Libre Franklin', sans-serif;
         font-family: inherit;
         padding-inline: 3rem;
         padding-block: 1.25rem;
-
+        &:focus {
+            border: 1px solid transparent;
+        }
         &::placeholder {
             color: $Pale-Blue;
         }
-
     }
+
     &__alert {
         display: none; /*modify */
         @extend .landing-page__paragraph;
@@ -87,6 +89,7 @@ $font-family: 'Libre Franklin', sans-serif;
 
         .error+& {
             display: inline-block;
+            color: $Light-Red;
         }
     }
     &__button {
@@ -143,7 +146,10 @@ $font-family: 'Libre Franklin', sans-serif;
 }
 .error {
     border: 1px solid $Light-Red;
-    
+    color: $Light-Red;
+    &::placeholder {
+        color: $Light-Red;
+    }
 }
 .lading-page__copyright {
     font-size: 1rem;
