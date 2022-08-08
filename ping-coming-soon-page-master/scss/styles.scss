@@ -85,6 +85,8 @@ $font-family: 'Libre Franklin', sans-serif;
         padding-block: 1.25rem;
         &:focus {
             border: 1px solid transparent;
+            outline:none;
+            box-shadow: 1px 1px 10px $Pale-Blue;
         }
         &::placeholder {
             color: $Pale-Blue;
@@ -171,11 +173,15 @@ $font-family: 'Libre Franklin', sans-serif;
     }
     
 }
+
 .error {
     border: 1px solid $Light-Red;
     color: $Light-Red;
     &::placeholder {
         color: $Light-Red;
+    }
+    &:focus {
+        box-shadow: 1px 1px 10px $Light-Red
     }
 }
 .lading-page__copyright {
