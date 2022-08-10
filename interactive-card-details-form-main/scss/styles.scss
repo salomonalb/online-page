@@ -123,5 +123,63 @@ $Linear-gradient: : hsl(249, 99%, 64%) to hsl(278, 94%, 30%)*/
     }
 }
 
+.form-section {
+    padding-inline: 1.6rem;
+}
+.form-container {
+    margin-top: 10rem;
+}
+.form {
+    font-size: 1.3rem;
+    max-width: fit-content;
+    margin-inline: auto;
+    padding-bottom: 4.5rem;
 
+    &__label {
+        display: block;
+        letter-spacing: .15rem;
+        margin-top: 2.4rem;
+        margin-bottom: 1.2rem;
+    }
+    &__input {
+        display: block;
+        border: 1px solid $Light-grayish-violet;
+        border-radius: 1rem;
+        width: 100%;
+        padding:1.5rem;
+        
+        &--small {
+            @extend .form__input;
+            width: 50%;
+        }
+        &::placeholder {
+            color: $Light-grayish-violet;
+        }
+    }
+    &__alert {
+        display: none;
+    }
+    &__row {
+        display: flex;
+        gap: 1rem;
+    }
+    &__column {
+        width: 50%;
+    }
+    &__input-column {
+        display: flex;
+        gap: 1rem;
+    }
+    &__button {
+        border: none;
+        width: 100%;
+        margin-top: 3rem;
+        color: $White;
+        padding-block: 2rem;
+        font-family: inherit;
+        background-color: $Very-dark-violet;
+        border-radius: 1rem;
+        
+    }
 
+}
