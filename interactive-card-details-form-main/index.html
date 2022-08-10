@@ -13,21 +13,22 @@
     <main class="sections-container">
         
         <section class="cards-section">
-            <article class="card-front">
-                <div class="card-front__icon-container" >
-                    <div class="card-front__big-circle"></div> 
-                    <div class="card-front__small-circle"></div>
-                </div>
-                <p class="card-front__card-number">1234 1234 1234 1234</p>
-                <div class="card-front__text-container">
-                    <p class="card-front__name">Felix Leire</p>
-                    <p class="card-front__date">09/11</p>
-                </div>
-            </article>
-
-            <article class="card-back">
-                <p class="card-back__cvc">000</p>
-            </article>
+            <div class="cards-wrapper">
+                <article class="card-front">
+                    <div class="card-front__icon-container" >
+                        <div class="card-front__big-circle"></div>
+                        <div class="card-front__small-circle"></div>
+                    </div>
+                    <p class="card-front__card-number">1234 1234 1234 1234</p>
+                    <div class="card-front__text-container">
+                        <p class="card-front__name">Felix Leire</p>
+                        <p class="card-front__date">09/11</p>
+                    </div>
+                </article>
+                <article class="card-back">
+                    <p class="card-back__cvc">000</p>
+                </article>
+            </div>
         </section>
         
         <section class="form-section"  >
@@ -35,11 +36,11 @@
                 <form class="form" action="">
                     <label class="form__label" for="name">CARDHOLDER NAME</label>
                     <input class="form__input" id="name" type="text" name="name" placeholder="e.g. Jane Appleseed">
-                    <p class="form__alert">Cant be blank</p>
+                    <p class="form__alert error">Cant be blank</p>
                     <label class="form__label" for="card-number">CARD NUMBER</label>
                     <input class="form__input" id="card-number" type="text" name="card-number" 
                     placeholder="e.g. 1234 5678 9123 0000">
-                    <p class="form__alert">Wrong format, numbers only</p>
+                    <p class="form__alert error">Wrong format, numbers only</p>
                     
                     <div class="form__row">
                         <div class="form__column">
@@ -50,13 +51,13 @@
                                 <input class="form__input--small" id="year" type="number" name="year"
                                 placeholder="YY">
                             </div>
-                            <p class="form__alert">Cant be blank</p>
+                            <p class="form__alert error">Cant be blank</p>
                         </div>
                         <div class="form__column" >
                             <label class="form__label" for="cvc">CVC</label>
                             <input class="form__input" id="cvc" type="number" name="cvc"
                             placeholder="e.g. 123">
-                            <p class="form__alert" >Cant be blank</p>
+                            <p class="form__alert error" >Cant be blank</p>
                         </div>
                     </div>
                     <button class="form__button">Confirm</button>
