@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../wickedcss.min.css">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <script src="js/script.js" defer></script>
+    <title>Interactive Card Details Form</title>
+</head>
+<body>
+    <main class="sections-container">
+        
+        <section class="cards-section">
+            <article class="card-front">
+                <div class="card-front__icon-container" >
+                    <div class="card-front__big-circle"></div> 
+                    <div class="card-front__small-circle"></div>
+                </div>
+                <p class="card-front__card-number">1234 1234 1234 1234</p>
+                <div class="card-front__text-container">
+                    <p class="card-front__name">Felix Leire</p>
+                    <p class="card-front__date">09/11</p>
+                </div>
+            </article>
+
+            <article class="card-back">
+                <p class="card-back__cvc">000</p>
+            </article>
+        </section>
+        
+        <section class="form-section"  >
+            <div class="form-container" >
+                <form class="form" action="">
+                    <label class="form__label" for="name">CARDHOLDER NAME</label>
+                    <input class="form__input" id="name" type="text" name="name">
+                    <p class="form__alert">Cant be blank</p>
+                    <label class="form__label" for="card-number">CARD NUMBER</label>
+                    <input class="form__input" id="card-number" type="text" name="card-number">
+                    <p class="form__alert">Wrong format, numbers only</p>
+                    
+                    <div class="form__row">
+                        <div class="form__column">
+                            <label class="form__label" for="day month">EXP. DATE (MM/YY)</label>
+                            <input class="form__input" id="day" type="number" name="day">
+                            <input class="form__input" id="month" type="number" name="month">
+                            <p class="form__alert">Cant be blank</p>
+                        </div>
+                        <div>
+                            <label class="form__label" for="cvc">CVC</label>
+                            <input class="form__input" id="cvc" type="number" name="cvc">
+                            <p class="form__alert" >Cant be blank</p>
+                        </div>
+                    </div>
+                    <button class="form__button">Confirm</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
