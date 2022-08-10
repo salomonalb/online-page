@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -23,3 +25,103 @@ input {
     font-family: inherit;
     color: inherit;
 }
+
+$Red: hsl(0, 100%, 66%);
+$White: hsl(0, 0%, 100%);
+$Light-grayish-violet: hsl(270, 3%, 87%);
+$Dark-grayish-violet: hsl(279, 6%, 55%);
+$Very-dark-violet: hsl(278, 68%, 11%);
+$font-family: 'Space Grotesk', sans-serif;
+
+body {
+    font-family: $font-family;
+    color: $Very-dark-violet;
+}
+
+/*
+(active input border)
+$Linear-gradient: : hsl(249, 99%, 64%) to hsl(278, 94%, 30%)*/ 
+.sections-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.cards-section {
+    background-image: url(../images/bg-main-mobile.png);
+    padding-inline: 1.6rem;
+    padding-block: 12rem;
+    color: white;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+
+}
+
+%card {
+    width: 28rem;
+    height: 15.4rem;
+    background-size: cover;
+    margin: auto;
+    margin-bottom: 2rem;
+    border-radius: 8px
+}
+
+.card-front {
+    @extend %card;
+    background-image: url(../images/bg-card-front.png);
+    padding: 2rem 2rem 2.4rem;
+    position: absolute;
+    left: 6%;
+    top: 12rem;
+    z-index: 1;
+
+    &__icon-container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        
+    }
+    &__big-circle {
+        width: 3rem;
+        height: 3rem;
+        background-color: $White;
+        border-radius: 50%;
+    }
+    &__small-circle {
+        width: 1.5rem;
+        height: 1.5rem;
+        border: 1px solid $White;
+        border-radius: 50%;
+    }
+    &__card-number {
+        font-size: 1.6rem;
+        letter-spacing: .38rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+    &__text-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__name, &__date {
+        font-size: 1rem;
+    }
+}
+
+.card-back {
+    @extend %card;
+    background-image: url(../images/bg-card-back.png);
+    position: absolute;
+    top: 3rem;
+    right: 6%;
+
+    &__cvc {
+        position: absolute;
+        top: 7rem;
+        right: 3rem; 
+        font-size: 1rem;
+    }
+}
+
+
+
