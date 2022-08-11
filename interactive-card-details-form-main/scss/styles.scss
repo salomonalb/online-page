@@ -45,6 +45,8 @@ $Linear-gradient: : hsl(249, 99%, 64%) to hsl(278, 94%, 30%)*/
 .sections-container {
     display: flex;
     flex-direction: column;
+    max-width: 140.5rem;
+    margin-inline: auto;
 }
 
 .cards-section {
@@ -58,7 +60,7 @@ $Linear-gradient: : hsl(249, 99%, 64%) to hsl(278, 94%, 30%)*/
     display: flex;
     flex-direction: column-reverse;
     position: relative;
-    max-width: 43rem;
+    max-width: 53rem;
     margin-inline: auto;
 }
 
@@ -213,7 +215,8 @@ $Linear-gradient: : hsl(249, 99%, 64%) to hsl(278, 94%, 30%)*/
 
     }
     .cards-wrapper {
-        padding-block: 16rem;
+        padding-top: 8rem;
+        padding-bottom: 12rem;
         padding-inline: 2rem;
         position: static;
         display: block;
@@ -221,46 +224,47 @@ $Linear-gradient: : hsl(249, 99%, 64%) to hsl(278, 94%, 30%)*/
         margin: 0;
     }
     %card {
-        width: 46rem;
-        height: 26rem;
+        width: min(27.3vw, 46rem); /*46rem;*/
+        height: min(15vw, 26rem); /*26rem;*/
     }
     .card-front {
+        padding: min(2vw, 3rem); /*3rem;*/
         position: relative;
         top: 0;
-        left: 10.5%;
-        padding: 3rem;
+        left: min(7.8vw, 15rem);/*8rem ;/*15rem;*/
+        
 
         &_icon-container {
-            gap: 2rem;
+            gap: min(1vw, 2rem);  /*2rem;*/
         }
         &__big-circle {
-            width: 5rem;
-            height: 5rem;
+            width: min(2.9vw, 5rem);/*5rem;*/
+            height: min(2.9vw, 5rem);/*5rem;*/
         }
         &__small-circle {
-            width: 2.2rem;
-            height: 2.2rem;
+            width: min(1.49vw, 2.2rem);/*2.2rem;*/
+            height: min(1.49vw, 2.2rem);/*2.2rem;*/
         }
         &__card-number {
-            font-size: 2.8rem;
-            letter-spacing: .5rem;
-            margin-top: 7rem;
-            margin-bottom: 3rem;
+            font-size: min(1.5vw, 2.8rem) ;/*2.8rem;*/
+            letter-spacing:min(0.29vw, .5rem) ;/*.5rem;*/
+            margin-top: min(2.9vw, 7rem) ;/*7rem;*/
+            margin-bottom: min(1.95vw, 3rem);/*3rem;*/
         }
 
         &__name, &__date {
-            font-size: 1.5rem;
+            font-size: min(0.97vw, 1.5rem) ;/*1.5rem;*/
         }
     }
     .card-back {
         position: relative;
         top: 0;
-        left: 17.5%;
+        left: min(14.5vw, 25rem); /*13rem;/*25rem; */
 
         &__cvc {
-            font-size: 1.8rem;
-            top: 11.5rem;
-            right: 4rem;
+            font-size: min(0.97vw, 1.8rem);/*1.8rem;*/
+            top: min(6.8vw, 11.5rem) ;/*11.5rem;*/
+            right: min(2.9vw, 4rem);/*4rem;*/
         }
     }
     .form-section {
@@ -270,7 +274,8 @@ $Linear-gradient: : hsl(249, 99%, 64%) to hsl(278, 94%, 30%)*/
         margin: 0;
     }
     .form {
-        padding-block: 24rem;
+        padding-top: 6rem;
+        padding-bottom: 12rem;
     }
 
 }
