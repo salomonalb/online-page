@@ -32,7 +32,7 @@ $Light-grayish-violet: hsl(270, 3%, 87%);
 $Dark-grayish-violet: hsl(279, 6%, 55%);
 $Very-dark-violet: hsl(278, 68%, 11%);
 $font-family: 'Space Grotesk', sans-serif;
-$break-point: 1025px;
+$break-point: 990px/*1025px*/;
 body {
     font-family: $font-family;
     color: $Very-dark-violet;
