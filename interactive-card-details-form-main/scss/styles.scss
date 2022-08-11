@@ -130,6 +130,7 @@ $Linear-gradient: : hsl(249, 99%, 64%) to hsl(278, 94%, 30%)*/
     }
 }
 
+
 .form-section {
     padding-inline: 1.6rem;
 }
@@ -201,6 +202,25 @@ $Linear-gradient: : hsl(249, 99%, 64%) to hsl(278, 94%, 30%)*/
         font-family: inherit;
         background-color: $Very-dark-violet;
         border-radius: 1rem;
+    }
+}
+
+.thanks-component {
+    @extend .form;
+
+    &__icon {
+        margin: auto;
+    }
+    &__title {
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+        font-size: 2rem;
+    }
+    &__text {
+        font-size: 1.6rem;
+        color: $Dark-grayish-violet;
+        text-align: center;
     }
 }
 
