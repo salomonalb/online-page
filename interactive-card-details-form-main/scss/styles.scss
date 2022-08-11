@@ -105,9 +105,10 @@ $Linear-gradient: : hsl(249, 99%, 64%) to hsl(278, 94%, 30%)*/
     }
     &__card-number {
         font-size: 1.6rem;
-        letter-spacing: .38rem;
+        letter-spacing: 2px;
         margin-top: 3rem;
         margin-bottom: 2rem;
+        text-align: center;
     }
     &__text-container {
         display: flex;
@@ -184,6 +185,7 @@ $Linear-gradient: : hsl(249, 99%, 64%) to hsl(278, 94%, 30%)*/
     }
     &__alert {
         display: none;
+        max-width: 23ch;
         &.error {
             display: block;
             color: $Red;
@@ -282,7 +284,7 @@ $Linear-gradient: : hsl(249, 99%, 64%) to hsl(278, 94%, 30%)*/
         }
         &__card-number {
             font-size: min(1.5vw, 2.8rem) ;/*2.8rem;*/
-            letter-spacing:min(0.29vw, .5rem) ;/*.5rem;*/
+            letter-spacing: 2px; /*min(0.29vw, .5rem) ;/*.5rem;*/
             margin-top: min(2.9vw, 7rem) ;/*7rem;*/
             margin-bottom: min(1.95vw, 3rem);/*3rem;*/
         }

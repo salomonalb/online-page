@@ -19,55 +19,57 @@
                         <div class="card-front__big-circle"></div>
                         <div class="card-front__small-circle"></div>
                     </div>
-                    <p class="card-front__card-number">1234 1234 1234 1234</p>
+                    <p id="out-number" class="card-front__card-number">0000 0000 0000 0000</p>
                     <div class="card-front__text-container">
-                        <p class="card-front__name">Felix Leire</p>
-                        <p class="card-front__date">09/11</p>
+                        <p id="out-name" class="card-front__name">Name Lastname</p>
+                        <p  class="card-front__date"><span id="out-month">00</span>/<span id="out-year">00</span></p>
                     </div>
                 </article>
                 <article class="card-back">
-                    <p class="card-back__cvc">000</p>
+                    <p id="out-cvc" class="card-back__cvc">000</p>
                 </article>
             </div>
         </section>
         
         <section class="form-section"  >
-            <div class="form-container" >
+            <div class="form-container" id="form-container" >
+                <!--
                 <div class="thanks-component">
                     <img class="thanks-component__icon" src="images/icon-complete.svg" alt="">
                     <p class="thanks-component__title" >THANK YOU!</p>
                     <p class="thanks-component__text">We've added your card details</p>
                     <button class="form__button">Continue</button>
                 </div>
+                -->
                 
-                <form class="form" action="">
+                <form class="form" action="" id="form">
                     <label class="form__label" for="name">CARDHOLDER NAME</label>
-                    <input class="form__input" id="name" type="text" name="name" placeholder="e.g. Jane Appleseed">
-                    <p class="form__alert error">Cant be blank</p>
+                    <input class="form__input" id="name" type="text" name="name" placeholder="e.g. Jane Appleseed" pattern="[a-zA-Z ]+" maxlength="30" minlength="1">
+                    <p class="form__alert" id="alert-name"></p>
                     <label class="form__label" for="card-number">CARD NUMBER</label>
                     <input class="form__input" id="card-number" type="text" name="card-number" 
-                    placeholder="e.g. 1234 5678 9123 0000">
-                    <p class="form__alert error">Wrong format, numbers only</p>
+                    placeholder="e.g. 1234 5678 9123 0000" pattern="[0-9]{16}" maxlength="16" minlength="1"> 
+                    <p class="form__alert" id="alert-number"></p>
                     
                     <div class="form__row">
                         <div class="form__column">
-                            <label class="form__label" for="day month">EXP. DATE (MM/YY)</label>
+                            <label class="form__label" for="month year">EXP. DATE (MM/YY)</label>
                             <div class="form__input-column">
-                                <input class="form__input--small" id="month" type="number" name="month"
-                                placeholder="MM">
-                                <input class="form__input--small" id="year" type="number" name="year"
-                                placeholder="YY">
+                                <input class="form__input--small" id="month" type="text" name="month"
+                                placeholder="MM" pattern="[0-1][0-9]" maxlength="2">
+                                <input class="form__input--small" id="year" type="text" name="year"
+                                placeholder="YY" /*pattern="[2-5][0-9]"*/ maxlength="2">
                             </div>
-                            <p class="form__alert error">Cant be blank</p>
+                            <p class="form__alert" id="alert-date"></p>
                         </div>
                         <div class="form__column" >
                             <label class="form__label" for="cvc">CVC</label>
-                            <input class="form__input" id="cvc" type="number" name="cvc"
-                            placeholder="e.g. 123">
-                            <p class="form__alert error" >Cant be blank</p>
+                            <input class="form__input" id="cvc" type="text" name="cvc"
+                            placeholder="e.g. 123" minlength="3" maxlength="3" pattern="[0-9]{3}">
+                            <p class="form__alert" id="alert-cvc" ></p>
                         </div>
                     </div>
-                    <button class="form__button">Confirm</button>
+                    <button id="button1" class="form__button">Confirm</button>
                 </form>
             </div> 
         </section>
