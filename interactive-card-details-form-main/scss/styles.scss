@@ -51,6 +51,8 @@ $Linear-gradient: : hsl(249, 99%, 64%) to hsl(278, 94%, 30%)*/
 
 .cards-section {
     background-image: url(../images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 .cards-wrapper {
@@ -70,7 +72,8 @@ $Linear-gradient: : hsl(249, 99%, 64%) to hsl(278, 94%, 30%)*/
     background-size: cover;
     margin: auto;
     margin-bottom: 2rem;
-    border-radius: 8px
+    border-radius: 8px;
+    box-shadow: 0px 5px 80px 4px  transparentize($color: #000000, $amount: 0.7);
 }
 
 .card-front {
@@ -155,6 +158,12 @@ $Linear-gradient: : hsl(249, 99%, 64%) to hsl(278, 94%, 30%)*/
         border-radius: 1rem;
         width: 100%;
         padding:1.5rem;
+        transition: all 200ms;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.0125);
+        }
         
         &--small {
             @extend .form__input;
@@ -166,6 +175,7 @@ $Linear-gradient: : hsl(249, 99%, 64%) to hsl(278, 94%, 30%)*/
         &:focus {
             outline: none;
             border-color: hsl(249, 99%, 64%);
+            transform: scale(1.0125);
         }
         &.error {
             border-color: $Red;
@@ -202,11 +212,19 @@ $Linear-gradient: : hsl(249, 99%, 64%) to hsl(278, 94%, 30%)*/
         font-family: inherit;
         background-color: $Very-dark-violet;
         border-radius: 1rem;
+        transition: all 200ms;
+
+        &:hover {
+            background-color: lighten($color: $Very-dark-violet, $amount: 20%);
+            cursor: pointer;
+            transform: scale(1.0125);
+        }
     }
 }
 
 .thanks-component {
     @extend .form;
+    max-width: 38rem;
 
     &__icon {
         margin: auto;
@@ -230,9 +248,6 @@ $Linear-gradient: : hsl(249, 99%, 64%) to hsl(278, 94%, 30%)*/
     }
     .cards-section {
         background-image: url(../images/bg-main-desktop.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-
     }
     .cards-wrapper {
         padding-top: 8rem;
@@ -296,6 +311,10 @@ $Linear-gradient: : hsl(249, 99%, 64%) to hsl(278, 94%, 30%)*/
     .form {
         padding-top: 6rem;
         padding-bottom: 12rem;
+    }
+    .thanks-component {
+        width: 38rem;
+        padding-top: 10rem;
     }
 
 }
