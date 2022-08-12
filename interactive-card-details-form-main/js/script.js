@@ -78,7 +78,7 @@ monthInput.addEventListener('input', (event) => {
     if (monthInput.validity.valid === false || Number(monthInput.value) > 12 || Number(monthInput.value) < 1) {
         monthInput.classList.add('error');
         alertDate.classList.add('error');
-        alertDate.textContent = "months between 01 and 12, years between 2022 and 2042";
+        alertDate.textContent = "months between 01 and 12, years between 2022 and 2050";
     } else {
         monthInput.classList.remove('error');
         alertDate.classList.remove('error');
@@ -94,7 +94,7 @@ monthInput.addEventListener('input', (event) => {
 })
 
 yearInput.addEventListener('input', (event) => {
-    if (yearInput.validity.valid === false || Number(yearInput.value) > 50 || Number(monthInput.value) < 22) {
+    if (yearInput.validity.valid === false || Number(yearInput.value) > 50 || Number(yearInput.value) < 22) {
         yearInput.classList.add('error');
         alertDate.classList.add('error');
         alertDate.textContent = "months between 01 and 12, years between 2022 and 2050";
@@ -134,17 +134,22 @@ cvcInput.addEventListener('input', (event) => {
 
 form.addEventListener('submit', (event) => {
 
-    if (Number(yearInput.value) > 50 || Number(monthInput.value) < 12) {
+    
+
+
+    if (Number(yearInput.value) > 50 || Number(yearInput.value) < 22) {
         event.preventDefault();
+        yearInput.classList.add('error')
         alertDate.classList.add('error');
         alertDate.textContent = "months between 01 and 12, years between 2022 and 2050";
     }
     if (Number(monthInput.value) > 12 || Number(monthInput.value) < 1) {
         event.preventDefault();
+        monthInput.classList.add('error')
         alertDate.classList.add('error');
         alertDate.textContent = "months between 01 and 12, years between 2022 and 2050";
     }
-    if (nameInput.value.length < 1) {
+    if (nameInput.value.length < 1 || nameInput.value == false) {
         event.preventDefault();
         nameInput.classList.add('error');
         alertName.classList.add('error');
@@ -155,27 +160,49 @@ form.addEventListener('submit', (event) => {
         numberInput.classList.add('error');
         alertNumber.classList.add('error');
         alertNumber.textContent = "Cant be blank";
+        
     }
     if (monthInput.value.length < 1) {
         event.preventDefault();
         monthInput.classList.add('error');
         alertDate.classList.add('error');
-        alertDate.textContent = "Cant be Blank";
+        alertDate.textContent = "Cant be blank";
+        
     }
     if (yearInput.value.length < 1) {
         event.preventDefault();
         yearInput.classList.add('error');
         alertDate.classList.add('error');
-        alertDate.textContent = "Cant be Blank";
+        alertDate.textContent = "Cant be blank";
+        
     }
     if (cvcInput.value.length < 1) {
         event.preventDefault();
         cvcInput.classList.add('error');
         alertCvc.classList.add('error');
-        alertCvc.textContent = "Cant be Blank";
+        alertCvc.textContent = "Cant be blank";
+    };
+
+    if (nameInput.value.length == false ||
+        numberInput.value.length == false ||
+        monthInput.value.length == false ||
+        yearInput.value.length == false ||
+        cvcInput.value.length == false || 
+        Number(yearInput.value) > 50 || Number(yearInput.value) < 22 || Number(monthInput.value) > 12 || Number(monthInput.value) < 1
+        ) {
+        event.preventDefault();
+    } else {
+        formContainer.innerHTML = `<div class="thanks-component bounceIn">
+        <img class="thanks-component__icon" src="images/icon-complete.svg" alt="">
+        <p class="thanks-component__title" >THANK YOU!</p>
+        <p class="thanks-component__text">We've added your card details</p>
+        <button class="form__button" onclick="window.location.reload()">Continue</button>
+    </div>`;
     }
-    
+
+
 })
+
 
 
 

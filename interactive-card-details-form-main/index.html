@@ -9,12 +9,12 @@
     <script src="js/script.js" defer></script>
     <title>Interactive Card Details Form</title>
 </head>
-<body>
+<body class="fadeIn">
     <main class="sections-container">
         
         <section class="cards-section">
             <div class="cards-wrapper">
-                <article class="card-front">
+                <article class="card-front floater">
                     <div class="card-front__icon-container" >
                         <div class="card-front__big-circle"></div>
                         <div class="card-front__small-circle"></div>
@@ -25,7 +25,7 @@
                         <p  class="card-front__date"><span id="out-month">00</span>/<span id="out-year">00</span></p>
                     </div>
                 </article>
-                <article class="card-back">
+                <article class="card-back floater">
                     <p id="out-cvc" class="card-back__cvc">000</p>
                 </article>
             </div>
@@ -42,13 +42,13 @@
                 </div>
                 -->
                 
-                <form class="form" action="" id="form">
+                <form class="form slideRight" method="get" action="" id="form">
                     <label class="form__label" for="name">CARDHOLDER NAME</label>
-                    <input class="form__input" id="name" type="text" name="name" placeholder="e.g. Jane Appleseed" pattern="[a-zA-Z ]+" maxlength="30" minlength="1">
+                    <input class="form__input" id="name" type="text" name="name" placeholder="e.g. Jane Appleseed" pattern="[a-zA-Z ]+" maxlength="30" minlength="1" >
                     <p class="form__alert" id="alert-name"></p>
                     <label class="form__label" for="card-number">CARD NUMBER</label>
                     <input class="form__input" id="card-number" type="text" name="card-number" 
-                    placeholder="e.g. 1234 5678 9123 0000" pattern="[0-9]{16}" maxlength="16" minlength="1"> 
+                    placeholder="e.g. 1234 5678 9123 0000" pattern="[0-9]{16}" maxlength="16" minlength="1" > 
                     <p class="form__alert" id="alert-number"></p>
                     
                     <div class="form__row">
@@ -56,16 +56,16 @@
                             <label class="form__label" for="month year">EXP. DATE (MM/YY)</label>
                             <div class="form__input-column">
                                 <input class="form__input--small" id="month" type="text" name="month"
-                                placeholder="MM" pattern="[0-1][0-9]" maxlength="2">
-                                <input class="form__input--small" id="year" type="text" name="year"
-                                placeholder="YY" /*pattern="[2-5][0-9]"*/ maxlength="2">
+                                placeholder="MM" pattern="[0-1][0-9]" maxlength="2" >
+                                <input class="form__input--small" pattern="[0-9][0-9]"  id="year" type="text" name="year"
+                                placeholder="YY" maxlength="2" >
                             </div>
                             <p class="form__alert" id="alert-date"></p>
                         </div>
                         <div class="form__column" >
                             <label class="form__label" for="cvc">CVC</label>
                             <input class="form__input" id="cvc" type="text" name="cvc"
-                            placeholder="e.g. 123" minlength="3" maxlength="3" pattern="[0-9]{3}">
+                            placeholder="e.g. 123" minlength="3" maxlength="3" pattern="[0-9]{3}" >
                             <p class="form__alert" id="alert-cvc" ></p>
                         </div>
                     </div>
