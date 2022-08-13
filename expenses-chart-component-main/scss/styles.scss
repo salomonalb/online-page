@@ -70,6 +70,7 @@ body {
     &__title {
         color: $Dark-brown;
         font-size: min(5.3vw, 2.5rem);
+        margin-bottom: 2rem;
     }
 }
 
@@ -105,6 +106,82 @@ body {
             @extend .footer__number;
             font-size: min(3.5vw, 1.5rem);
             text-align: right;
+        }
+    }
+}
+
+.chart {
+
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: repeat(7, 1fr);
+    padding-bottom: min(5.3vw, 3rem);
+    column-gap: 1px;
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    &__amount {
+        background-color: $Dark-brown;
+        color: $Very-pale-orange;
+        font-weight: 700;
+        font-size: min(3vw, 1.5rem);
+        padding-block: min(1.3vw, 1rem);
+        text-align: center;
+        border-radius: 5px;
+        opacity: 0;
+        transition: all 200ms;
+    }
+    &__day {
+        color: $Medium-brown;
+        font-size: min(3.5vw, 1.5rem);
+        font-weight: 400;
+        text-align: center;
+    }
+    &__bar {
+        margin-block: .5rem;
+        margin-inline: min(3.5vw, 1.5rem);
+        background-color: $Soft-red;
+        height: 5rem;
+        &:hover {
+            cursor: pointer;
+            background-color: lighten($color: $Soft-red, $amount: 15%)
+        }
+
+        &--1 {
+            @extend .chart__bar;
+            height: 5rem;
+        }
+        &--2 {
+            @extend .chart__bar;
+            height: 10rem;
+        }
+        &--3 {
+            @extend .chart__bar;
+            height: 15rem;
+            background-color: $Cyan;
+            
+            &:hover {
+                background-color: lighten($color: $Cyan, $amount: 15%)
+            }
+        }
+        &--4 {
+            @extend .chart__bar;
+            height: 9rem;
+        }
+        &--5 {
+            @extend .chart__bar;
+            height: 7rem;
+        }
+        &--6 {
+            @extend .chart__bar;
+            height: 12rem;
+        }
+        &--7 {
+            @extend .chart__bar;
+            height: 7.5rem;
         }
     }
 }
