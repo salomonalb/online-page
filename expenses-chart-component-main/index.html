@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="../wickedcss.min.css">
-    <script src="js/script.js" defer></script>
+    <script src="data.json" defer></script>
+    <script  src="js/script.js" defer></script>
     <title>Expenses Chart Component</title>
 </head>
 <body>
-    <article class="expenses-comp">
+    <article class="expenses-comp ">
         <header class="header">
             <div class="header__text-container">
                 <h2 class="header__label">My balance</h2>
@@ -22,48 +23,19 @@
 
         <section class="card" >
             <h2 class="card__title" >Spending - Last 7 days</h2>
-            <main class="chart">
-
-                <div class="chart__column">
-                    <p class="chart__amount">$25.34</p>
-                    <div class="chart__bar--1"></div>
-                    <p class="chart__day">day</p>
-                </div>
-                <div class="chart__column">
-                    <p class="chart__amount">$25.34</p>
-                    <div class="chart__bar--2"></div>
-                    <p class="chart__day">day</p>
-                </div>
-                <div class="chart__column">
-                    <p class="chart__amount">$25.34</p>
-                    <div class="chart__bar--3"></div>
-                    <p class="chart__day">day</p>
-                </div>
-                <div class="chart__column">
-                    <p class="chart__amount">$25.34</p>
-                    <div class="chart__bar--4"></div>
-                    <p class="chart__day">day</p>
-                </div>
-                <div class="chart__column">
-                    <p class="chart__amount">$25.34</p>
-                    <div class="chart__bar--5"></div>
-                    <p class="chart__day">day</p>
-                </div>
-                <div class="chart__column">
-                    <p class="chart__amount">$25.34</p>
-                    <div class="chart__bar--6"></div>
-                    <p class="chart__day">day</p>
-                </div>
+            <main class="chart" id="chart">
+                <!--
                 <div class="chart__column">
                     <p class="chart__amount">$25.34</p>
                     <div class="chart__bar--7"></div>
                     <p class="chart__day">day</p>
                 </div>
+                -->
             </main>
             <footer class="footer">
                 <div class="footer__text-container">
                     <h2 class="footer__label">Total this week</h2>
-                    <p class="footer__number">$478.33</p>
+                    <p class="footer__number" id="total-expenses"></p>
                 </div>
                 <div class="footer__text-container--small">
                     <p class="footer__number--small">+2.4%</p>
