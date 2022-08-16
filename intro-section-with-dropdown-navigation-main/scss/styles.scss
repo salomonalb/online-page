@@ -84,9 +84,15 @@ body {
         font-size: min(8vw, 7.78rem);
         text-align: center;
         margin: auto;
+
+        & span {
+            @media screen and (min-width: $breakpoint) {
+                display: block;
+            }
+        }
         @media screen and (min-width: $breakpoint) {
             text-align: left;
-            max-width: 11ch;
+            max-width: 12ch;
         }
     }
     &__paragraph {
@@ -106,9 +112,16 @@ body {
         background-color: $Almost-Black;
         color: $Almost-White;
         text-decoration: none;
-        padding: min(4.5vw, 2.2rem) min(6.6vw, 3.3rem);
+        border: 3px solid $Almost-Black;
+        padding: min(4.3vw, 2.2rem) min(6.3vw, 3.3rem);
         border-radius: 1.5rem;
         font-size: min(3.7vw, 2rem);
+
+        &:hover {
+            background-color: transparent;
+            color: $Almost-Black;
+        }
+
         @media screen and (min-width: $breakpoint) {
             text-align: left;
         }
