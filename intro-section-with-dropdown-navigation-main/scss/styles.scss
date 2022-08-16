@@ -127,11 +127,16 @@ body {
         }
     }
     &__logos-container {
+        margin-top: 4rem;
         width: 95%;
         max-width: 57rem;
         justify-content: space-between;
         display: flex;
         gap: 2rem;
+
+        @media screen and (min-width: $breakpoint) {
+            margin-top: 0;
+        }
     }
     &__logo {
         max-width: min(16vw, 11.6rem);
