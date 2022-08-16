@@ -19,6 +19,7 @@ $Almost-White: hsl(0, 0%, 98%);
 $Medium-Gray: hsl(0, 0%, 41%);
 $Almost-Black: hsl(0, 0%, 8%);
 $font-family: 'Epilogue', sans-serif;
+$breakpoint: 1025px;
 
 body {
     background-color: $Almost-White;
@@ -30,7 +31,7 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 2.4rem 1.6rem;
+    padding: min(6.4vw, 3.3rem) min(4.2%, 4rem);
 
     &__logo {
         width: 8.5rem;
@@ -43,44 +44,83 @@ body {
 }
 
 .hero {
-    
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin: auto;
 
-    &__image {
+    @media screen and (min-width: $breakpoint) {
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 15rem;
+        padding-inline: min(4.2%, 4rem);
+    }
+
+    &__image-container {
         margin-bottom: 5rem;
+        margin: auto;
+        max-width: 48rem;
+        @media screen and (min-width: $breakpoint) {
+            margin: 0;
+        }
+    }
+    &__image {
+        max-width: 100%;
+        margin: 0;
     }
     &__text-container {
         display: flex;
         flex-direction: column;
         gap: 3rem;
-        align-items: center;
+        align-items: center; 
+        @media screen and (min-width: $breakpoint) {
+            padding-top: 13rem ;
+            gap: 6rem;
+            align-items: flex-start;
+        }
     }
     &__title {
-        font-size: 3rem;
+        font-size: min(8vw, 7.78rem);
         text-align: center;
+        margin: auto;
+        @media screen and (min-width: $breakpoint) {
+            text-align: left;
+            max-width: 11ch;
+        }
     }
     &__paragraph {
         color: $Medium-Gray;
         line-height: 2;
-        font-size: 1.4rem;
+        font-size: min(3.7vw, 1.8rem);
         text-align: center;
         max-width: 37ch;
         margin: auto;
+        @media screen and (min-width: $breakpoint) {
+            text-align: left;
+            margin: 0;
+            max-width: 43ch;
+        }
     }
     &__button {
         background-color: $Almost-Black;
         color: $Almost-White;
         text-decoration: none;
-        padding: 1.7rem 2.5rem;
+        padding: min(4.5vw, 2.2rem) min(6.6vw, 3.3rem);
         border-radius: 1.5rem;
-        font-size: 1.4rem;
+        font-size: min(3.7vw, 2rem);
+        @media screen and (min-width: $breakpoint) {
+            text-align: left;
+        }
     }
     &__logos-container {
         width: 95%;
+        max-width: 57rem;
         justify-content: space-between;
         display: flex;
         gap: 2rem;
     }
     &__logo {
-        max-width: 6rem;
+        max-width: min(16vw, 11.6rem);
     }
 }

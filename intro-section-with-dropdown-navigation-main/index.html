@@ -19,7 +19,10 @@
         </button>
     </header>
     <main class="hero">
-        <img class="hero__image" src="images/image-hero-mobile.png" alt="">
+        <picture class="hero__image-container">
+            <source srcset="images/image-hero-desktop.png" media="(min-width: 1025px)"> 
+            <img class="hero__image" src="images/image-hero-mobile.png" alt="">
+        </picture>
 
         <section class="hero__text-container">
             <h1 class="hero__title" >Make remote work</h1>
