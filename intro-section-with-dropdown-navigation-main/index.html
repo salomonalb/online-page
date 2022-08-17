@@ -10,8 +10,8 @@
     <script src="js/script.js" defer></script>
     <title>Intro Section width Dropdown Navigation</title>
 </head>
-<body>
-    <header class="header">
+<body class="fadeIn">
+    <header class="header slideDown">
         <img class="header__logo" src="images/logo.svg" alt="logo">
 
         <div id="filter" class="filter"></div>
@@ -74,13 +74,22 @@
             <img src="images/icon-menu.svg" alt="menu button">
         </button>
     </header>
+
+
+
+
+
+
+
+
+
     <main class="hero">
-        <picture class="hero__image-container">
+        <picture class="hero__image-container slideLeft">
             <source srcset="images/image-hero-desktop.png" media="(min-width: 1025px)"> 
             <img class="hero__image" src="images/image-hero-mobile.png" alt="">
         </picture>
 
-        <section class="hero__text-container">
+        <section class="hero__text-container slideRight">
             <h1 class="hero__title" >Make <span>remote work</span></h1>
             <p class="hero__paragraph">
                 Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.
