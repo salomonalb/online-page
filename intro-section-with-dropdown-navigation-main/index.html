@@ -14,46 +14,50 @@
     <header class="header">
         <img class="header__logo" src="images/logo.svg" alt="logo">
 
+        <div id="filter" class="filter"></div>
 
 
 
-
-        <nav class="navigation">
-            <button class="navigation__close-button">
-                <img  src="images/icon-close-menu.svg" alt="">
+        <nav id="navigation" class="navigation">
+            <button id="close-button" class="navigation__close-button">
+                <img   src="images/icon-close-menu.svg" alt="">
             </button>
             <ul class="navigation__main-list">
-                <li class="navigation__main-item--dropdown">
+                <li id="features-toggle" class="navigation__main-item--dropdown">
                     Features 
-                    <img class="navigation__main-item-icon" src="images/icon-arrow-down.svg" alt="">
-                    <ul class="navigation__sub-list">
-                        <li class="navigation__sub-item">
-                            <img src="images/icon-todo.svg" alt="">
-                            Todo list
-                        </li>
-                        <li class="navigation__sub-item">
-                            <img src="images/icon-calendar.svg" alt="">
-                            Calendar
-                        </li>
-                        <li class="navigation__sub-item">
-                            <img src="images/icon-reminders.svg" alt="">
-                            Reminders
-                        </li>
-                        <li class="navigation__sub-item">
-                            <img src="images/icon-planning.svg" alt="">
-                            Planning
-                        </li>
-                    </ul>
+                    <img id="features-icon" class="navigation__main-item-icon" src="images/icon-arrow-down.svg" data-open="false" alt="">
                 </li>
-                <li class="navigation__main-item--dropdown">
+
+                <ul id="features-sublist" class="navigation__sub-list">
+                    <li class="navigation__sub-item">
+                        <img src="images/icon-todo.svg" alt="">
+                        Todo list
+                    </li>
+                    <li class="navigation__sub-item">
+                        <img src="images/icon-calendar.svg" alt="">
+                        Calendar
+                    </li>
+                    <li class="navigation__sub-item">
+                        <img src="images/icon-reminders.svg" alt="">
+                        Reminders
+                    </li>
+                    <li class="navigation__sub-item">
+                        <img src="images/icon-planning.svg" alt="">
+                        Planning
+                    </li>
+                </ul>
+
+                <li id="company-toggle" class="navigation__main-item--dropdown">
                     Company 
-                    <img src="images/icon-arrow-down.svg" alt="">
-                    <ul class="navigation__sub-list" >
-                        <li class="navigation__sub-item">History</li>
-                        <li class="navigation__sub-item">Our Team</li>
-                        <li class="navigation__sub-item">Blog</li>
-                    </ul>
+                    <img id="company-icon" src="images/icon-arrow-down.svg" data-open="false" alt="">
                 </li>
+
+                <ul id="company-sublist" class="navigation__sub-list" >
+                    <li class="navigation__sub-item">History</li>
+                    <li class="navigation__sub-item">Our Team</li>
+                    <li class="navigation__sub-item">Blog</li>
+                </ul>
+
                 <li class="navigation__main-item">Careers</li>
                 <li class="navigation__main-item">About</li>
             </ul>
@@ -67,7 +71,7 @@
 
 
 
-        <button class="header__button">
+        <button id="open-button" class="header__button">
             <img src="images/icon-menu.svg" alt="menu button">
         </button>
     </header>
