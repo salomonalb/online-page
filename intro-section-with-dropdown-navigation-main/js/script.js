@@ -14,7 +14,7 @@ const filter = document.getElementById('filter');
 
 openButton.addEventListener('click', () =>  {
     navigation.style.display = "flex";
-    filter.style.display = "block"
+    filter.style.display = "block";
 })
 
 closeButton.addEventListener('click', () => {
@@ -62,5 +62,13 @@ companyToggle.addEventListener('click', () => {
     }
 })
 
-
+window.addEventListener('resize', ()=> {
+    if (window.innerWidth >= 900 ) {
+        navigation.style.display = "flex";
+        filter.style.display = "none"
+    } else {
+        navigation.style.display = "none";
+        filter.style.display = "none"
+    }
+})
 

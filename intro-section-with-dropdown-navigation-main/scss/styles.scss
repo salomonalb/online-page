@@ -21,6 +21,7 @@ $Medium-Gray: hsl(0, 0%, 41%);
 $Almost-Black: hsl(0, 0%, 8%);
 $font-family: 'Epilogue', sans-serif;
 $breakpoint: 1025px;
+$breakpoint-navigation: 900px;
 
 body {
     background-color: $Almost-White;
@@ -34,6 +35,12 @@ body {
     justify-content: space-between;
     padding: min(6.4vw, 3.3rem) min(4.2%, 4rem);
     position: relative;
+    max-width: 144rem;
+    margin-inline: auto;
+
+    @media screen and (min-width: $breakpoint-navigation) {
+        justify-content: start;
+    }
 
     &__logo {
         width: 8.5rem;
@@ -45,6 +52,9 @@ body {
         &:hover {
             cursor: pointer;
         }
+        @media screen and (min-width: $breakpoint-navigation) {
+            display: none
+        }
     }
 }
 
@@ -53,7 +63,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: transparentize($color: black, $amount: 0.1);
+    background-color: transparentize($color: black, $amount: 0.125);
     width: 100%;
     display: none;
 }
@@ -73,6 +83,16 @@ body {
     right: 0;
     top: 0;
 
+    @media screen and (min-width: $breakpoint-navigation) {
+    all: unset;
+    display: flex;
+    font-size: min(3.7vw, 1.5rem);
+    color: $Medium-Gray;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    }
+
     &__close-button {
         margin-top: 1rem;
         width: 3.5rem;
@@ -84,6 +104,10 @@ body {
         &:hover {
             cursor: pointer;
         }
+        @media screen and (min-width: $breakpoint-navigation) {
+            all: unset;
+            display: none;
+        }
     }
     &__main-list {
         list-style-type: none;
@@ -91,11 +115,31 @@ body {
         flex-direction: column;
         gap: 3rem;
         margin-bottom: 4rem;
+        @media screen and (min-width: $breakpoint-navigation) {
+            all: unset;
+            margin-left: 4rem;
+            display: flex;
+            list-style-type: none;
+            justify-content: space-between;
+            gap: 4rem;
+        }
     }
     &__main-item {
         &:hover {
-            cursor: pointer;
             text-decoration: underline;
+            color: $Almost-Black;
+            cursor: pointer;
+        }
+        @media screen and (min-width: $breakpoint-navigation) {
+            all: unset;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            &:hover {
+                text-decoration: underline;
+                color: $Almost-Black;
+                cursor: pointer;
+            }
         }
     }
     &__main-item--dropdown  {
@@ -106,12 +150,28 @@ body {
         align-items: center;
         justify-content: start;
         &:hover {
-            cursor: pointer;
             text-decoration: underline;
+            color: $Almost-Black;
+            cursor: pointer;
+        }
+        @media screen and (min-width: $breakpoint-navigation) {
+            all: unset;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            &:hover {
+                text-decoration: underline;
+                color: $Almost-Black;
+                cursor: pointer;
+            }
         }
     }
     &__main-item-icon {
         grid-area: icon;
+
+        @media screen and (min-width: $breakpoint-navigation) {
+            all: unset;
+        }
     }
     &__sub-list {
         text-decoration: none;
@@ -121,6 +181,25 @@ body {
         flex-direction: column;
         gap: 3rem;
         margin-left: 2.5rem;
+
+        @media screen and (min-width: $breakpoint-navigation) {
+            all: unset;
+            background-color: white;
+            list-style-type: none;
+            display: none;
+            flex-direction: column;
+            gap:  2rem;
+            padding: 2.5rem 2rem;
+            position: absolute;
+            top: 8rem;
+            left: 10rem;
+            border-radius: 1.25rem;
+            box-shadow: 0 40px 80px 2px transparentize($color: #000000, $amount: 0.90);
+    
+            &#company-sublist {
+                left: 18em;
+            }
+        }
     }
     &__sub-item {
         display: flex;
@@ -129,6 +208,16 @@ body {
             cursor: pointer;
             text-decoration: underline;
         }
+        @media screen and (min-width: $breakpoint-navigation) {
+            all: unset;
+            display: flex;
+            gap: 2rem;
+            &:hover {
+                text-decoration: underline;
+                color: $Almost-Black;
+                cursor: pointer;
+            }
+        }
     }
     &__tertiary-button {
         align-self: center;
@@ -136,9 +225,27 @@ body {
         text-decoration: none;
         color: inherit;
         &:hover {
-            cursor: pointer;
             text-decoration: underline;
+            color: $Almost-Black;
+            cursor: pointer;
         }
+        @media screen and (min-width: $breakpoint-navigation) {
+            all: unset;
+            text-align: center;
+            align-self: center;
+            margin-left: auto;
+            margin-right: 2rem;
+            padding-block: 1.5rem;
+            padding-inline: 2rem;
+            text-decoration: none;
+            color: inherit;
+            &:hover {
+                text-decoration: underline;
+                color: $Almost-Black;
+                cursor: pointer;
+            }
+        }
+
     }
     &__secondary-button {
         align-self: center;
@@ -151,8 +258,25 @@ body {
         border-radius: 1.5rem;
         &:hover {
             cursor: pointer;
-            color: $Almost-White;
-            background-color: $Medium-Gray;
+            color: $Almost-Black;
+            border-color: $Almost-Black;
+        }
+        @media screen and (min-width: $breakpoint-navigation) {
+            all: unset;
+            align-self: center;
+            text-decoration: none;
+            color: inherit;
+            border: 2px solid $Medium-Gray;
+            
+            text-align: center;
+            padding-block: 1.5rem;
+            padding-inline: 2rem;
+            border-radius: 1.5rem;
+            &:hover {
+                cursor: pointer;
+                color: $Almost-Black;
+                border-color: $Almost-Black;
+            }
         }
     }
 }
