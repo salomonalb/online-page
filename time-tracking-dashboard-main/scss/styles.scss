@@ -93,9 +93,81 @@ body {
 
         &:hover {
             color: white;
+            cursor: pointer;
         }
         &.--active {
             color: white;
         }
     }
+}
+
+.time-card {
+    padding-top: 4rem;
+    border-radius: 1.6rem;
+    background-image: url(../images/);
+    background-position: top -1rem right 1.5rem;
+    background-repeat: no-repeat;
+    background-size: 8.6rem;
+    background-color: transparent;
+
+    &#work {
+        background-image: url(../images/icon-work.svg);
+        background-color: $Light-red-work;
+    }
+    &#play {
+        background-image: url(../images/icon-play.svg);
+        background-color: $Soft-blue-play;
+    }
+    &#study {
+        background-image: url(../images/icon-study.svg);
+        background-color: $Light-red-study;
+    }
+    &#exercise {
+        background-image: url(../images/icon-exercise.svg);
+        background-color: $Lime-green-exercise;
+    }
+    &#social {
+        background-image: url(../images/icon-social.svg);
+        background-color: $Violet-social;
+    }
+    &#self-care {
+        background-image: url(../images/icon-self-care.svg);
+        background-color: $Soft-orange-self-care;
+    }
+    
+    &__data-container {
+        background-color: $Dark-blue;
+        padding: 3.2rem 2.4rem;
+        border-radius: 1.4rem;
+    }
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        color: white;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+    &__button {
+        background-color: transparent;
+        border: none;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &__responsive-row {
+        margin-top: 1.6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__time {
+        font-size: 2.4rem;
+        color: white;
+    }
+    &__last-time {
+        font-size: 1.2rem;
+    }
+
 }
