@@ -35,16 +35,37 @@ body {
     font-family: $font-family;
     font-size: 1.6rem;
     font-weight: 300;
-    padding: 8rem 2.4rem;
+    padding: min(21vw, 6rem) 2.4rem;
 }
 .dashboard {
     display: grid;
-    row-gap: 2.4rem;
+    row-gap: /*2.4rem;*/ min(6.4vw, 2.8rem);
+    max-width: 37.5rem;
+    margin-inline: auto;
+    grid-template-areas: "profile" "work" "play" "study" "exercise" "social" "self-care";
+
+    @media screen and (min-width: 590px) {
+        grid-template-columns: 25.5rem 25.5rem;
+        max-width: unset;
+        column-gap: 3.2rem;
+        row-gap: 2.8rem;
+        justify-content: center;
+        align-items: center;
+        grid-template-areas: "profile work" "profile play" "study exercise" "social self-care" ;
+    }
+    @media screen and (min-width: 1164px) {
+        grid-template-columns: repeat(4, 25.5rem);
+        grid-template-areas: "profile work play study" "profile exercise social self-care";
+    }
 }
 
 .profile-card {
     background-color: $Dark-blue;
     border-radius: 1.5rem;
+    grid-area: profile;
+    @media screen and (min-width: 590px) {
+        align-self: stretch;
+    }
 
     &__profile-section {
         background-color: $Blue;
@@ -55,15 +76,22 @@ body {
         grid-template-areas: "pic label" "pic name";
         column-gap: 1.6rem;
         border-radius: 1.5rem;
+        @media screen and (min-width: 590px) {
+            grid-template-areas: "pic" "label" "name";
+            padding-bottom: 9rem;
+        }
     }
     &__profile-picture {
-        width: 6.4rem;
+        width: /*6.4rem;*/ min(17vw, 7.8rem);
         border: 2px solid white;
         position: relative;
         background-color: white;
         border-radius: 50%;
         text-align: center;
         grid-area: pic;
+        @media screen and (min-width: 590px) {
+            margin-bottom: 4rem;
+        }
     }
     &__label {
         font-size: 1.3rem;
@@ -74,22 +102,32 @@ body {
     }
     &__name {
         color: white;
-        font-size: 2rem;
+        font-size: /*2rem;*/ min(5.3vw, 4rem);
         font-weight: 300;
         grid-area: name;
         align-self: start;
+        @media screen and (min-width: 590px) {
+            max-width: min-content;
+        }
     }
     &__menu {
         list-style-type: none;
         display: flex;
         justify-content: space-between;
         padding: 1.6rem 3.2rem;
+        @media screen and (min-width: 590px) {
+            flex-direction: column;
+            gap: 2.4rem;
+            padding: 3rem 3.2rem;
+            
+        }
     }
     &__menu-button {
         background-color: transparent;
         border: none;
         color: $Desaturated-blue;
         font-weight: 400;
+        transition: all 300ms;
 
         &:hover {
             color: white;
@@ -102,47 +140,67 @@ body {
 }
 
 .time-card {
-    padding-top: 4rem;
+    padding-top: min(10.6vw, 4.5rem);
     border-radius: 1.6rem;
     background-image: url(../images/);
     background-position: top -1rem right 1.5rem;
     background-repeat: no-repeat;
     background-size: 8.6rem;
     background-color: transparent;
+    transition: all 300ms;
+    &:hover {
+        transform: scale(1.012);
+        cursor: pointer;
+    }
 
     &#work {
         background-image: url(../images/icon-work.svg);
         background-color: $Light-red-work;
+        grid-area: work;
     }
     &#play {
         background-image: url(../images/icon-play.svg);
         background-color: $Soft-blue-play;
+        grid-area: play;
     }
     &#study {
         background-image: url(../images/icon-study.svg);
         background-color: $Light-red-study;
+        grid-area: study;
     }
     &#exercise {
         background-image: url(../images/icon-exercise.svg);
         background-color: $Lime-green-exercise;
+        grid-area: exercise;
+        background-position: top  right 1.5rem;
     }
     &#social {
         background-image: url(../images/icon-social.svg);
         background-color: $Violet-social;
+        grid-area: social;
     }
     &#self-care {
         background-image: url(../images/icon-self-care.svg);
         background-color: $Soft-orange-self-care;
+        grid-area: self-care;
     }
     
     &__data-container {
         background-color: $Dark-blue;
-        padding: 3.2rem 2.4rem;
+        padding: 3.2rem min(6.4vw, 3.2rem);
         border-radius: 1.4rem;
+        transition: all 300ms;
+
+        &:hover {
+            background-color: lighten($color: $Dark-blue, $amount: 2.5%)
+        }
     }
     &__row {
         display: flex;
         justify-content: space-between;
+        @media screen and (min-width: 590px) {
+            margin-bottom: 2.8rem;
+        }
     }
     &__title {
         color: white;
@@ -161,9 +219,14 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media screen and (min-width: 590px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2rem;
+        }
     }
     &__time {
-        font-size: 2.4rem;
+        font-size: min(6.4vw, 4.5rem);
         color: white;
     }
     &__last-time {
