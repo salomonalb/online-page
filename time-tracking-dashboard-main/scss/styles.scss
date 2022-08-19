@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+img, svg {
+    display: block;
+    max-width: 100%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+$font-family: 'Rubik', sans-serif;
+$Blue: hsl(246, 80%, 60%);
+$Light-red-work: hsl(15, 100%, 70%);
+$Soft-blue-play: hsl(195, 74%, 62%);
+$Light-red-study: hsl(348, 100%, 68%);
+$Lime-green-exercise: hsl(145, 58%, 55%);
+$Violet-social: hsl(264, 64%, 52%);
+$Soft-orange-self-care: hsl(43, 84%, 65%);
+
+$Very-dark-blue: hsl(226, 43%, 10%);
+$Dark-blue: hsl(235, 46%, 20%);
+$Desaturated-blue: hsl(235, 45%, 61%);
+$Pale-Blue: hsl(236, 100%, 87%);
+
+body {
+    background-color: $Very-dark-blue;
+    color: $Pale-Blue;
+    font-family: $font-family;
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding: 8rem 2.4rem;
+}
+.dashboard {
+    display: grid;
+    row-gap: 2.4rem;
+}
+
+.profile-card {
+    background-color: $Dark-blue;
+    border-radius: 1.5rem;
+
+    &__profile-section {
+        background-color: $Blue;
+
+        padding: 3.2rem;
+        display: grid;
+        grid-template-columns: max-content max-content;
+        grid-template-areas: "pic label" "pic name";
+        column-gap: 1.6rem;
+        border-radius: 1.5rem;
+    }
+    &__profile-picture {
+        width: 6.4rem;
+        border: 2px solid white;
+        position: relative;
+        background-color: white;
+        border-radius: 50%;
+        text-align: center;
+        grid-area: pic;
+    }
+    &__label {
+        font-size: 1.3rem;
+        color: $Pale-Blue;
+        grid-area: label;
+        align-self: end;
+        font-weight: 400;
+    }
+    &__name {
+        color: white;
+        font-size: 2rem;
+        font-weight: 300;
+        grid-area: name;
+        align-self: start;
+    }
+    &__menu {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 1.6rem 3.2rem;
+    }
+    &__menu-button {
+        background-color: transparent;
+        border: none;
+        color: $Desaturated-blue;
+        font-weight: 400;
+
+        &:hover {
+            color: white;
+        }
+        &.--active {
+            color: white;
+        }
+    }
+}
