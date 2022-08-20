@@ -11,6 +11,49 @@
     <title>Tip Calculator App</title>
 </head>
 <body>
-    
+    <header class="header">
+        <img class="header__logo" src="images/logo.svg" alt="splitter logo">
+    </header>
+
+    <form class="app">
+        <section class="app__input-section">
+            
+            <label class="app__label" for="bill">Bill</label>
+            <input class="app__input--bill" type="text" placeholder="0" name="bill" id="bill">
+
+            <fieldset class="app__tip-section">
+                <legend class="app__label">Select Tip %</legend>
+                <div class="app__buttons-grid">
+                    <button class="app__tip-button">5%</button>
+                    <button class="app__tip-button">10%</button>
+                    <button class="app__tip-button">15%</button>
+                    <button class="app__tip-button">25%</button>
+                    <button class="app__tip-button">50%</button>
+                    <input class="app__input--custom" type="text" placeholder="Custom">
+                </div>
+            </fieldset>
+
+            <label class="app__label" for="numOfPeople">Number Of People</label>
+            <input class="app__input--numofpeople" type="text" placeholder="0" name="numOfPeople" id="numOfPeople">
+
+        </section >
+
+
+        <section class="app__output-section">
+            <div class="app__row-container">
+                <label class="app__out-label" for="tipAmount">Tip Amount</label>
+                <p class="app__out-para">/ person</p>
+                <output class="app__out-output" name="tipAmount" id="tipAmount" for="bill numOfPeople">$0.00</output>
+            </div>
+            <div class="app__row-container">
+                <label class="app__out-label" for="total">Total</label>
+                <p class="app__out-para">/ person</p>
+                <output class="app__out-output" name="total" id="total" for="bill numOfPeople">$0.00</output>
+            </div>
+
+            <button class="app__reset-button">RESET</button>
+        </section>
+
+    </form>
 </body>
 </html>
