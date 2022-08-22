@@ -47,7 +47,6 @@ body {
         margin-inline: auto;
     }
 }
-/* 456 */  /* + 32  + 392 */
 
 .app {
     background-color: $White;
@@ -58,7 +57,7 @@ body {
     border-radius: 2rem;
     max-width: 54rem;
     margin-inline: auto;
-    @media screen and (min-width: 620px) {
+    @media screen and (min-width: 800px) {
         flex-direction: row;
         max-width: 88rem;
         justify-content: space-between;
@@ -68,6 +67,10 @@ body {
         display: flex;
         flex-direction: column;
         flex-grow: 1;
+        @media screen and (min-width: 800px) {
+            flex-grow: 0;
+            width: 393.7px;
+        }
     }
     &__label {
         font-size: 1.3rem;
@@ -161,6 +164,7 @@ body {
         text-align: right;
     }
     &__reset-button {
+        margin-top: auto;
         font-family: inherit;
         background-color: $Strong-cyan;
         color: $Very-dark-cyan;
@@ -198,4 +202,5 @@ body {
     color:rgb(255, 59, 59);
     text-align: right;
     display: none;
+    max-width: 100%;
 }
