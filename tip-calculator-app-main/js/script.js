@@ -1,5 +1,6 @@
 "use strict"
 
+
 const app = document.getElementById('app');
 
 // Text Inputs
@@ -96,6 +97,7 @@ function billValidate() {
         calculation()
     }
 }
+
 function customValidate() {
     if (customInput.validity.valid === false || customInput.value === "" || customInput.value < 1) {
         customInput.classList.remove('--valid');
@@ -147,6 +149,12 @@ function peopleValidate() {
         calculation()
     }
 }
+
+
+
+// you can use the same function and logic with a function where you pass the input, the alert and a string for it, the value, and other functon for the radio button
+
+
 
 
 app.addEventListener('submit',  (event)=> {
