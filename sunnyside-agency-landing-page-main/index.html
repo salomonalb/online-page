@@ -11,24 +11,30 @@
     <title>Sunnyside Agency Landing Page</title>
 </head>
 <body>
-    <header>
-        <div>
-            <img src="images/logo.svg" alt="">
-            <button>
-                <img src="images/icon-hamburger.svg" alt="">
+
+    <header class="header">
+        <div class="header__top-row">
+            <img class="header__logo" src="images/logo.svg" alt="">
+            <button class="header__button">
+                <img id="button" src="images/icon-hamburger.svg" alt="icon-hamburger">
             </button>
-            <nav>
-                <menu>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">CONTACT</a></li>
+            <nav id="nav" class="header__navigation">
+                <menu class="header__menu">
+                    <li class="header__list-item"><a class="header__link" href="#">About</a></li>
+                    <li class="header__list-item"><a class="header__link" href="#">Services</a></li>
+                    <li class="header__list-item"><a class="header__link" href="#">Projects</a></li>
+                    <li class="header__list-item"><a class="header__nav-btn" href="#">CONTACT</a></li>
                 </menu>
             </nav>
         </div>
-        <h1>We Are Creatives</h1>
-        <!-- down arrow and bg image  in css-->
+        <h1 class="header__title">We Are Creatives</h1>
+        <img class="header__icon-arrow" src="images/icon-arrow-down.svg" alt="">
+        <!-- <picture class="header__image">
+            <source media="(min-width: 600px)" srcset="images/desktop/image-header.jpg">
+            <img src="images/mobile/image-header.jpg" alt="">
+        </picture> -->
     </header>
+
     <main>
         <section>
             <div> <!-- egg image css --></div>
@@ -77,7 +83,7 @@
                 </article>
 
                 <article>
-                    <img src="images/image-thomas.jpg" alt="">
+                    <img src="images/image-jennie.jpg" alt="">
                     <p>  Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
                     </p>
                     <p>Jennie F.</p>

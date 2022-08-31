@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -11,4 +13,129 @@ img, svg {
 
 html {
     font-size: 62.5%;
+}
+
+/* --------------- */
+
+$Soft-red: hsl(7, 99%, 70%);
+$Yellow: hsl(51, 100%, 49%);
+$Dark-desaturated-cyan: hsl(167, 40%, 24%);  /*(graphic design text)*/
+$Dark-blue: hsl(198, 62%, 26%); /* (photography text)*/
+$Dark-moderate-cyan: hsl(168, 34%, 41%); /* (footer)*/
+
+
+$Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+$Very-dark-grayish-blue: hsl(213, 9%, 39%);
+$Dark-grayish-blue: hsl(232, 10%, 55%);
+$Grayish-blue: hsl(210, 4%, 67%);
+$White: hsl(0, 0%, 100%);
+
+$font-barlow:'Barlow', sans-serif;
+$font-frances: 'Fraunces', serif;
+
+$header-blue: hsl(200, 100%, 62%);
+
+.header {
+    padding-top: 3.2rem;
+    position: relative;
+    background-color: $header-blue;
+    padding-bottom: 31rem;
+    background-image: url(../images/mobile/image-header.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size:  100%;
+    @media screen and (min-width: 600px) {
+        background-image: url(../images/desktop/image-header.jpg);
+    }
+
+    &__top-row {
+        margin-inline: 2.3rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    &__button {
+        background-color: transparent;
+        border: none;
+    }
+    &__logo {
+
+    }
+    &__navigation {
+        display: none;
+        position: absolute;
+        top: 12rem;
+        right: 2.3rem;
+        font-family: $font-barlow;
+        z-index: 10;
+
+        &::before {
+            position: absolute;
+            right: 0;
+            top: -2.4rem;
+            content: "";
+            width: 0; 
+            height: 0; 
+            border-top: 24px solid transparent;
+            border-bottom: 24px solid transparent; 
+            border-right:24px solid $White;
+        }
+    }
+    &__menu {
+        padding-block: 4rem;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        background-color: $White;
+        width: 32.9rem;
+    }
+    &__list-item {
+        margin: auto;
+        overflow: hidden;
+    }
+    &__link {
+        text-decoration: none;
+        color: $Dark-grayish-blue;
+        font-size: 1.5rem;
+        &:hover {
+            color: $Very-dark-grayish-blue;
+        }
+    }
+    &__nav-btn {
+        display: block;
+        background-color: $Yellow;
+        font-size: 1.5rem;
+        font-family: $font-frances;
+        font-weight: 700;
+        text-decoration: none;
+        padding-block: 1.8rem;
+        padding-inline: 3.2rem;
+        color: $Very-dark-desaturated-blue;
+        border-radius: 2.5rem;
+
+    }
+    &__title {
+        margin-top: 10rem;
+        color: $White;
+        font-family: $font-frances;
+        font-size: 3rem;
+        font-weight: 900;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+        max-width: 11ch;
+        margin-inline: auto;
+    }
+    &__icon-arrow {
+        position: absolute;
+        top: 28.5rem;
+        left: 47%;
+    }
+    &__image {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+
 }
