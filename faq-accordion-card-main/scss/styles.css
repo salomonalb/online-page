@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img, picture {
+  display: block;
+}
+
+/* --------------- */
+/* text */
+/* Background gradient: */
+/* text */
+/* Divider */
+/* ----------------- */
+html {
+  font-size: 10px;
+  overflow-y: scroll;
+  padding-bottom: 20rem;
+}
+
+body {
+  background: linear-gradient(to top, hsl(240deg, 73%, 65%), hsl(273deg, 75%, 66%));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Kumbh Sans", sans-serif;
+  padding-inline: 2.5rem;
+  padding-bottom: 10rem;
+}
+
+.faq-card {
+  background-color: white;
+  margin-top: 16rem;
+  margin-inline: auto;
+  margin-bottom: 10rem;
+  padding: 3rem;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  border-radius: 2.5rem;
+  position: relative;
+  max-width: 45rem;
+  min-width: 21rem;
+  display: flex;
+}
+@media screen and (min-width: 870px) {
+  .faq-card {
+    max-width: 92rem;
+    margin-block: 5rem;
+    overflow: hidden;
+    padding-top: 5rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .faq-card {
+    margin-inline: auto;
+  }
+}
+.faq-card__illustration-section-container {
+  max-width: 39rem;
+}
+@media screen and (min-width: 870px) {
+  .faq-card__illustration-section-container {
+    position: relative;
+    padding-inline: 19.5rem;
+  }
+}
+.faq-card__illustration {
+  width: 23rem;
+  position: absolute;
+  top: -11rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media screen and (min-width: 870px) {
+  .faq-card__illustration {
+    width: 100%;
+    top: 10rem;
+    left: 25%;
+    z-index: 5;
+  }
+}
+.faq-card__illustration-shadow {
+  width: 23rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media screen and (min-width: 870px) {
+  .faq-card__illustration-shadow {
+    width: 200%;
+    top: -16rem;
+    left: -6%;
+  }
+}
+.faq-card__wrapper {
+  margin-bottom: 10rem;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  overflow: visible;
+  height: 47rem;
+}
+.faq-card__box-illustration {
+  display: none;
+}
+@media screen and (min-width: 870px) {
+  .faq-card__box-illustration {
+    display: block;
+    position: absolute;
+    bottom: 7rem;
+    left: -6.8rem;
+    z-index: 10;
+    width: 14rem;
+  }
+}
+.faq-card__faq-container {
+  margin: auto;
+  /* change the with for each viewport  and
+  add some bottom padding to the main card or
+  to the wrapper */
+}
+@media screen and (min-width: 320px) {
+  .faq-card__faq-container {
+    width: 21rem;
+  }
+}
+@media screen and (min-width: 375px) {
+  .faq-card__faq-container {
+    width: 26rem;
+  }
+}
+@media screen and (min-width: 470px) {
+  .faq-card__faq-container {
+    width: 36rem;
+  }
+}
+@media screen and (min-width: 870px) {
+  .faq-card__faq-container {
+    width: 36rem;
+  }
+}
+.faq-card__title {
+  font-size: 2.5rem;
+  color: hsl(238deg, 29%, 16%);
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 870px) {
+  .faq-card__title {
+    text-align: left;
+  }
+}
+.faq-card__accordion {
+  border-bottom: 2px solid hsl(240deg, 5%, 91%);
+  padding-block: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr -webkit-min-content;
+  grid-template-columns: 1fr 1fr min-content;
+  grid-template-areas: "q q i" "a a i";
+}
+.faq-card__accordion:hover {
+  cursor: pointer;
+}
+.faq-card__accordion:hover .faq-card__question {
+  color: hsl(14deg, 88%, 65%);
+}
+.faq-card__question {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: hsl(238deg, 29%, 16%);
+  grid-area: q;
+  margin-bottom: 1rem;
+}
+.faq-card__icon {
+  grid-area: i;
+  margin-top: 0.5rem;
+}
+.faq-card__answer {
+  display: none;
+  grid-area: a;
+  color: hsl(237deg, 12%, 33%);
+  font-size: 1.125rem;
+}
+
+.question-open {
+  font-weight: 700;
+}
+
+.icon-open {
+  transform: rotate(180deg);
+}
+
+.answer-open {
+  display: block;
+}
+
+/* make the wrapper a fixed height but allow overflow to be shown 
+this way you can set the position of the box and still open the accordions *//*# sourceMappingURL=styles.css.map */

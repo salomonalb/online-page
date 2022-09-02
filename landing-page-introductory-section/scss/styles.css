@@ -1,0 +1,254 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+/* reset */
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+  object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+  object-position: center center;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1rem;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+} */
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  font-size: 100%;
+  /* opcional */
+  line-height: 1.5;
+  /* opcional 
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto; */
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------------------------------------------------------------------*/
+body {
+  background-image: url(../images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-color: hsl(257deg, 40%, 49%);
+  background-size: contain;
+  overflow-x: hidden;
+  padding: 0 2rem;
+}
+
+.logo {
+  width: 8rem;
+  margin-bottom: 3.5rem;
+  margin-top: 2rem;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+}
+.hero-section__image {
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 4rem;
+  max-width: 480px;
+}
+.hero-section__text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin: auto;
+}
+.hero-section__title {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+  width: 100%;
+  max-width: 17ch;
+  margin: auto;
+}
+.hero-section__paragraph {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 1.025rem;
+  max-width: 33ch;
+  margin: auto;
+}
+.hero-section__button {
+  background-color: white;
+  color: hsl(257deg, 40%, 49%);
+  font-family: "Poppins", sans-serif;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  display: block;
+  margin: auto;
+  font-size: 0.97rem;
+  padding: 0.5rem 4rem;
+  border-radius: 50px;
+  box-shadow: 3px 3px 13px 3px #433172;
+  transition: all 200ms;
+}
+.hero-section__button:hover {
+  background-color: hsl(300deg, 69%, 71%);
+  color: white;
+}
+
+.icon-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.icon {
+  display: block;
+  overflow: visible;
+  box-sizing: content-box;
+  width: 0.8rem;
+  height: 0.8rem;
+  color: white;
+  padding: 0.3rem;
+  transition: all 200ms;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.icon:hover {
+  color: hsl(300deg, 69%, 71%);
+  border-color: hsl(300deg, 69%, 71%);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 916px) {
+  body {
+    background-image: url("../images/bg-desktop.svg");
+    background-size: cover;
+  }
+  .hero-section {
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .hero-section__text-container {
+    margin: 0;
+    margin-top: 3.5vw;
+  }
+  .hero-section__title {
+    text-align: left;
+    margin-left: 0;
+  }
+  .hero-section__paragraph {
+    text-align: left;
+  }
+  .hero-section__button {
+    margin-left: 0;
+  }
+  .hero-section__image {
+    width: 50%;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    margin: 0;
+  }
+  .icon-container {
+    justify-content: flex-end;
+  }
+}/*# sourceMappingURL=styles.css.map */

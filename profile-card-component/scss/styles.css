@@ -1,0 +1,194 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+/* reset */
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+  object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+  object-position: center center;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1rem;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+} */
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  font-size: 100%;
+  /* opcional */
+  line-height: 1.5;
+  /* opcional 
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto; */
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------------------------------------------------------------------*/
+body {
+  background-color: hsl(185deg, 75%, 39%);
+  background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain;
+  background-position: top -20rem left -15rem, bottom -20rem right -15rem;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.profile-card {
+  margin: 4rem auto;
+  overflow: hidden;
+  background-color: white;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  border-radius: 15px;
+}
+.profile-card__avatar {
+  width: 30%;
+  border: 4px solid white;
+  border-radius: 50%;
+  margin: 0 auto -2.5rem;
+  transform: translateY(-50px);
+  z-index: 2;
+  transition: all 500ms;
+}
+.profile-card__avatar:hover {
+  cursor: pointer;
+}
+.profile-card__name, .profile-card__stats-number {
+  font-size: 18px;
+  font-weight: 700;
+  color: hsl(229deg, 23%, 23%);
+  text-align: center;
+  transition: all 200ms;
+}
+.profile-card__name:hover, .profile-card__stats-number:hover {
+  cursor: pointer;
+  color: hsl(185deg, 75%, 39%);
+}
+.profile-card__age {
+  color: hsl(0deg, 0%, 59%);
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
+.profile-card__city, .profile-card__stats-title {
+  text-align: center;
+  color: hsl(227deg, 10%, 46%);
+  font-weight: 400;
+  font-size: 0.8rem;
+  margin: 0 auto 1.5rem;
+  transition: all 200ms;
+}
+.profile-card__city:hover, .profile-card__stats-title:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.profile-card__stats-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem;
+  border-top: 1px solid rgba(150, 150, 150, 0.3);
+}
+.profile-card__stats-container {
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+}
+.profile-card__stats-title {
+  font-size: 0.5rem;
+  letter-spacing: 1.5px;
+  margin: 0;
+}/*# sourceMappingURL=styles.css.map */

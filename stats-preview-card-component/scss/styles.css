@@ -1,0 +1,221 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+/* reset */
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+  object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+  object-position: center center;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1rem;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+} */
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  font-size: 100%;
+  /* opcional */
+  line-height: 1.5;
+  /* opcional 
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto; */
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------------------------------------------------------------------*/
+body {
+  background-color: hsl(233deg, 47%, 7%);
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  color: hsl(0deg, 0%, 100%);
+  text-align: center;
+  padding: 1rem;
+}
+
+.stats-card {
+  background-color: hsl(244deg, 38%, 16%);
+  border-radius: 0.8rem;
+  overflow: hidden;
+  max-width: 23rem;
+  min-width: 23rem;
+  margin: auto;
+  position: relative;
+  padding-bottom: 2rem;
+}
+.stats-card__image {
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.stats-card__accent-color-overlay {
+  padding: 8.45rem 11.5rem;
+  background: rgba(94, 29, 134, 0.6);
+  position: absolute;
+  top: 0;
+}
+.stats-card__title {
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0 2rem;
+}
+.stats-card__title--accent-color {
+  color: hsl(277deg, 64%, 61%);
+  font-size: inherit;
+  margin: 0;
+}
+.stats-card__text {
+  color: hsla(0deg, 0%, 100%, 0.75);
+  margin-top: 1rem;
+  margin: 1rem 2rem 0;
+}
+.stats-card__text--stats {
+  color: hsla(0deg, 0%, 100%, 0.6);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: small;
+  font-weight: 400;
+  letter-spacing: 1.3px;
+  margin-top: 0;
+}
+.stats-card__stats-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 1100px) {
+  .stats-card {
+    margin-top: 8rem;
+    max-width: 70rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    text-align: left;
+    padding-bottom: 0;
+  }
+  .stats-card__desktop-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    margin-bottom: 4rem;
+  }
+  .stats-card__image {
+    margin: 0;
+    display: block;
+    line-height: 0;
+    min-width: 32rem;
+    max-width: 32rem;
+  }
+  .stats-card__accent-color-overlay {
+    padding: 13.3rem 16rem;
+  }
+  .stats-card__title {
+    max-width: 15ch;
+  }
+  .stats-card__text {
+    max-width: 37ch;
+    -webkit-hyphens: none;
+        -ms-hyphens: none;
+            hyphens: none;
+  }
+  .stats-card__stats-section {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+  }
+}/*# sourceMappingURL=styles.css.map */

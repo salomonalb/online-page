@@ -1,0 +1,49 @@
+@import url(/wickedcss.min.css);
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(212deg, 45%, 89%);
+  font-family: "Outfit", sans-serif;
+}
+
+.card {
+  background-color: hsl(0deg, 0%, 100%);
+  margin: auto;
+  border-radius: 20px;
+  padding: 1rem;
+  max-width: 20rem;
+  margin-top: 3rem;
+  padding-bottom: 2rem;
+  transition: all 200ms;
+}
+.card__image {
+  display: block;
+  border-radius: 10px;
+  width: 100%;
+}
+.card__text-container {
+  padding: 0.7rem;
+}
+.card .card__para, .card .card__title {
+  display: block;
+  width: 95%;
+  text-align: center;
+  margin: auto;
+  margin-top: 1.5rem;
+}
+.card__title {
+  font-weight: 700;
+  color: hsl(218deg, 44%, 22%);
+  font-size: 22px;
+}
+.card__para {
+  font-weight: 400;
+  color: hsl(220deg, 15%, 55%);
+  font-size: 15px;
+}
+.card:hover {
+  transform: scale(1.025);
+  cursor: pointer;
+}/*# sourceMappingURL=styles.css.map */

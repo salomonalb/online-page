@@ -1,0 +1,238 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+/* reset */
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+  object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+  object-position: center center;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1rem;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+} */
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  font-size: 100%;
+  /* opcional */
+  line-height: 1.5;
+  /* opcional 
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto; */
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------------------------------------------------------------------*/
+body {
+  background-color: hsl(204deg, 43%, 93%);
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+}
+
+.pricing {
+  margin: 4rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  overflow: hidden;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.description-card {
+  padding: 2rem 1.5rem;
+  width: 19.5rem;
+  background-color: white;
+}
+.description-card__title {
+  color: hsl(179deg, 62%, 43%);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1.33rem;
+}
+.description-card__subtitle {
+  color: hsl(71deg, 73%, 54%);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.description-card__paragraph {
+  color: hsl(218deg, 22%, 67%);
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+
+.pricing-card {
+  padding: 2rem 1.5rem;
+  width: 19.5rem;
+  background-color: hsl(179deg, 62%, 43%);
+  color: white;
+}
+.pricing-card__title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.pricing-card__price-container {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+.pricing-card__price {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.pricing-card__frecuency {
+  color: hsl(204deg, 43%, 93%);
+  font-size: 0.8rem;
+}
+.pricing-card__paragraph {
+  font-size: 1rem;
+}
+.pricing-card__button {
+  margin-top: 2rem;
+  display: block;
+  background-color: hsl(71deg, 73%, 54%);
+  padding: 0.8rem 0;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.benefits-card {
+  padding: 2rem 1.5rem;
+  width: 19.5rem;
+  background-color: #2dbebc;
+}
+.benefits-card__title {
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.benefits-card__benefits-list {
+  color: hsl(204deg, 43%, 93%);
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+
+@media screen and (min-width: 656px) {
+  .pricing {
+    display: grid;
+    grid-template: -webkit-min-content min-content/1fr 1fr;
+    grid-template: min-content min-content/1fr 1fr;
+    grid-template-areas: "desc desc" "price why";
+  }
+  .description-card {
+    grid-area: desc;
+    width: 39rem;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+  }
+  .description-card__paragraph {
+    width: 55ch;
+    font-size: 0.9rem;
+  }
+  .pricing-card {
+    grid-area: price;
+  }
+  .benefits-card {
+    grid-area: why;
+  }
+}/*# sourceMappingURL=styles.css.map */

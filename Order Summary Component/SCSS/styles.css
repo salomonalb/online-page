@@ -1,0 +1,225 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+/* reset */
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+  object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+  object-position: center center;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1rem;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+} */
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  font-size: 100%;
+  /* opcional */
+  line-height: 1.5;
+  /* opcional 
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto; */
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------------------------------------------------------------------*/
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  padding: 1rem;
+  color: hsl(223deg, 47%, 23%);
+  background-color: hsl(255deg, 100%, 94%);
+}
+
+/*----Block---*/
+.order-component {
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 23rem;
+  margin: auto;
+  margin-top: 3rem;
+  background-color: white;
+  padding-bottom: 2rem;
+  /* -------Elements------- */
+  /* ---- Modifiers ---- */
+}
+.order-component__image {
+  margin-bottom: 2rem;
+}
+.order-component__title {
+  font-weight: 900;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.order-component__text {
+  color: hsl(224deg, 23%, 55%);
+  text-align: center;
+  margin: auto;
+  display: block;
+  margin: 0 2rem;
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+}
+.order-component__summary {
+  display: flex;
+  justify-content: start;
+  background-color: hsl(255deg, 100%, 98%);
+  margin: 1rem 1.5rem 0;
+  padding: 1rem;
+  border-radius: 15px;
+  gap: 1rem;
+}
+.order-component__icon {
+  width: 17.5%;
+}
+.order-component__action {
+  font-weight: 700;
+  color: hsl(245deg, 75%, 52%);
+  text-decoration: underline;
+  margin-left: auto;
+  align-self: center;
+}
+.order-component__action:hover {
+  color: #8b82ed;
+  text-decoration: none;
+}
+.order-component__button {
+  color: white;
+  background-color: hsl(245deg, 75%, 52%);
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  padding: 0.8rem;
+  margin: 1.5rem 1.5rem 2rem;
+  border-radius: 15px;
+  box-shadow: 3px 15px 10px 2px hsl(255deg, 100%, 94%);
+}
+.order-component__button:hover {
+  background-color: #8b82ed;
+}
+.order-component__title--small {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+.order-component__action--secondary {
+  display: block;
+  color: hsl(224deg, 23%, 55%);
+  text-decoration: none;
+  text-align: center;
+  margin: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.order-component__action--secondary:hover {
+  color: hsl(223deg, 47%, 23%);
+}
+.order-component__text--price {
+  margin: 0;
+}
+
+@media screen and (max-width: 420px) {
+  .order-component__text {
+    margin: 0 3.87rem;
+  }
+  .order-component__text--price {
+    margin: 0;
+  }
+}/*# sourceMappingURL=styles.css.map */

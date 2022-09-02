@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+html {
+  font-size: 62.5%;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* ----- */
+body {
+  font-size: 1.1rem;
+  background-color: hsl(210deg, 46%, 95%);
+  font-family: "Manrope", sans-serif;
+  padding-block: 5rem;
+  padding-inline: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 33rem;
+  margin: auto;
+  background-color: white;
+  border-radius: 1.5rem;
+  box-shadow: 0px 15px 20px 2px rgba(0, 0, 0, 0.1);
+}
+.card__image-container {
+  height: 20rem;
+  overflow: hidden;
+  border-top-right-radius: 1.5rem;
+  border-top-left-radius: 1.5rem;
+  background-image: url(../images/drawers.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card__text-container {
+  margin-inline: 3.5rem;
+  margin-top: 5.5rem;
+  margin-bottom: 3rem;
+}
+.card__title {
+  color: hsl(217deg, 19%, 35%);
+  margin-bottom: 1.5rem;
+}
+.card__paragraph {
+  color: hsl(214deg, 17%, 51%);
+}
+.card__grid-container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: -webkit-min-content -webkit-max-content 1fr -webkit-min-content;
+  grid-template-columns: min-content max-content 1fr min-content;
+  grid-template-areas: "avatar author . share" "avatar date   . share";
+  margin-inline: 3.5rem;
+  gap: 0.1rem 2rem;
+  margin-bottom: 2rem;
+}
+.card__avatar {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  grid-area: avatar;
+}
+.card__author {
+  color: hsl(217deg, 19%, 35%);
+  font-weight: 700;
+  grid-area: author;
+}
+.card__date {
+  grid-area: date;
+  color: hsl(214deg, 17%, 51%);
+}
+.card__share-button {
+  grid-area: share;
+  display: block;
+  padding: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: hsl(210deg, 46%, 95%);
+  color: hsl(214deg, 17%, 51%);
+  transition: all 250ms;
+}
+.card__share-button:hover {
+  background-color: hsl(214deg, 17%, 51%);
+  color: hsl(210deg, 46%, 95%);
+  cursor: pointer;
+}
+
+.share-component {
+  display: flex;
+  width: 100%;
+  max-width: 33rem;
+  margin: auto;
+  padding-inline: 3.5rem;
+  padding-block: 2.2rem;
+  align-items: center;
+  background-color: hsl(217deg, 19%, 35%);
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  position: relative;
+  transform: translateY(-7.9rem);
+}
+@media screen and (min-width: 906px) {
+  .share-component {
+    transform: none;
+    border-radius: 1.5rem;
+    justify-content: space-around;
+    max-width: 25rem;
+    box-shadow: 0px 15px 20px 2px rgba(0, 0, 0, 0.1);
+    transform: translate(30.5rem, -13.5rem);
+  }
+}
+.share-component::after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 100%;
+  border-width: 10px;
+  border-style: solid;
+  border-color: hsl(217deg, 19%, 35%) transparent transparent transparent;
+}
+@media screen and (min-width: 906px) {
+  .share-component::after {
+    display: block;
+  }
+}
+.share-component__text {
+  font-family: "Manrope", sans-serif;
+  letter-spacing: 4px;
+  color: hsl(212deg, 23%, 69%);
+  margin-right: 2rem;
+}
+.share-component__facebook, .share-component__pinterest, .share-component__twitter {
+  margin-right: 1rem;
+  transition: all 200ms;
+}
+.share-component__facebook:hover, .share-component__pinterest:hover, .share-component__twitter:hover {
+  cursor: pointer;
+  transform: scale(1.125);
+}
+.share-component__share-button {
+  display: block;
+  padding: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: hsl(210deg, 46%, 95%);
+  color: hsl(214deg, 17%, 51%);
+  transition: all 250ms;
+  background-color: hsl(214deg, 17%, 51%);
+  color: hsl(210deg, 46%, 95%);
+  cursor: pointer;
+  margin-left: auto;
+}
+@media screen and (min-width: 906px) {
+  .share-component__share-button {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 906px) {
+  .card {
+    flex-direction: row;
+    max-width: 73rem;
+  }
+  .card__image-container {
+    flex-shrink: 0;
+    margin: 0;
+    height: unset;
+    border-bottom-left-radius: 1.5rem;
+    border-top-right-radius: 0px;
+    width: 28rem;
+  }
+  .card__content-wrapper {
+    width: 44rem;
+    flex-shrink: 0;
+  }
+  .card__text-container {
+    padding: 0;
+    margin-inline: 4rem;
+    margin-top: 4rem;
+  }
+  .card__title {
+    font-size: 2rem;
+  }
+  .card__paragraph {
+    font-size: 1.3rem;
+  }
+  .card__author {
+    font-size: 1.3rem;
+  }
+  .card__date {
+    font-size: 1.3rem;
+  }
+}
+.hidden {
+  display: none;
+}/*# sourceMappingURL=styles.css.map */

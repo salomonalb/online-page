@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img, svg {
+  display: block;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+input {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+}
+
+*::-moz-placeholder {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+}
+
+*:-ms-input-placeholder {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+}
+
+*::placeholder {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  color: hsl(278deg, 68%, 11%);
+  height: 100vh;
+}
+
+/*
+(active input border)
+$Linear-gradient: : hsl(249, 99%, 64%) to hsl(278, 94%, 30%)*/
+.sections-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 140.5rem;
+  margin-inline: auto;
+}
+
+.cards-section {
+  background-image: url(../images/bg-main-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cards-wrapper {
+  padding-inline: 1.6rem;
+  padding-block: 12rem;
+  color: white;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  max-width: 53rem;
+  margin-inline: auto;
+}
+
+.card-back, .card-front {
+  width: 28rem;
+  height: 15.4rem;
+  background-size: cover;
+  margin: auto;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0px 5px 80px 4px rgba(0, 0, 0, 0.3);
+}
+
+.card-front {
+  background-image: url(../images/bg-card-front.png);
+  padding: 2rem 2rem 2.4rem;
+  position: absolute;
+  left: 6%;
+  top: 12rem;
+  z-index: 1;
+}
+.card-front__icon-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.card-front__big-circle {
+  width: 3rem;
+  height: 3rem;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+}
+.card-front__small-circle {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+}
+.card-front__card-number {
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.card-front__text-container {
+  display: flex;
+  justify-content: space-between;
+}
+.card-front__name, .card-front__date {
+  font-size: 1rem;
+}
+
+.card-back {
+  background-image: url(../images/bg-card-back.png);
+  position: absolute;
+  top: 3rem;
+  right: 6%;
+}
+.card-back__cvc {
+  position: absolute;
+  top: 7rem;
+  right: 3rem;
+  font-size: 1rem;
+}
+
+.form-section {
+  padding-inline: 1.6rem;
+}
+
+.form-container {
+  margin-top: 10rem;
+}
+
+.form, .thanks-component {
+  font-size: 1.4rem;
+  max-width: 38rem;
+  margin-inline: auto;
+  padding-bottom: 4.5rem;
+}
+.form__label {
+  display: block;
+  letter-spacing: 0.15rem;
+  margin-top: 2.4rem;
+  margin-bottom: 1.2rem;
+}
+.form__input, .form__input--small {
+  display: block;
+  border: 1px solid hsl(270deg, 3%, 87%);
+  border-radius: 1rem;
+  width: 100%;
+  padding: 1.5rem;
+  transition: all 200ms;
+}
+.form__input:hover, .form__input--small:hover {
+  cursor: pointer;
+  transform: scale(1.0125);
+}
+.form__input--small {
+  width: 50%;
+}
+.form__input::-moz-placeholder, .form__input--small::-moz-placeholder {
+  color: hsl(270deg, 3%, 87%);
+}
+.form__input:-ms-input-placeholder, .form__input--small:-ms-input-placeholder {
+  color: hsl(270deg, 3%, 87%);
+}
+.form__input::placeholder, .form__input--small::placeholder {
+  color: hsl(270deg, 3%, 87%);
+}
+.form__input:focus, .form__input--small:focus {
+  outline: none;
+  border-color: hsl(249deg, 99%, 64%);
+  transform: scale(1.0125);
+}
+.form__input.error, .error.form__input--small {
+  border-color: hsl(0deg, 100%, 66%);
+}
+.form__alert {
+  display: none;
+  max-width: 23ch;
+}
+.form__alert.error {
+  display: block;
+  color: hsl(0deg, 100%, 66%);
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: -1.5rem;
+}
+.form__row {
+  display: flex;
+  gap: 1rem;
+}
+.form__column {
+  width: 50%;
+}
+.form__input-column {
+  display: flex;
+  gap: 1rem;
+}
+.form__button {
+  border: none;
+  width: 100%;
+  margin-top: 3rem;
+  color: hsl(0deg, 0%, 100%);
+  padding-block: 2rem;
+  font-family: inherit;
+  background-color: hsl(278deg, 68%, 11%);
+  border-radius: 1rem;
+  transition: all 200ms;
+}
+.form__button:hover {
+  background-color: #5d1985;
+  cursor: pointer;
+  transform: scale(1.0125);
+}
+
+.thanks-component {
+  max-width: 38rem;
+}
+.thanks-component__icon {
+  margin: auto;
+}
+.thanks-component__title {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+}
+.thanks-component__text {
+  font-size: 1.6rem;
+  color: hsl(279deg, 6%, 55%);
+  text-align: center;
+}
+
+@media screen and (min-width: 990px) {
+  .sections-container {
+    flex-direction: row;
+  }
+  .cards-section {
+    background-image: url(../images/bg-main-desktop.png);
+  }
+  .cards-wrapper {
+    padding-top: 8rem;
+    padding-bottom: 12rem;
+    padding-inline: 2rem;
+    position: static;
+    display: block;
+    max-width: 100%;
+    margin: 0;
+  }
+  .card-front, .card-back {
+    width: min(27.3vw, 46rem); /*46rem;*/
+    height: min(15vw, 26rem); /*26rem;*/
+  }
+  .card-front {
+    padding: min(2vw, 3rem); /*3rem;*/
+    position: relative;
+    top: 0;
+    left: min(7.8vw, 15rem); /*8rem ;/*15rem;*/
+  }
+  .card-front_icon-container {
+    gap: min(1vw, 2rem); /*2rem;*/
+  }
+  .card-front__big-circle {
+    width: min(2.9vw, 5rem); /*5rem;*/
+    height: min(2.9vw, 5rem); /*5rem;*/
+  }
+  .card-front__small-circle {
+    width: min(1.49vw, 2.2rem); /*2.2rem;*/
+    height: min(1.49vw, 2.2rem); /*2.2rem;*/
+  }
+  .card-front__card-number {
+    font-size: min(1.5vw, 2.8rem); /*2.8rem;*/
+    letter-spacing: 2px; /*min(0.29vw, .5rem) ;/*.5rem;*/
+    margin-top: min(2.9vw, 7rem); /*7rem;*/
+    margin-bottom: min(1.95vw, 3rem); /*3rem;*/
+  }
+  .card-front__name, .card-front__date {
+    font-size: min(0.97vw, 1.5rem); /*1.5rem;*/
+  }
+  .card-back {
+    position: relative;
+    top: 0;
+    left: min(14.5vw, 25rem); /*13rem;/*25rem; */
+  }
+  .card-back__cvc {
+    font-size: min(0.97vw, 1.8rem); /*1.8rem;*/
+    top: min(6.8vw, 11.5rem); /*11.5rem;*/
+    right: min(2.9vw, 4rem); /*4rem;*/
+  }
+  .form-section {
+    margin-inline: auto;
+  }
+  .form-container {
+    margin: 0;
+  }
+  .form, .thanks-component {
+    padding-top: 6rem;
+    padding-bottom: 12rem;
+  }
+  .thanks-component {
+    width: 38rem;
+    padding-top: 10rem;
+  }
+}/*# sourceMappingURL=styles.css.map */

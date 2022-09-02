@@ -34,19 +34,23 @@ $font-barlow:'Barlow', sans-serif;
 $font-frances: 'Fraunces', serif;
 
 $header-blue: hsl(200, 100%, 62%);
+$breakpoint: 769px;
+
+// setting the size in percentage and hard sizes + the min function you can make the image behave like you want
 
 .header {
     padding-top: 3.5rem;
     position: relative;
     background-color: $header-blue;
-    padding-bottom: 31rem;
+    padding-bottom: min(53vw, 30rem);
     background-image: url(../images/mobile/image-header.jpg);
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: min(cover, 600px); //cover;
-    @media screen and (min-width: 70rem) {
+    background-size: min(100%, 475px); //cover;
+    @media screen and (min-width: 400px) {
         background-image: url(../images/desktop/image-header.jpg);
-        background-size: min(120%, 1240px) //100%;
+        background-size: min(200%, 1240px); //100%;
+        //padding-bottom: 30rem;
     }
 
     &__top-row {
@@ -58,19 +62,29 @@ $header-blue: hsl(200, 100%, 62%);
     &__button {
         background-color: transparent;
         border: none;
-        @media screen and (min-width: 800px) {
+        transition: all 300ms;
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.125);
+        }
+        @media screen and (min-width: $breakpoint) {
             display: none;
         }
     }
-    //&__logo {}
+    &__logo {
+        width: min(34vw, 17rem);
+        @media screen and (min-width: $breakpoint) {
+            align-self: center;
+        }
+    }
     &__navigation {
         display: none;
         position: absolute;
-        top: 12rem;
-        right: 2.3rem;
+        top: 10rem;
+        right: min(6vw, 4.8rem);// 2.3rem;
         font-family: $font-barlow;
         z-index: 10;
-        @media screen and (min-width: 800px) {
+        @media screen and (min-width: $breakpoint) {
             display: block;
             position: static;
         }
@@ -85,7 +99,7 @@ $header-blue: hsl(200, 100%, 62%);
             border-top: 24px solid transparent;
             border-bottom: 24px solid transparent; 
             border-right:24px solid $White;
-            @media screen and (min-width: 800px) {
+            @media screen and (min-width: $breakpoint) {
                 display: none;
             }
         }
@@ -98,7 +112,7 @@ $header-blue: hsl(200, 100%, 62%);
         gap: 3rem;
         background-color: $White;
         width: 32.9rem;
-        @media screen and (min-width: 800px) {
+        @media screen and (min-width: $breakpoint) {
             width: 100%;
             flex-direction: row;
             gap: 5rem;
@@ -114,18 +128,22 @@ $header-blue: hsl(200, 100%, 62%);
     &__link {
         text-decoration: none;
         color: $Dark-grayish-blue;
-        font-size: 1.5rem;
-        @media screen and (min-width: 800px) {
-            color: $White;
-        }
+        font-size: 1.6rem;
         &:hover {
             color: $Very-dark-grayish-blue;
+        }
+        @media screen and (min-width: $breakpoint) {
+            color: $White;
+            &:hover {
+                color: $White;
+                text-decoration: underline;
+            }
         }
     }
     &__nav-btn {
         display: block;
         background-color: $Yellow;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         font-family: $font-frances;
         font-weight: 700;
         text-decoration: none;
@@ -133,14 +151,24 @@ $header-blue: hsl(200, 100%, 62%);
         padding-inline: 3.2rem;
         color: $Very-dark-desaturated-blue;
         border-radius: 2.5rem;
-        @media screen and (min-width: 800px) {
-            background-color: $White;
+        transition: all 300ms;
+        &:hover {
+            cursor: pointer;
+            background-color: transparentize($color: $Yellow, $amount: 0.6);
         }
+        @media screen and (min-width: $breakpoint) {
+            background-color: $White;
+            &:hover {
+                background-color: transparentize($color: $White, $amount: 0.6);
+                color: $White;
+            }
+        }
+
 
     }
     &__title {
         margin-top: 6.5rem;
-        color: red;
+        color: $White;
         font-family: $font-frances;
         font-size:  min(8vw, 4rem);//3rem;
         font-weight: 900;
@@ -149,7 +177,7 @@ $header-blue: hsl(200, 100%, 62%);
         letter-spacing: 0.5rem;
         max-width: 11ch;
         margin-inline: auto;
-        @media screen and (min-width: 800px) {
+        @media screen and (min-width: $breakpoint) {
             max-width: 22ch;
         }
     }
@@ -163,5 +191,4 @@ $header-blue: hsl(200, 100%, 62%);
         top: 0;
         z-index: -1;
     }
-
 }

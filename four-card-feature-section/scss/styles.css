@@ -1,0 +1,268 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+/* reset */
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+  object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+  object-position: center center;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1rem;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+} */
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  font-size: 100%;
+  /* opcional */
+  line-height: 1.5;
+  /* opcional 
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto; */
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------------------------------------------------------------------*/
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(0deg, 0%, 98%);
+  font-family: "Poppins", Arial, sans-serif;
+  padding-bottom: 5rem;
+}
+
+.features-section {
+  width: 100%;
+}
+.features-section__header {
+  min-width: 40rem;
+}
+.features-section__title {
+  font-size: 22.5px;
+  font-weight: 600;
+  text-align: center;
+  color: hsl(234deg, 12%, 34%);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+  margin-top: 9rem;
+}
+.features-section__title--light {
+  font-weight: 200;
+  display: block;
+}
+.features-section__description {
+  color: hsl(229deg, 6%, 66%);
+  width: 32ch;
+  font-size: 14px;
+  text-align: center;
+  margin: auto;
+  margin-top: 3rem;
+}
+.features-section__cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 6rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  min-width: 40rem;
+}
+
+.feature-card {
+  background-color: white;
+  width: 30rem;
+  margin: auto;
+  padding: 3rem;
+  border-top: 5px solid black;
+  border-radius: 5px;
+  box-shadow: 8px 10px 20px -5px rgba(76, 78, 97, 0.1), 8px 10px 20px -5px rgba(84, 158, 242, 0.2);
+}
+.feature-card__title {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: hsl(234deg, 12%, 34%);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.feature-card__description {
+  color: hsl(229deg, 6%, 66%);
+  font-size: 13px;
+}
+.feature-card__icon {
+  margin-top: 3rem;
+  width: 6rem;
+  float: right;
+}
+.feature-card--1 {
+  border-color: hsl(180deg, 62%, 55%);
+  transition: all 200ms;
+}
+.feature-card--1:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.feature-card--2 {
+  border-color: hsl(0deg, 78%, 62%);
+  transition: all 200ms;
+}
+.feature-card--2:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.feature-card--3 {
+  border-color: hsl(34deg, 97%, 64%);
+  transition: all 200ms;
+}
+.feature-card--3:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.feature-card--4 {
+  border-color: hsl(212deg, 86%, 64%);
+  transition: all 200ms;
+}
+.feature-card--4:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+@media screen and (min-width: 720px) {
+  .features-section__title {
+    font-size: 30px;
+  }
+  .features-section__description {
+    width: 55ch;
+  }
+  .features-section__cards-container {
+    max-width: 720px;
+    margin: 6rem auto;
+  }
+}
+@media screen and (min-width: 1040px) {
+  .features-section__title {
+    font-size: 33.75px;
+  }
+  .features-section__description {
+    width: 55ch;
+  }
+  .features-section__cards-container {
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr/1fr 1fr 1fr;
+    grid-template-areas: ". red ." "green red yellow " "green blue yellow " ". blue .";
+    max-width: 1040px;
+    margin: 6rem auto;
+  }
+  .feature-card--1 {
+    grid-area: green;
+  }
+  .feature-card--2 {
+    grid-area: red;
+  }
+  .feature-card--3 {
+    grid-area: yellow;
+  }
+  .feature-card--4 {
+    grid-area: blue;
+  }
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,334 @@
+@charset "UTF-8";
+/* reset */
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  /*max-width: 100%;
+  width: 100%; */
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+  object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+  object-position: center center;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+} */
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  font-size: 100%;
+  /* opcional */
+  line-height: 1.5;
+  /* opcional 
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto; */
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------------------------------------------------------------------*/
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Bai Jamjuree", Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
+  fill: currentColor;
+}
+
+.page__header {
+  background-image: url("../images/bg-header-mobile.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 12rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+
+.logo {
+  margin: auto;
+  margin-bottom: 7rem;
+}
+
+.main-title {
+  font-size: 3rem;
+}
+
+.second-title {
+  font-size: 2.5rem;
+}
+
+.third-title {
+  font-size: 2.12rem;
+}
+
+/* text*/
+.text-component__title {
+  font-weight: 600;
+  color: rgb(61, 61, 61);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.text-component__paragraph {
+  color: darkgray;
+  text-align: center;
+  max-width: 50ch;
+  margin: auto;
+}
+
+/* buttons */
+.cta-component {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+
+.button {
+  color: white;
+  font-weight: 600;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+  padding: 2rem 8rem;
+  border-radius: 60px;
+}
+.button--ios {
+  background-color: hsl(171deg, 66%, 44%);
+  box-shadow: 2px 3px 2px #156659, 8px 8px 18px 15px #d0f5f0;
+}
+.button--ios:hover {
+  background-color: #47d9c3;
+  cursor: pointer;
+}
+.button--mac {
+  background-color: hsl(233deg, 100%, 69%);
+  box-shadow: 2px 3px 2px #001194, 8px 8px 18px 15px #d1d6ff;
+}
+.button--mac:hover {
+  background-color: #8a97ff;
+  cursor: pointer;
+}
+
+.page__section {
+  padding: 0 3.5rem;
+  margin-top: 17rem;
+}
+
+.image {
+  max-width: 100%;
+}
+
+.--devices .image {
+  margin: auto;
+  margin-top: 7rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7rem;
+  gap: 7rem;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+}
+
+.authority {
+  margin-bottom: 15rem;
+}
+
+.footer {
+  margin-top: 15rem;
+  background-color: rgb(228, 228, 228);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  color: rgb(78, 77, 77);
+}
+.footer__logo {
+  width: 55px;
+  height: 55px;
+  margin: 5rem auto;
+}
+.footer__list {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.footer__link {
+  color: rgb(78, 77, 77);
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__social-media {
+  display: flex;
+  gap: 3rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 5rem auto;
+}
+
+.icon:hover {
+  color: hsl(171deg, 66%, 44%);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 645px) {
+  .authority {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .content-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .text-component__paragraph {
+    max-width: 30ch;
+  }
+  .page__header {
+    background-image: url("../images/bg-header-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .cta-component {
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  .button {
+    margin: 0;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer__list {
+    display: block;
+    -moz-column-count: 3;
+         column-count: 3;
+    -moz-column-width: 2rem;
+         column-width: 2rem;
+    line-height: 5rem;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1241px) {
+  .left {
+    text-align: left;
+  }
+}/*# sourceMappingURL=styles.css.map */

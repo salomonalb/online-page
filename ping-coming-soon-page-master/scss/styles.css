@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.landing-page {
+  padding-inline: 4.7rem;
+  font-size: 2rem;
+  font-family: "Libre Franklin", sans-serif;
+}
+.landing-page__header {
+  margin-top: 8.5rem;
+  margin-inline: auto;
+  max-width: 64rem;
+}
+.landing-page__logo {
+  display: block;
+  max-width: 100%;
+  width: 5.5rem;
+  width: clamp(5.5rem, 14.5vw, 8.8rem);
+  margin: auto;
+}
+.landing-page__main-container {
+  margin-inline: auto;
+  margin-bottom: 10rem;
+  max-width: 64rem;
+}
+.landing-page__title {
+  font-size: 2rem;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 300;
+  color: hsl(0deg, 0%, 59%);
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+.landing-page__title--highlight {
+  color: black;
+  font-weight: 700;
+}
+.landing-page__paragraph {
+  font-size: 1.1rem;
+  font-size: clamp(1.1rem, 3vw, 2rem);
+  text-align: center;
+}
+.landing-page__form {
+  margin-top: 3.5rem;
+  margin-bottom: 6rem;
+  display: grid;
+}
+@media screen and (min-width: 769px) {
+  .landing-page__form {
+    grid-template-columns: 7fr 3fr;
+    gap: 1rem;
+    grid-template-areas: "input button" "alert .";
+    align-items: center;
+  }
+}
+.landing-page__email-input {
+  width: 100%;
+  border: 1px solid hsl(223deg, 100%, 88%);
+  border-radius: 25rem;
+  color: inherit;
+  font-family: inherit;
+  padding-inline: 3rem;
+  padding-block: 1.25rem;
+}
+.landing-page__email-input:focus {
+  border: 1px solid transparent;
+  outline: none;
+  box-shadow: 1px 1px 10px hsl(223deg, 100%, 88%);
+}
+.landing-page__email-input::-moz-placeholder {
+  color: hsl(223deg, 100%, 88%);
+}
+.landing-page__email-input:-ms-input-placeholder {
+  color: hsl(223deg, 100%, 88%);
+}
+.landing-page__email-input::placeholder {
+  color: hsl(223deg, 100%, 88%);
+}
+@media screen and (min-width: 769px) {
+  .landing-page__email-input {
+    grid-area: input;
+  }
+}
+.landing-page__alert {
+  display: none; /*modify */
+  font-size: 1.1rem;
+  text-align: center;
+  color: hsl(354deg, 100%, 66%);
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+@media screen and (min-width: 769px) {
+  .landing-page__alert {
+    text-align: left;
+    margin-left: 2.8rem;
+    grid-area: alert;
+  }
+}
+.error + .landing-page__alert {
+  display: inline-block;
+}
+.landing-page__button {
+  margin-top: 1rem;
+  border: none;
+  color: white;
+  font-weight: 600;
+  background-color: hsl(223deg, 87%, 63%);
+  border-radius: 25rem;
+  padding-inline: 3rem;
+  padding-block: 1.25rem;
+  box-shadow: 0 3px 10px 2px rgba(79, 125, 243, 0.4);
+}
+@media screen and (min-width: 769px) {
+  .landing-page__button {
+    margin-top: 0;
+    grid-area: button;
+  }
+}
+.landing-page__button:hover {
+  cursor: pointer;
+  background-color: #668ff4;
+}
+.landing-page__illustration {
+  display: block;
+  max-width: 100%;
+}
+.landing-page__footer {
+  margin-inline: auto;
+  margin-bottom: 3.5rem;
+  max-width: 64rem;
+}
+.landing-page__socials-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+.landing-page__copyright {
+  font-size: 1rem;
+  color: hsl(0deg, 0%, 59%);
+  text-align: center;
+}
+.landing-page__icon {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid hsl(223deg, 100%, 88%);
+  border-radius: 50%;
+  padding: 0.8rem;
+  color: hsl(223deg, 87%, 63%);
+}
+.landing-page__icon:hover {
+  cursor: pointer;
+  color: white;
+  background-color: hsl(223deg, 87%, 63%);
+}
+
+.error {
+  border: 1px solid hsl(354deg, 100%, 66%);
+  color: hsl(354deg, 100%, 66%);
+}
+.error::-moz-placeholder {
+  color: hsl(354deg, 100%, 66%);
+}
+.error:-ms-input-placeholder {
+  color: hsl(354deg, 100%, 66%);
+}
+.error::placeholder {
+  color: hsl(354deg, 100%, 66%);
+}
+.error:focus {
+  box-shadow: 1px 1px 10px hsl(354deg, 100%, 66%);
+}
+
+.lading-page__copyright {
+  font-size: 1rem;
+  color: hsl(0deg, 0%, 59%);
+  text-align: center;
+}/*# sourceMappingURL=styles.css.map */

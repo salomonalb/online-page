@@ -1,0 +1,282 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+/* reset */
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  /*max-width: 100%;
+  width: 100%; */
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+  object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+  object-position: center center;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1rem;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+} */
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  font-size: 100%;
+  /* opcional */
+  line-height: 1.5;
+  /* opcional 
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto; */
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------------------------------------------------------------------*/
+/* Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%)
+*/
+body {
+  font-family: "Raleway", sans-serif;
+  color: white;
+  background-color: hsl(229deg, 57%, 11%);
+  background-image: url("../images/bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding: 1.5rem;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin: auto;
+}
+
+.storage-card, .menu-card {
+  background-color: hsl(228deg, 56%, 26%);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.menu-card {
+  border-top-right-radius: 80px;
+}
+.menu-card__icons-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.menu-card__icon-background {
+  background-color: hsl(229deg, 57%, 11%);
+  padding: 0.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-card__icon-background:hover {
+  cursor: pointer;
+  transform: scale(1.025);
+}
+
+.storage-card {
+  position: relative;
+  padding-bottom: 3.5rem;
+}
+.storage-card__text {
+  font-size: 14px;
+  font-weight: 400;
+  color: hsl(243deg, 100%, 93%);
+  text-align: center;
+}
+.storage-card__text--bold {
+  font-weight: 700;
+}
+.storage-card__text-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.storage-card__bar-background {
+  margin-top: 1rem;
+  background-color: #141e48;
+  padding: 4px;
+  border-radius: 10px;
+}
+.storage-card__bar {
+  height: 14px;
+  width: 80%;
+  border-radius: 8px;
+  background-image: linear-gradient(to right, hsl(6deg, 100%, 80%), hsl(335deg, 100%, 65%));
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2px;
+  align-items: center;
+}
+.storage-card__bar::after {
+  content: "";
+  border: 6px solid white;
+  border-radius: 100%;
+  align-self: center;
+}
+
+.gb-left-box {
+  background-color: white;
+  position: absolute;
+  bottom: -20%;
+  left: 4rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  gap: 1rem;
+  border-radius: 10px;
+}
+.gb-left-box__number {
+  color: black;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+.gb-left-box__text {
+  color: hsl(229deg, 7%, 55%);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    background-image: url("../images/bg-desktop.png");
+    background-size: 100% 50%;
+    background-position: bottom;
+  }
+  .cards-container {
+    flex-direction: row;
+    max-width: unset;
+    justify-content: center;
+  }
+  .gb-left-box {
+    top: -25%;
+    bottom: unset;
+    left: unset;
+    right: 7%;
+  }
+  .storage-card {
+    padding-bottom: unset;
+    width: 540px;
+  }
+  .storage-card__text {
+    text-align: left;
+  }
+  .menu-card {
+    width: 311px;
+  }
+  .gb-left-box__triangle {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid white;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid white;
+    transform: rotate(135deg);
+    position: absolute;
+    right: -20px;
+    top: 51px;
+  }
+}/*# sourceMappingURL=styles.css.map */

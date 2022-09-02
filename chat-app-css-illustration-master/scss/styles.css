@@ -1,0 +1,217 @@
+@import url("./_reset.scss");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+/*(sub-heading at the top of the app UI)*/
+/*(chat on the left)*/
+/*(chat on the right)*/
+/*(placeholder text)*/
+/*(main heading)*/
+/*(paragraph)*/
+/*These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient*/
+/*(app background)*/
+/*(submit button background)*/
+/*(radio button outline)*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: hsl(270deg, 20%, 96%);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone {
+  background-color: white;
+  width: 25rem;
+  margin: 6rem auto;
+  position: relative;
+  padding: 1rem;
+  border-radius: 3rem;
+  overflow: hidden;
+  box-shadow: 0.7rem 0.7rem 1rem 0.1rem rgba(0, 0, 0, 0.14);
+}
+.phone__notch {
+  width: 13rem;
+  background-color: white;
+  padding-top: 3rem;
+  margin: auto;
+  border-radius: 1.5rem;
+  position: absolute;
+  top: -0.25rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.app {
+  background-color: hsl(270deg, 20%, 96%);
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.app__avatar {
+  width: 2rem;
+}
+.app__header {
+  display: flex;
+  background-image: linear-gradient(to left, hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
+  align-items: center;
+  padding: 3rem 1.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.6rem 0.3rem rgba(0, 0, 0, 0.15);
+}
+.app__back {
+  height: 2rem;
+}
+.app__avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid hsl(270deg, 20%, 96%);
+  border-radius: 50%;
+}
+.app__text-container {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.app__name {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(270deg, 20%, 96%);
+}
+.app__status {
+  margin: 0;
+  font-size: 0.9rem;
+  color: hsl(276deg, 100%, 81%);
+}
+.app__options {
+  height: 2rem;
+  margin-left: auto;
+}
+.app__message {
+  margin: 1rem;
+  color: hsl(276deg, 55%, 52%);
+  font-size: 0.8rem;
+  background-color: #ebe7ef;
+  padding: 0.8rem;
+  width: 45%;
+  border-radius: 0.8rem;
+  border-bottom-left-radius: 0;
+}
+.app__message--sent, .app__message--sent--small {
+  margin: 1rem 1rem 1rem auto;
+  color: hsl(271deg, 15%, 43%);
+  font-size: 0.8rem;
+  background-color: white;
+  padding: 0.8rem;
+  width: 40%;
+  border-radius: 0.8rem;
+  border-bottom-right-radius: 0;
+  box-shadow: 0 0.3rem 0.3rem 0.15rem rgba(0, 0, 0, 0.04);
+}
+.app__message--sent--small {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.app__images-wrapper {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin: 1rem;
+}
+.app__image {
+  width: 4rem;
+  border-radius: 0.9rem;
+}
+.app__radio-button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-image: linear-gradient(to right, hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
+  margin: 1rem;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 0.8rem;
+  background-color: #ebe7ef;
+  padding: 0.9rem;
+  width: 60%;
+  border-radius: 0.8rem;
+  border-bottom-left-radius: 0;
+  box-shadow: 0 0.3rem 0.2rem 0 rgba(0, 0, 0, 0.12);
+}
+.app__radio-button-check {
+  height: 2rem;
+}
+.app__radio-button-price {
+  margin-left: auto;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.app__text-input {
+  background-color: white;
+  margin: 2rem 1rem;
+  display: flex;
+  padding: 1rem;
+  border-radius: 2rem;
+  position: relative;
+  color: lightgray;
+}
+.app__send-button {
+  position: absolute;
+  right: 0.4rem;
+  bottom: 0.4rem;
+  height: 2.5rem;
+  display: inline-grid;
+  place-items: center;
+  width: 2.5rem;
+  border-radius: 50%;
+  background-color: hsl(271deg, 36%, 24%);
+}
+.app__send-icon {
+  height: 2rem;
+}
+
+.text-container {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  margin: auto;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 3rem auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: hsl(271deg, 36%, 24%);
+}
+
+.paragraph {
+  color: hsl(270deg, 7%, 64%);
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 10rem;
+  line-height: 2;
+}
+
+@media screen and (min-width: 682px) {
+  .title, .paragraph {
+    text-align: left;
+  }
+  .phone, .text-container {
+    margin: 0;
+  }
+  main {
+    margin-top: 6rem;
+  }
+}/*# sourceMappingURL=styles.css.map */

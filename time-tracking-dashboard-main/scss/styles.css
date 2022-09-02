@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(226deg, 43%, 10%);
+  color: hsl(236deg, 100%, 87%);
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  padding: min(21vw, 6rem) 2.4rem;
+}
+
+.dashboard {
+  display: grid;
+  row-gap: min(6.4vw, 2.8rem);
+  max-width: 37.5rem;
+  margin-inline: auto;
+  grid-template-areas: "profile" "work" "play" "study" "exercise" "social" "self-care";
+}
+@media screen and (min-width: 590px) {
+  .dashboard {
+    grid-template-columns: 25.5rem 25.5rem;
+    max-width: unset;
+    -moz-column-gap: 3.2rem;
+         column-gap: 3.2rem;
+    row-gap: 2.8rem;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: "profile work" "profile play" "study exercise" "social self-care";
+  }
+}
+@media screen and (min-width: 1164px) {
+  .dashboard {
+    grid-template-columns: repeat(4, 25.5rem);
+    grid-template-areas: "profile work play study" "profile exercise social self-care";
+  }
+}
+
+.profile-card {
+  background-color: hsl(235deg, 46%, 20%);
+  border-radius: 1.5rem;
+  grid-area: profile;
+}
+@media screen and (min-width: 590px) {
+  .profile-card {
+    align-self: stretch;
+  }
+}
+.profile-card__profile-section {
+  background-color: hsl(246deg, 80%, 60%);
+  padding: 3.2rem;
+  display: grid;
+  grid-template-columns: -webkit-max-content -webkit-max-content;
+  grid-template-columns: max-content max-content;
+  grid-template-areas: "pic label" "pic name";
+  -moz-column-gap: 1.6rem;
+       column-gap: 1.6rem;
+  border-radius: 1.5rem;
+}
+@media screen and (min-width: 590px) {
+  .profile-card__profile-section {
+    grid-template-areas: "pic" "label" "name";
+    padding-bottom: 9rem;
+  }
+}
+.profile-card__profile-picture {
+  width: min(17vw, 7.8rem);
+  border: 2px solid white;
+  position: relative;
+  background-color: white;
+  border-radius: 50%;
+  text-align: center;
+  grid-area: pic;
+}
+@media screen and (min-width: 590px) {
+  .profile-card__profile-picture {
+    margin-bottom: 4rem;
+  }
+}
+.profile-card__label {
+  font-size: 1.3rem;
+  color: hsl(236deg, 100%, 87%);
+  grid-area: label;
+  align-self: end;
+  font-weight: 400;
+}
+.profile-card__name {
+  color: white;
+  font-size: min(5.3vw, 4rem);
+  font-weight: 300;
+  grid-area: name;
+  align-self: start;
+}
+@media screen and (min-width: 590px) {
+  .profile-card__name {
+    max-width: -webkit-min-content;
+    max-width: -moz-min-content;
+    max-width: min-content;
+  }
+}
+.profile-card__menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.6rem 3.2rem;
+}
+@media screen and (min-width: 590px) {
+  .profile-card__menu {
+    flex-direction: column;
+    gap: 2.4rem;
+    padding: 3rem 3.2rem;
+  }
+}
+.profile-card__menu-button {
+  background-color: transparent;
+  border: none;
+  color: hsl(235deg, 45%, 61%);
+  font-weight: 400;
+  transition: all 300ms;
+}
+.profile-card__menu-button:hover {
+  color: white;
+  cursor: pointer;
+}
+.profile-card__menu-button.--active {
+  color: white;
+}
+
+.time-card {
+  padding-top: min(10.6vw, 4.5rem);
+  border-radius: 1.6rem;
+  background-image: url(../images/);
+  background-position: top -1rem right 1.5rem;
+  background-repeat: no-repeat;
+  background-size: 8.6rem;
+  background-color: transparent;
+  transition: all 300ms;
+}
+.time-card:hover {
+  transform: scale(1.012);
+  cursor: pointer;
+}
+.time-card#work {
+  background-image: url(../images/icon-work.svg);
+  background-color: hsl(15deg, 100%, 70%);
+  grid-area: work;
+}
+.time-card#play {
+  background-image: url(../images/icon-play.svg);
+  background-color: hsl(195deg, 74%, 62%);
+  grid-area: play;
+}
+.time-card#study {
+  background-image: url(../images/icon-study.svg);
+  background-color: hsl(348deg, 100%, 68%);
+  grid-area: study;
+}
+.time-card#exercise {
+  background-image: url(../images/icon-exercise.svg);
+  background-color: hsl(145deg, 58%, 55%);
+  grid-area: exercise;
+  background-position: top right 1.5rem;
+}
+.time-card#social {
+  background-image: url(../images/icon-social.svg);
+  background-color: hsl(264deg, 64%, 52%);
+  grid-area: social;
+}
+.time-card#selfcare {
+  background-image: url(../images/icon-self-care.svg);
+  background-color: hsl(43deg, 84%, 65%);
+  grid-area: self-care;
+}
+.time-card__data-container {
+  background-color: hsl(235deg, 46%, 20%);
+  padding: 3.2rem min(6.4vw, 3.2rem);
+  border-radius: 1.4rem;
+  transition: all 300ms;
+}
+.time-card__data-container:hover {
+  background-color: #1f2354;
+}
+.time-card__row {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 590px) {
+  .time-card__row {
+    margin-bottom: 2.8rem;
+  }
+}
+.time-card__title {
+  color: white;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.time-card__button {
+  background-color: transparent;
+  border: none;
+}
+.time-card__button:hover {
+  cursor: pointer;
+}
+.time-card__responsive-row {
+  margin-top: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 590px) {
+  .time-card__responsive-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
+.time-card__time {
+  font-size: min(6.4vw, 4.5rem);
+  color: white;
+}
+.time-card__last-time {
+  font-size: 1.2rem;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,524 @@
+@charset "UTF-8";
+/* reset */
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;700&display=swap");
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  /*width: 100%; */
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+  object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+  object-position: center center;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+} */
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  font-size: 100%;
+  /* opcional */
+  line-height: 1.5;
+  /* opcional 
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto; */
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------------------------------------------------------------------*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 2.4rem;
+  margin-bottom: 12rem;
+  align-items: center;
+}
+.header__logo {
+  width: 9.8rem;
+}
+.header__button {
+  font-size: 1rem;
+  color: hsl(322deg, 100%, 66%);
+  padding: 0.6rem 2rem;
+  border: 1px solid hsl(322deg, 100%, 66%);
+  border-radius: 5rem;
+  box-shadow: 0 0 3px 1px rgba(255, 82, 191, 0.1);
+}
+.header__button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px 3px rgba(255, 82, 191, 0.2);
+}
+
+.hero {
+  margin: 0 4rem;
+}
+.hero__text-container {
+  margin-bottom: 10rem;
+}
+.hero__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: hsl(192deg, 100%, 9%);
+  margin-bottom: 3rem;
+}
+.hero__text {
+  color: hsl(192deg, 100%, 9%);
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: "Open Sans", sans-serif;
+  margin: auto;
+  margin-bottom: 5rem;
+  font-weight: 600;
+  max-width: 55ch;
+}
+.hero__button {
+  background-color: hsl(322deg, 100%, 66%);
+  color: white;
+  margin: auto;
+  padding: 1.2rem 4rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 5rem;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
+}
+.hero__button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+.hero__stats-container {
+  margin-top: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+}
+.hero__stats-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.hero__stats-image {
+  width: 3rem;
+}
+.hero__stats-number {
+  font-size: 5rem;
+  font-weight: 700;
+  color: hsl(192deg, 100%, 9%);
+}
+.hero__stats-text {
+  color: gray;
+  font-size: 1.2rem;
+  text-align: center;
+  align-self: stretch;
+}
+
+.curved-divider {
+  width: 100%;
+}
+
+/* .features {} */
+.card {
+  padding: 8rem 4rem 8rem;
+}
+.card--white {
+  margin-top: 6rem;
+}
+.card--blue {
+  background-color: hsl(207deg, 100%, 98%);
+}
+.card__image {
+  margin-bottom: 6rem;
+}
+.card__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: hsl(192deg, 100%, 9%);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.card__text {
+  color: hsl(192deg, 100%, 9%);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: auto;
+  text-align: center;
+  max-width: 60ch;
+}
+
+.cta {
+  margin: 8rem 4rem 20rem;
+}
+.cta__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: hsl(192deg, 100%, 9%);
+  margin-bottom: 3rem;
+}
+.cta__button {
+  background-color: hsl(322deg, 100%, 66%);
+  color: white;
+  margin: auto;
+  padding: 1.2rem 4rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 5rem;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
+}
+.cta__button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.footer {
+  color: white;
+  background-color: hsl(192deg, 100%, 9%);
+  padding: 6rem 3rem;
+}
+.footer__logo {
+  width: 20rem;
+  margin-bottom: 2rem;
+}
+.footer__info {
+  font-style: normal;
+}
+.footer__text {
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+  font-size: 1.4rem;
+  font-weight: 400;
+  max-width: 40ch;
+}
+.footer__row-container {
+  margin-top: 4rem;
+}
+.footer__info-row {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+.footer__socials-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+.footer__social-icon {
+  width: 2rem;
+}
+.footer__social-icon:hover {
+  cursor: pointer;
+  color: hsl(207deg, 100%, 98%);
+}
+
+.form {
+  margin-bottom: 10rem;
+  position: relative;
+}
+.form__title {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+.form__text {
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+  font-size: 1.4rem;
+  font-weight: 400;
+  max-width: 41ch;
+}
+.form__email-input {
+  background-color: white;
+  width: 100%;
+  margin: 2rem 0 1.5rem;
+  padding: 1.5rem 0;
+  border-radius: 0.5rem;
+  color: hsl(192deg, 100%, 9%);
+}
+.form__email-input:invalid {
+  outline: 2px solid red;
+  content: "valid mail please";
+}
+.form__email-input:invalid + .form__alert {
+  display: block;
+  position: absolute;
+  color: red;
+  bottom: 0;
+}
+.form__alert {
+  display: none;
+}
+.form__button {
+  background-color: hsl(322deg, 100%, 66%);
+  color: white;
+  width: 50%;
+  margin-left: auto;
+  padding: 1.2rem 4rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
+}
+.form__button:hover {
+  cursor: pointer;
+  background-color: hsl(321deg, 100%, 78%);
+}
+
+@media screen and (min-width: 426px) {
+  html {
+    font-size: 68.75%;
+  }
+}
+@media screen and (min-width: 566px) {
+  html {
+    font-size: 75%;
+  }
+}
+@media screen and (min-width: 769px) {
+  html {
+    font-size: 43%;
+  }
+  .header {
+    margin: 8rem;
+    margin-bottom: 24rem;
+  }
+  .header__logo {
+    width: 24rem;
+  }
+  .header__button {
+    font-size: 1.4rem;
+    padding: 1.3rem 3.3rem;
+  }
+  .hero__text-container {
+    margin-bottom: 10rem;
+  }
+  .hero__title {
+    font-size: 4rem;
+    margin-bottom: 5rem;
+  }
+  .hero__text {
+    font-size: 1.6rem;
+  }
+  .hero__button {
+    font-size: 1.6rem;
+    padding: 3rem 10rem;
+  }
+  .hero__image {
+    width: 100%;
+    max-width: 103rem;
+    margin: auto;
+  }
+  .hero__stats-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .hero__stats-number {
+    font-size: 7rem;
+  }
+  .hero__stats-image {
+    width: 5rem;
+  }
+  .hero__stats-text {
+    font-size: 1.9rem;
+  }
+  .card--blue {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .card--white {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .card__title {
+    text-align: left;
+    font-size: 3rem;
+  }
+  .card__text {
+    text-align: left;
+    font-size: 1.4rem;
+  }
+  .card__image {
+    max-width: 53rem;
+  }
+  .cta__title {
+    font-size: 3rem;
+    margin-bottom: 6rem;
+  }
+  .cta__button {
+    font-size: 1.6rem;
+    padding: 3rem 10rem;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+  .footer__text {
+    font-size: 1.6rem;
+  }
+  .footer__logo {
+    width: 24rem;
+  }
+  .footer__social-icon {
+    width: 3rem;
+  }
+  .form {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "title ." "text ." "input button";
+    -moz-column-gap: 4rem;
+         column-gap: 4rem;
+  }
+  .form__title {
+    font-size: 2rem;
+    grid-area: title;
+    margin: 0;
+  }
+  .form__text {
+    font-size: 1.5rem;
+    grid-area: text;
+  }
+  .form__email-input {
+    padding: 1.8rem 0;
+    grid-area: input;
+    margin: 0;
+    place-self: center;
+  }
+  .form__button {
+    vertical-align: bottom;
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: 2rem 4rem;
+    grid-area: button;
+    place-self: center;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 920px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  html {
+    font-size: 62.5%;
+  }
+}/*# sourceMappingURL=styles.css.map */

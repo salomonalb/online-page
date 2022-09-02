@@ -1,0 +1,624 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+/* reset */
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  /*width: 100%; */
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+  object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+  object-position: center center;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+} */
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  font-size: 100%;
+  /* opcional */
+  line-height: 1.5;
+  /* opcional 
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto; */
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------------------------------------------------------------------*/
+html {
+  font-size: 10px;
+}
+
+/*hovers, focus, active states*/
+.header {
+  padding: 2.5rem;
+  padding-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10rem;
+  /*&__navigation {
+  }*/
+}
+.header__logo {
+  width: 8rem;
+}
+.header__link-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+.header__link {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.3rem;
+  color: hsl(243deg, 87%, 12%);
+}
+.header__link:hover {
+  border-bottom: 1px solid;
+}
+
+.hero {
+  padding: 2.5rem;
+  padding-top: 0;
+}
+.hero__illustration {
+  width: 100%;
+  max-width: 37.5rem;
+  margin: auto;
+  margin-bottom: 5rem;
+}
+.hero__text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 37.5rem;
+  margin: auto;
+}
+.hero__title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.5rem;
+  color: hsl(243deg, 87%, 12%);
+  font-weight: 700;
+  text-align: center;
+}
+.hero__paragraph {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4rem;
+  color: hsl(243deg, 87%, 12%);
+  font-weight: 400;
+  text-align: center;
+  padding: 0 1rem;
+}
+.hero__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.hero__input {
+  border: 1px solid hsl(243deg, 87%, 12%);
+  padding: 1.5rem 2rem;
+  border-radius: 5px;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.3rem;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.04), inset 2px 2px 5px 2px rgba(0, 0, 0, 0.04);
+}
+.hero__button {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.08);
+  background-color: hsl(224deg, 93%, 58%);
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  border-radius: 5px;
+}
+.hero__button:hover {
+  background-color: #628af9;
+  cursor: pointer;
+}
+
+.b-section {
+  background-color: hsl(240deg, 75%, 98%);
+  padding: 2.5rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  /* clip path maybe */
+}
+.b-section__image {
+  /*
+  width: 100%;
+  margin: auto;
+  margin-bottom: 10rem;
+  max-width: 37.5rem;
+  */
+  width: 100%;
+  max-width: 37.5rem;
+  margin: auto;
+  margin-bottom: 5rem;
+}
+.b-section__text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  max-width: 37.5rem;
+  margin: auto;
+}
+.b-section__paragraph-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.b-section__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.b-section__paragraph {
+  color: hsl(238deg, 22%, 44%);
+  font-size: 1.4rem;
+  font-family: "Open Sans", sans-serif;
+}
+.b-section__link {
+  color: hsl(170deg, 45%, 43%);
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  border-bottom: 2px solid hsl(170deg, 45%, 43%);
+  padding-bottom: 0.3rem;
+  padding-right: 2rem;
+  background-image: url(../images/icon-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  background-position: right top;
+}
+.b-section__link:hover {
+  filter: opacity(70%);
+}
+
+.card {
+  /* box shadow */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 28rem;
+  border-radius: 5px;
+  background-color: white;
+  background-image: url("../images/icon-quotes.svg");
+  background-repeat: no-repeat;
+  background-position: top 2rem left 2.5rem;
+  margin: auto;
+  padding: 2.5rem;
+  padding-top: 5rem;
+  box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.04);
+}
+.card__paragraph {
+  font-size: 1.025rem;
+  font-family: "Open Sans", sans-serif;
+  color: hsl(243deg, 87%, 12%);
+}
+.card__container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+.card__avatar {
+  width: 2.5rem;
+  border-radius: 50%;
+}
+.card__name {
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  color: hsl(243deg, 87%, 12%);
+  font-weight: 700;
+}
+.card__role {
+  font-size: 0.7rem;
+  font-family: "Open Sans", sans-serif;
+  color: hsl(243deg, 87%, 12%);
+  font-weight: 400;
+}
+
+.cta {
+  background-color: hsl(238deg, 22%, 44%);
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.cta__text-container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 37.5rem;
+  margin: auto;
+}
+.cta__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  text-align: center;
+}
+.cta__paragraph {
+  text-align: center;
+  font-size: 1.35rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+.cta__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 2rem;
+  width: 100%;
+  max-width: 33.5rem;
+  margin: auto;
+}
+.cta__input {
+  padding: 1rem 1.5rem;
+  border-radius: 3px;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8rem;
+  background-color: white;
+  color: hsl(0deg, 0%, 75%);
+}
+.cta__button {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: hsl(224deg, 93%, 58%);
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.08);
+}
+.cta__button:hover {
+  background-color: #628af9;
+  cursor: pointer;
+}
+
+.footer {
+  color: white;
+  padding: 5rem;
+  background-color: hsl(243deg, 87%, 12%);
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.footer__block-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.footer__row-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  align-items: center;
+}
+.footer__icon {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.footer__text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+}
+.footer__link {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+.footer__link:hover {
+  border-bottom: 1px solid;
+}
+.footer__socials-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+.footer__social-icon {
+  display: block;
+  overflow: visible;
+  box-sizing: content-box;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+  padding: 1rem;
+  transition: all 200ms;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.footer__social-icon:hover {
+  color: hsl(224deg, 93%, 58%);
+  border-color: hsl(224deg, 93%, 58%);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 426px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 769px) {
+  html {
+    font-size: 6px;
+  }
+  .header {
+    margin: 6rem 8rem 10rem;
+    padding: 0;
+    align-items: flex-start;
+  }
+  .header__logo {
+    width: 16rem;
+  }
+  .header__link {
+    font-size: 1.8rem;
+  }
+  .header__link-list {
+    gap: 6rem;
+  }
+  .hero {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0;
+    padding-bottom: 16rem;
+    margin: 0 8rem;
+    align-items: center;
+  }
+  .hero__title {
+    text-align: left;
+    font-size: 3.5rem;
+    font-family: "Raleway", sans-serif;
+  }
+  .hero__paragraph {
+    text-align: left;
+    padding: 0;
+    font-size: 1.6rem;
+  }
+  .hero__illustration {
+    width: 50%;
+    margin: 0;
+    max-width: unset;
+  }
+  .hero__text-container {
+    margin: 0;
+    max-width: 52rem;
+  }
+  .hero__form {
+    flex-direction: row;
+  }
+  .hero__input {
+    width: 32rem;
+    padding: 1.5rem 2rem;
+  }
+  .hero__button {
+    width: 20rem;
+    font-size: 1.6rem;
+    padding: 1.6rem;
+  }
+  .b-section {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 16rem 8rem;
+    margin: 0;
+    justify-content: space-between;
+    gap: 8rem;
+  }
+  .b-section__image {
+    /*width: 50%;
+    margin: 0;
+    max-width: unset;*/
+    width: 50%;
+    padding: 0.1rem;
+    max-width: unset;
+  }
+  .b-section__text-container {
+    align-items: start;
+    margin: 0;
+    max-width: 58rem;
+  }
+  .b-section__title {
+    text-align: left;
+    font-size: 3rem;
+    font-family: "Raleway", sans-serif;
+  }
+  .b-section__paragraph {
+    text-align: left;
+    font-size: 1.6rem;
+    color: hsl(243deg, 87%, 12%);
+  }
+  .b-section__paragraph-container {
+    max-width: 53rem;
+  }
+  .b-section__link {
+    font-size: 1.2rem;
+  }
+  .card {
+    margin-left: 0;
+    max-width: 36rem;
+  }
+  .card__paragraph {
+    font-size: 1.4rem;
+  }
+  .card__avatar {
+    width: 3rem;
+    height: 3rem;
+  }
+  .card__name {
+    font-size: 1.2rem;
+  }
+  .card__role {
+    font-size: 1rem;
+  }
+  .cta {
+    flex-direction: row;
+    padding: 8rem;
+    justify-content: space-between;
+  }
+  .cta__text-container {
+    margin: 0 0;
+  }
+  .cta__title {
+    text-align: left;
+    font-size: 3rem;
+  }
+  .cta__text-container {
+    max-width: 46rem;
+    gap: 3rem;
+  }
+  .cta__paragraph {
+    text-align: left;
+    font-size: 1.5rem;
+  }
+  .cta__form {
+    margin: 0;
+    padding: 0;
+    max-width: 50rem;
+  }
+  .cta__input {
+    max-width: 50rem;
+    padding: 2rem;
+    font-size: 1rem;
+  }
+  .cta__button {
+    font-size: 1.4rem;
+    padding: 2rem 3rem;
+    max-width: 20rem;
+  }
+  .footer {
+    display: grid;
+    grid-template-areas: "logo logo logo logo" "info list1 list2 social";
+    row-gap: 2rem;
+    padding: 10rem 8rem;
+  }
+  .footer__logo-container {
+    grid-area: logo;
+  }
+  .footer__block-container {
+    grid-area: info;
+  }
+  .footer__socials-container {
+    grid-area: social;
+  }
+}
+@media screen and (min-width: 901px) {
+  html {
+    font-size: 7px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  html {
+    font-size: 8px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 9px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  html {
+    font-size: 10px;
+  }
+}/*# sourceMappingURL=styles.css.map */
