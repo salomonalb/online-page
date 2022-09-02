@@ -36,20 +36,21 @@ $font-frances: 'Fraunces', serif;
 $header-blue: hsl(200, 100%, 62%);
 
 .header {
-    padding-top: 3.2rem;
+    padding-top: 3.5rem;
     position: relative;
     background-color: $header-blue;
     padding-bottom: 31rem;
     background-image: url(../images/mobile/image-header.jpg);
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size:  100%;
-    @media screen and (min-width: 600px) {
+    background-size: min(cover, 600px); //cover;
+    @media screen and (min-width: 70rem) {
         background-image: url(../images/desktop/image-header.jpg);
+        background-size: min(120%, 1240px) //100%;
     }
 
     &__top-row {
-        margin-inline: 2.3rem;
+        margin-inline: min(6vw, 4.8rem); //2.3rem;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
@@ -57,10 +58,11 @@ $header-blue: hsl(200, 100%, 62%);
     &__button {
         background-color: transparent;
         border: none;
+        @media screen and (min-width: 800px) {
+            display: none;
+        }
     }
-    &__logo {
-
-    }
+    //&__logo {}
     &__navigation {
         display: none;
         position: absolute;
@@ -68,6 +70,10 @@ $header-blue: hsl(200, 100%, 62%);
         right: 2.3rem;
         font-family: $font-barlow;
         z-index: 10;
+        @media screen and (min-width: 800px) {
+            display: block;
+            position: static;
+        }
 
         &::before {
             position: absolute;
@@ -79,6 +85,9 @@ $header-blue: hsl(200, 100%, 62%);
             border-top: 24px solid transparent;
             border-bottom: 24px solid transparent; 
             border-right:24px solid $White;
+            @media screen and (min-width: 800px) {
+                display: none;
+            }
         }
     }
     &__menu {
@@ -89,8 +98,16 @@ $header-blue: hsl(200, 100%, 62%);
         gap: 3rem;
         background-color: $White;
         width: 32.9rem;
+        @media screen and (min-width: 800px) {
+            width: 100%;
+            flex-direction: row;
+            gap: 5rem;
+            padding: 0;
+            background-color: transparent;
+        }
     }
     &__list-item {
+        display: block;
         margin: auto;
         overflow: hidden;
     }
@@ -98,6 +115,9 @@ $header-blue: hsl(200, 100%, 62%);
         text-decoration: none;
         color: $Dark-grayish-blue;
         font-size: 1.5rem;
+        @media screen and (min-width: 800px) {
+            color: $White;
+        }
         &:hover {
             color: $Very-dark-grayish-blue;
         }
@@ -113,24 +133,30 @@ $header-blue: hsl(200, 100%, 62%);
         padding-inline: 3.2rem;
         color: $Very-dark-desaturated-blue;
         border-radius: 2.5rem;
+        @media screen and (min-width: 800px) {
+            background-color: $White;
+        }
 
     }
     &__title {
-        margin-top: 10rem;
-        color: $White;
+        margin-top: 6.5rem;
+        color: red;
         font-family: $font-frances;
-        font-size: 3rem;
+        font-size:  min(8vw, 4rem);//3rem;
         font-weight: 900;
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 0.5rem;
         max-width: 11ch;
         margin-inline: auto;
+        @media screen and (min-width: 800px) {
+            max-width: 22ch;
+        }
     }
     &__icon-arrow {
-        position: absolute;
-        top: 28.5rem;
-        left: 47%;
+        position: relative;
+        top: 6rem;
+        margin: auto;
     }
     &__image {
         position: absolute;
