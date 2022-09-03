@@ -184,14 +184,10 @@ $breakpoint: 769px;
         }
     }
     &__icon-arrow {
+        width: 3.6rem;
         position: relative;
         top: 6rem;
         margin: auto;
-    }
-    &__image {
-        position: absolute;
-        top: 0;
-        z-index: -1;
     }
 }
 
