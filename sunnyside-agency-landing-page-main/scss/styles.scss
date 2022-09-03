@@ -192,34 +192,88 @@ $breakpoint: 769px;
     }
 }
 
+// decide where your gonna make the breakpoint
+// maybe i need something like autofill or auto fill, so they grow in column until theres is enough space to hold two columns at the small size
+
 .grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-auto-rows: 31rem 43rem;
+    grid-auto-rows: clamp(31rem, 83vw, 60rem) clamp(43rem, 115vw, 60rem);
+    @media screen and (min-width: 750px) {
+        grid-template-columns: clamp(375px, 50vw, 72rem) clamp(375px, 50vw, 72rem);
+        grid-template-areas:"text1 egg"
+                            "cup text2";
+    }
 
     &__image {
-        background-size: contain;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        
+
         &.--egg {
             background-image: url(../images/mobile/image-transform.jpg);
+            background-color:rgb(255, 209, 1);
+            background-position: top;
+            @media screen and (min-width: 750px) {
+                /*background-color:rgb(255, 209, 1);*/
+                background-image: url(../images/desktop/image-transform.jpg);
+                background-size: cover;//min(100%, 72rem);
+                background-position: center;
+                grid-area: egg;
+            }
         }
         &.--cup {
             background-image: url(../images/mobile/image-stand-out.jpg);
+            background-color: rgb(254, 121, 104);
+            background-position: bottom;
+            @media screen and (min-width: 750px) {
+                /*background-color: rgb(254, 121, 104);*/
+                background-image: url(../images/desktop/image-stand-out.jpg);
+                background-size: cover;//min(100%, 72rem);
+                background-position: center;
+                grid-area: cup;
+            }
         }
     }
     &__text {
         background-color: $bgc;
         padding-inline: 3.2rem;
+        max-width: 100%;
+        @media screen and (min-width: 750px) {
+            padding-right: clamp(3.2rem, 11vw, 12rem);
+            padding-left: clamp(3.2rem, 11vw, 16.5rem) ;
+        }
+
+        .--egg+& {
+            @media screen and (min-width: 750px) {
+                grid-area: text1;
+            }
+        }
+
+        .--cup+& {
+            @media screen and (min-width: 750px) {
+                grid-area: text2;
+            }
+        }
     }
     &__title {
         color: $Very-dark-desaturated-blue;
-        font-size: min(8vw, 3rem);
+        font-size: min(8vw, 4rem);
         font-family: $font-frances;
         font-weight: 900;
         text-align: center;
         max-width: 12ch;
         margin: auto;
-        margin-top: 7.2rem;
-        margin-bottom: 3rem;
+        margin-top: min(19vw, 16rem);
+        margin-bottom: min(8vw, 4rem);
+        @media screen and (min-width: 750px) {
+            /* copy the min functions values and reduce the percentage to half, becuase each text square now occupies 50% */
+            font-size: min(4vw, 4rem);
+            margin-top: clamp(3.2rem, 11vw, 16rem);
+            margin-bottom: min(4vw, 4rem);
+            text-align: left;
+            margin-left: 0;
+        }
     }
     &__paragraph {
         font-size: 1.6rem;
@@ -227,8 +281,13 @@ $breakpoint: 769px;
         color: $Dark-grayish-blue;
         text-align: center;
         line-height: 2.5rem;
-        max-width: 32ch;
+        width: min(77vw, 44rem);
         margin: auto;
+        @media screen and (min-width: 750px) {
+            width: min(100%, /*38.5vw,*/ 44rem);
+            text-align: left;
+            margin-left: 0;
+        }
     }
     &__link {
         display: block;
@@ -240,9 +299,14 @@ $breakpoint: 769px;
         color: $Very-dark-desaturated-blue;
         text-decoration: none;
         margin: auto;
-        margin-top: 3rem;
+        margin-top: min(8vw, 4rem);
         text-transform: uppercase;
         text-align: center;
+        @media screen and (min-width: 750px) {
+            margin-top: min(4vw, 4rem);
+            text-align: left;
+            margin-left: 0;
+        }
 
         &.--egg {
             &::after {
