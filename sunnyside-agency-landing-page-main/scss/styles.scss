@@ -436,7 +436,7 @@ $breakpoint: 769px;
 }
 
 .testmnl-card {
-    width: 33.3rem;
+    width: min(100%, 33.3rem);
     
     &__avatar {
         border-radius: 50%;
@@ -469,3 +469,51 @@ $breakpoint: 769px;
         color: $Grayish-blue;
     }
 }
+
+.row-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, min(50vw, 45rem));
+
+    @media screen and (min-width: 900px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.photo {
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &.--1 {
+        background-image: url(../images/mobile/image-gallery-milkbottles.jpg);
+        @media screen and (min-width: 900px) {
+            background-image: url(../images/desktop/image-gallery-milkbottles.jpg);
+        }
+    }
+    &.--2 {
+        background-image: url(../images/mobile/image-gallery-orange.jpg);
+        @media screen and (min-width: 900px) {
+            background-image: url(../images/desktop/image-gallery-orange.jpg);
+        }
+    }
+    &.--3 {
+        background-image: url(../images/mobile/image-gallery-cone.jpg);
+        @media screen and (min-width: 900px) {
+            background-image: url(../images/desktop/image-gallery-cone.jpg);
+        }
+    }
+    &.--4 {
+        background-image: url(../images/mobile/image-gallery-sugar-cubes.jpg);
+        @media screen and (min-width: 900px) {
+            background-image: url(../images/desktop/image-gallery-sugarcubes.jpg);
+        }
+    }
+}
+
+
+.footer {
+    
+}
+
+//alturas: 19rem  45rem;
