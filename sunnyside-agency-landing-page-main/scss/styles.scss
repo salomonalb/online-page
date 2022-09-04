@@ -477,6 +477,7 @@ $breakpoint: 769px;
 
     @media screen and (min-width: 900px) {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: min(50vw, 45rem);
     }
 }
 
@@ -513,7 +514,71 @@ $breakpoint: 769px;
 
 
 .footer {
-    
+    background-color: hsl(167, 44%, 70%);
+    padding-block: 7rem;
+
+    &__logo {
+        width: 17rem;
+        margin: auto;
+    }
+    &__nav {
+        margin-top: 5rem;
+        margin-bottom: 9rem;
+    }
+    &__menu {
+        width: 30rem;
+        list-style-type: none;
+        display: flex;
+        gap: 6rem;
+        margin: auto;
+        justify-content: center;
+    }
+    &__link {
+        text-decoration: none;
+        font-family: $font-barlow;
+        font-size: 1.6rem;
+        color: $Dark-moderate-cyan;
+        transition: all 350ms;
+
+        &:hover {
+            color: $White;
+        }
+    }
 }
+
+.socials-container {
+    display: flex;
+    gap: 3rem;
+    width: 16.4rem;
+    margin: auto;
+}
+.social-icon {
+    width: 2rem;
+    aspect-ratio: 1/1;
+    color: $Dark-moderate-cyan;
+    transition: all 350ms;
+
+    &:hover {
+        cursor: pointer;
+        color: $White;
+    }
+}
+
+
+
+
+
+
+
+// fix the image gallery and the weird space that they left
+// fix the svgs
+// fucking done!
+
+
+
+
+
+
+
 
 //alturas: 19rem  45rem;
