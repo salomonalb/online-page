@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    @media screen and (min-width: 1441px) {
+        font-size: 0.7vw;
+    }
+}
+
+$Soft-Cyan: hsl(174, 77%, 80%); /*(Full Slider Bar)*/
+$Strong-Cyan:  hsl(174, 86%, 45%); /*(Slider Backround)*/
+$Light-Grayish-Red:  hsl(14, 92%, 95%); /*(Discount Background)*/
+$Light-Red: hsl(15, 100%, 70%); /*(Discount Text)*/
+$Pale-Blue: hsl(226, 100%, 87%); /*(CTA Text)*/
+$White: hsl (0, 0%, 100%); /*(Pricing Component Background)*/
+$Very-Pale-Blue: hsl(230, 100%, 99%); /*(Main Background)*/
+$Light-Grayish-Blue-empty: hsl(224, 65%, 95%); /*(Empty Slider Bar)*/
+$Light-Grayish-Blue-toggle: hsl(223, 50%, 87%); /*(Toggle Background)*/
+$Grayish-Blue: hsl(225, 20%, 60%); /*(Text)*/
+$Dark-Desaturated-Blue: hsl(227, 35%, 25%); /*(Text & CTA Background)*/
+$font: 'Manrope', sans-serif;
+/* ------------------------- */
+
+body {
+    font-family: $font;
+    font-weight: 600;
+    font-size: 1rem;
+    background: {
+        image: url(../images/bg-pattern.svg);
+        repeat:no-repeat;
+        size: cover;
+    }
+}
+
+.header {
+    padding-top: 9.5rem;
+    padding-bottom: 7rem;
+    background: {
+        image: url(../images/pattern-circles.svg);
+        repeat: no-repeat;
+        size: min(40vw, 15rem); /*15rem;*/
+        position: center top 7rem;
+    };
+    @media screen and (min-width: 530px) {
+        background-position: center top 5.5rem;
+    }
+
+/*5.5rem*/
+
+    &__title {
+        font-size: min(5.3vw, 2.8rem );
+        width: max-content;
+        color: $Dark-Desaturated-Blue;
+        margin: auto;
+    }
+    &__paragraph {
+        max-width: 22ch;
+        margin: auto;
+        margin-top: 2rem;
+        text-align: center;
+        font-size: min(3.45vw, 1.45rem) /*1.45rem /*1.3rem;*/;
+        color: $Grayish-Blue;
+        @media screen and (min-width: 530px) {
+            max-width: max-content;
+        }
+    }
+}
