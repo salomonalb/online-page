@@ -35,11 +35,11 @@ body {
     background: {
         image: url(../images/bg-pattern.svg);
         repeat:no-repeat;
-        size: cover;
+        size: no-idea;// max(132rem, 100vw);
         color: $Very-Pale-Blue;
     }
 }
- /* ------ header  --------*/
+/* ------ header  --------*/
 .header {
     padding-top: 9.5rem;
     padding-bottom: 7rem;
@@ -108,6 +108,14 @@ main {
         letter-spacing: 0.1rem;
         font-weight: 800;
         grid-area: views;
+        //margin-bottom: 3.5rem;
+    }
+
+    &__slider-container {
+        text-align: center;max-width: max-content;
+        margin: auto;
+        grid-area: slider;
+        margin-block: 3.5rem;
     }
 
     &__price-row {
@@ -119,6 +127,10 @@ main {
         max-width: max-content;
         margin: auto;
         grid-area: price;
+        margin-bottom: 3.5rem;
+        @media screen and (min-width: $breakpoint) {
+            margin-bottom: 0;
+        }
     }
     &__price {
         color: $Dark-Desaturated-Blue;
@@ -128,22 +140,60 @@ main {
     &__radio-row {
         width: 100%;
         display: flex;
-        position: relative;
         justify-content: center;
         gap: 1.5rem;
+        grid-area: radio;
+        align-items: center;
     }
     &__text {
         font-size: min(2.9vw, 1.2rem); /* 1.1rem;*/
         color: $Grayish-Blue;
         font-weight: 600;
+        position: relative;
     }
+
+    &__radio-button { 
+        width: min(12.8vw, 4.8rem);
+        height: 2.4rem;
+        
+        border-radius: 50rem;
+        position: relative;
+        transition: all 400ms;
+        &[data-yearly="false"] {
+            background-color: $Light-Grayish-Blue-toggle;
+        }
+        &[data-yearly="true"] {
+            background-color: $Strong-Cyan;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }  
+
+    &__radio-button-ball {
+        width: min(4vw, 1.5rem);
+        height: min(4vw, 1.5rem);
+        background-color: $White;
+        position: absolute;
+        top: .4rem;
+        border-radius: 50%;
+        transition: all 400ms;
+
+        [data-yearly="false"] & {
+            left: .5rem;
+        }
+        [data-yearly="true"] & {
+            transform: translate(2.7rem);
+        }
+    }
+
     &__discount {
         position: absolute;
         background-color: $Light-Grayish-Red;
         color: $Light-Red;
         border-radius: 50rem;
         padding: .25rem .5rem;
-        right: 0;
+        right: -4.5rem;
         top: -.25rem;
     }
 }
@@ -155,6 +205,7 @@ main {
     padding-block: min(9.3vw/*(3.5rem)*/, 5rem);
     width: min(100%, 54rem);
     margin: auto;
+    margin-bottom: 10rem;
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
     display: flex;
