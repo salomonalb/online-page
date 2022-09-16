@@ -18,13 +18,14 @@ $Strong-Cyan:  hsl(174, 86%, 45%); /*(Slider Backround)*/
 $Light-Grayish-Red:  hsl(14, 92%, 95%); /*(Discount Background)*/
 $Light-Red: hsl(15, 100%, 70%); /*(Discount Text)*/
 $Pale-Blue: hsl(226, 100%, 87%); /*(CTA Text)*/
-$White: hsl (0, 0%, 100%); /*(Pricing Component Background)*/
+$White: hsl(0, 0%, 100%); /*(Pricing Component Background)*/
 $Very-Pale-Blue: hsl(230, 100%, 99%); /*(Main Background)*/
 $Light-Grayish-Blue-empty: hsl(224, 65%, 95%); /*(Empty Slider Bar)*/
 $Light-Grayish-Blue-toggle: hsl(223, 50%, 87%); /*(Toggle Background)*/
 $Grayish-Blue: hsl(225, 20%, 60%); /*(Text)*/
 $Dark-Desaturated-Blue: hsl(227, 35%, 25%); /*(Text & CTA Background)*/
 $font: 'Manrope', sans-serif;
+$breakpoint: 480px;
 /* ------------------------- */
 
 body {
@@ -35,9 +36,10 @@ body {
         image: url(../images/bg-pattern.svg);
         repeat:no-repeat;
         size: cover;
+        color: $Very-Pale-Blue;
     }
 }
-
+ /* ------ header  --------*/
 .header {
     padding-top: 9.5rem;
     padding-bottom: 7rem;
@@ -47,7 +49,7 @@ body {
         size: min(40vw, 15rem); /*15rem;*/
         position: center top 7rem;
     };
-    @media screen and (min-width: 530px) {
+    @media screen and (min-width: $breakpoint) {
         background-position: center top 5.5rem;
     }
 
@@ -66,8 +68,81 @@ body {
         text-align: center;
         font-size: min(3.45vw, 1.45rem) /*1.45rem /*1.3rem;*/;
         color: $Grayish-Blue;
-        @media screen and (min-width: 530px) {
+        @media screen and (min-width: $breakpoint) {
             max-width: max-content;
         }
+    }
+}
+
+/* -------- component -------- */
+
+main {
+    padding-inline: 2.4rem;
+}
+
+.pricing-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $White;
+    padding-inline: min(6.4vw, 4.4rem);
+    padding-block: min(9.3vw/*(3.5rem)*/, 5rem);
+    width: min(100%, 54rem);
+    margin: auto;
+    border-radius: 1rem;
+
+    @media screen and (min-width: $breakpoint){
+        display: grid;
+        grid-template-areas: "views price" "slider slider" "radio radio";
+        justify-content: space-between;
+    }
+
+
+    &__pageviews {
+        max-width: max-content;
+        font-size: min(3.6vw, 1.66rem); /*1.9rem /*1.586rem*/
+        color: $Grayish-Blue;
+        margin: auto;
+        letter-spacing: 0.1rem;
+        font-weight: 800;
+        grid-area: views;
+    }
+
+    &__price-row {
+        display: flex;
+        align-items: center;
+        gap: .8rem;
+        font-size: min(3.6vw, 1.66rem); /*1.9rem /*1.586rem*/
+        color: $Grayish-Blue;
+        max-width: max-content;
+        margin: auto;
+        grid-area: price;
+    }
+    &__price {
+        color: $Dark-Desaturated-Blue;
+        font-weight: 800;
+        font-size: min(8vw, 3.6rem); /*3rem*/
+    }
+    &__radio-row {
+        width: 100%;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    &__text {
+        font-size: min(2.9vw, 1.1rem); /* 1.1rem;*/
+        color: $Grayish-Blue;
+        font-weight: 600;
+    }
+    &__discount {
+        position: absolute;
+        background-color: $Light-Grayish-Red;
+        color: $Light-Red;
+        border-radius: 50rem;
+        padding: .25rem .5rem;
+        right: 0;
+        top: -.25rem;
     }
 }
