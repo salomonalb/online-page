@@ -90,7 +90,8 @@ main {
     padding-block: min(9.3vw/*(3.5rem)*/, 5rem);
     width: min(100%, 54rem);
     margin: auto;
-    border-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
 
     @media screen and (min-width: $breakpoint){
         display: grid;
@@ -132,7 +133,7 @@ main {
         gap: 1.5rem;
     }
     &__text {
-        font-size: min(2.9vw, 1.1rem); /* 1.1rem;*/
+        font-size: min(2.9vw, 1.2rem); /* 1.1rem;*/
         color: $Grayish-Blue;
         font-weight: 600;
     }
@@ -144,5 +145,58 @@ main {
         padding: .25rem .5rem;
         right: 0;
         top: -.25rem;
+    }
+}
+
+.cta {
+    border-top: .2rem solid $Light-Grayish-Blue-empty ;
+    background-color: $White;
+    padding-inline: min(6.4vw, 4.4rem);
+    padding-block: min(9.3vw/*(3.5rem)*/, 5rem);
+    width: min(100%, 54rem);
+    margin: auto;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    @media screen and (min-width: $breakpoint) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__benefits-list {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        @media screen and (min-width: $breakpoint) {
+            align-items: flex-start;
+        }
+
+        &-item {
+            @extend .pricing-component__text;
+
+            &::before {
+                content: url(../images/icon-check.svg);
+                margin-right: 1rem;
+            }
+        }
+    }
+    &__button-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__button {
+        background-color: $Dark-Desaturated-Blue;
+        color: $Very-Pale-Blue;
+        padding: min(4vw, 1.5rem);
+        padding-inline: min(13.3vw, 5rem);
+        border-radius: 50rem;
+        text-decoration: none;
+        font-size: min(2.9vw, 1.2rem);
     }
 }
