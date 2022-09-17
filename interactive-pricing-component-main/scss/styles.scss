@@ -32,6 +32,7 @@ body {
     font-family: $font;
     font-weight: 600;
     font-size: 1rem;
+    padding-inline: 2.4rem;
     background: {
         image: url(../images/bg-pattern.svg);
         repeat:no-repeat;
@@ -77,7 +78,10 @@ body {
 /* -------- component -------- */
 
 main {
-    padding-inline: 2.4rem;
+    margin: auto;
+    width: min(100%, 54rem);
+    box-shadow: 0 0 4rem .1rem transparentize($color: $Dark-Desaturated-Blue, $amount: .85);
+    border-radius: 1rem;
 }
 
 .pricing-component {
@@ -112,10 +116,13 @@ main {
     }
 
     &__slider-container {
-        text-align: center;max-width: max-content;
+        text-align: center;
         margin: auto;
         grid-area: slider;
         margin-block: 3.5rem;
+        width: 100%;
+        align-self: stretch;
+        justify-self: stretch;
     }
 
     &__price-row {
@@ -161,6 +168,9 @@ main {
         transition: all 400ms;
         &[data-yearly="false"] {
             background-color: $Light-Grayish-Blue-toggle;
+            &:hover {
+                background-color: $Soft-Cyan;
+            }
         }
         &[data-yearly="true"] {
             background-color: $Strong-Cyan;
@@ -188,12 +198,14 @@ main {
     }
 
     &__discount {
+        width: max-content;
         position: absolute;
         background-color: $Light-Grayish-Red;
         color: $Light-Red;
         border-radius: 50rem;
         padding: .25rem .5rem;
-        right: -4.5rem;
+        left: 110%;
+        //right: -4.5rem;
         top: -.25rem;
     }
 }
@@ -243,11 +255,60 @@ main {
     }
     &__button {
         background-color: $Dark-Desaturated-Blue;
-        color: $Very-Pale-Blue;
+        color: $Pale-Blue;
         padding: min(4vw, 1.5rem);
         padding-inline: min(13.3vw, 5rem);
         border-radius: 50rem;
         text-decoration: none;
         font-size: min(2.9vw, 1.2rem);
+        transition: all 400ms;
+        &:hover {
+            cursor: pointer;
+            color: $Very-Pale-Blue;
+        }
+    }
+}
+
+.slider {
+    width: 100%;
+    background-color:
+    $Light-Grayish-Blue-empty;
+    height: 1rem;
+    border-radius: 2rem;
+    position: relative;
+    &:hover {
+        cursor: pointer;
+    }
+
+    &__progress-bar {
+        position: absolute;
+        left: 0;
+        width: 50%;
+        height: 1rem;
+        background-color: $Soft-Cyan;
+        z-index: 10;
+        border-radius: 2rem;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &__handle {
+        width: 4rem;
+        height: 4rem;
+        background-color: $Strong-Cyan;
+        border-radius: 50%;
+        position: absolute;
+        top: -1.5rem;
+        left: 49%;
+        z-index: 20;
+        background-image: url(../images/icon-slider.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        &:hover {
+            cursor: grab;
+        }
+        &:active {
+            cursor: grabbing;
+        }
     }
 }
