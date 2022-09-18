@@ -29,34 +29,6 @@ radioBtn.addEventListener('keydown', (event) => {
 
 // -------------------------
 
-const handle = document.getElementById('handle');
-const progress = document.getElementById('progress');
-const slider = document.getElementById('slider');
-const pageviews = document.getElementById('pageviews');
-const price = document.getElementById('price');
-
-
-let placement = ""
-slider.addEventListener('mousemove', (e) => {
-    console.log(e.offsetX)
-    placement = e.offsetX;
-})
-
-slider.addEventListener('click', (e) => {
-    console.log(e)
-    handle.style.left = `min(${placement}px, 100%)`
-    progress.style.width = `${placement + 10}px`
-    pageviews.textContent = `${placement}K PAGEVIEWS`
-
-    if (yearly) {
-        price.textContent = `$${placement - 25}.15`;
-    } else {
-        price.textContent = `$${placement - 25}.00`
-    }
-
-    
-})
-
 
 // -------------
 

@@ -20,24 +20,39 @@
     
     <main >
         <article class="pricing-component">
-            <p class="pricing-component__pageviews" id="pageviews">100k PAGEVIEWS</p>
-            <div class="pricing-component__slider-container">
-                <div class="slider" id="slider">
-                    <div class="slider__progress-bar" id="progress"></div>
-                    <divs class="slider__handle" id="handle"></div>
-                </div>
-            </div>
-            <p class="pricing-component__price-row">
-                <span class="pricing-component__price" id="price">$16.00</span>
-                / month</p>
-            <div class="pricing-component__radio-row">
-                <p class="pricing-component__text">Monthly Billing</p>
+            <p class="pricing-component__pageviews"><span id="pageviews">100</span>k PAGEVIEWS</p>
 
-                <div class="pricing-component__radio-button" data-yearly="false" id="radio" tabindex="0"><span class="pricing-component__radio-button-ball"></span></div>
-                <p class="pricing-component__text">Yearly Billing <span id="discount" class="pricing-component__discount">-25%</span></p>
+            <div class="pricing-component__slider-container">
+                <input class="slider" type="range" min="1" max="5" step="1" value="3">
+                <div class="slider__progress-bar" id="progress"></div>
+            </div>
+
+            <p class="pricing-component__price-row">
+                <span class="pricing-component__price">$<span id="price">16</span>.00</span>
+                / month</p>
+            
+            
+            
+                <div class="pricing-component__check-row">
+                <p class="pricing-component__text">Monthly Billing</p>
+                <input id="check" name="yearly-billing" type="checkbox" class="pricing-component__check-button">
+                <label for="check" class="pricing-component__text">Yearly Billing <span id="discount" class="pricing-component__discount">-25%</span></label>
             </div>
         </article>
         
+
+
+
+
+
+
+
+
+
+
+
+
+
         <section class="cta">
             <ul class="cta__benefits-list">
                 <li class="cta__benefits-list-item">

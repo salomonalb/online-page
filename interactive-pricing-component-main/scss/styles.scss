@@ -36,8 +36,16 @@ body {
     background: {
         image: url(../images/bg-pattern.svg);
         repeat:no-repeat;
-        size: no-idea;// max(132rem, 100vw);
+        size: 144rem;
         color: $Very-Pale-Blue;
+    }
+    @media screen and (min-width: 1440px) {
+        background: {
+            image: url(../images/bg-pattern.svg);
+            repeat:no-repeat;
+            size: 100%;
+            color: $Very-Pale-Blue;
+        }
     }
 }
 /* ------ header  --------*/
@@ -99,7 +107,7 @@ main {
 
     @media screen and (min-width: $breakpoint){
         display: grid;
-        grid-template-areas: "views price" "slider slider" "radio radio";
+        grid-template-areas: "views price" "slider slider" "check check";
         justify-content: space-between;
     }
 
@@ -123,6 +131,7 @@ main {
         width: 100%;
         align-self: stretch;
         justify-self: stretch;
+        position: relative;
     }
 
     &__price-row {
@@ -144,12 +153,12 @@ main {
         font-weight: 800;
         font-size: min(8vw, 3.6rem); /*3rem*/
     }
-    &__radio-row {
+    &__check-row {
         width: 100%;
         display: flex;
         justify-content: center;
         gap: 1.5rem;
-        grid-area: radio;
+        grid-area: check;
         align-items: center;
     }
     &__text {
@@ -159,43 +168,37 @@ main {
         position: relative;
     }
 
-    &__radio-button { 
+    &__check-button {
+        appearance: none;
         width: 4.8rem;
         height: 2.4rem;
-        
+        background-color: $Light-Grayish-Blue-toggle;
         border-radius: 50rem;
         position: relative;
         transition: all 400ms;
-        &[data-yearly="false"] {
-            background-color: $Light-Grayish-Blue-toggle;
-            &:hover {
-                background-color: $Soft-Cyan;
-            }
-        }
-        &[data-yearly="true"] {
-            background-color: $Strong-Cyan;
-        }
-        &:hover {
-            cursor: pointer;
-        }
-    }  
-
-    &__radio-button-ball {
-        width: 1.5rem;
-        height: 1.5rem;
-        background-color: $White;
-        position: absolute;
-        top: .4rem;
-        border-radius: 50%;
-        transition: all 400ms;
-
-        [data-yearly="false"] & {
+        &::after {
+            content: "";
+            width: 1.5rem;
+            height: 1.5rem;
+            background-color: $White;
+            position: absolute;
+            top: .4rem;
+            border-radius: 50%;
+            transition: all 400ms;
             left: .5rem;
         }
-        [data-yearly="true"] & {
-            transform: translate(2.7rem);
+        &:hover {
+            background-color: $Soft-Cyan;
+            cursor: pointer;
         }
-    }
+        &:checked {
+            background-color: $Strong-Cyan;
+
+            &::after {
+                transform: translate(2.25rem);
+            }
+        }
+    } 
 
     &__discount {
         width: max-content;
@@ -205,7 +208,6 @@ main {
         border-radius: 50rem;
         padding: .25rem .5rem;
         left: 110%;
-        //right: -4.5rem;
         top: -.25rem;
     }
 }
@@ -270,36 +272,41 @@ main {
 }
 
 .slider {
+    appearance: none;
     width: 100%;
     background-color:
     $Light-Grayish-Blue-empty;
     height: 1rem;
     border-radius: 2rem;
-    position: relative;
+    z-index: 10;
     &:hover {
         cursor: pointer;
     }
-
-    &__progress-bar {
-        position: absolute;
-        left: 0;
-        width: 50%;
-        height: 1rem;
-        background-color: $Soft-Cyan;
-        z-index: 10;
-        border-radius: 2rem;
-        &:hover {
-            cursor: pointer;
-        }
-    }
-    &__handle {
+    &::-webkit-slider-thumb {
+        appearance: none;
         width: 4rem;
         height: 4rem;
         background-color: $Strong-Cyan;
         border-radius: 50%;
-        position: absolute;
-        top: -1.5rem;
-        left: 49%;
+        z-index: 20;
+        background-image: url(../images/icon-slider.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 30;
+        position: relative;
+        &:hover {
+            cursor: grab;
+        }
+        &:active {
+            cursor: grabbing;
+        }
+    }
+    &::-moz-range-thumb {
+        appearance: none;
+        width: 4rem;
+        height: 4rem;
+        background-color: $Strong-Cyan;
+        border-radius: 50%;
         z-index: 20;
         background-image: url(../images/icon-slider.svg);
         background-repeat: no-repeat;
@@ -309,6 +316,37 @@ main {
         }
         &:active {
             cursor: grabbing;
+        }
+    }
+    &::-ms-thumb {
+        appearance: none;
+        width: 4rem;
+        height: 4rem;
+        background-color: $Strong-Cyan;
+        border-radius: 50%;
+        z-index: 20;
+        background-image: url(../images/icon-slider.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        &:hover {
+            cursor: grab;
+        }
+        &:active {
+            cursor: grabbing;
+        }
+    }
+
+    &__progress-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 1rem;
+        background-color: $Soft-Cyan;
+        z-index: 20;
+        border-radius: 2rem;
+        &:hover {
+            cursor: pointer;
         }
     }
 }
