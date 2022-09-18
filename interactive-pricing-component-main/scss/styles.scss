@@ -345,6 +345,7 @@ main {
         background-color: $Soft-Cyan;
         z-index: 20;
         border-radius: 2rem;
+        transition: all 400ms;
         &:hover {
             cursor: pointer;
         }

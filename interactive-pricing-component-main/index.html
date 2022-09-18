@@ -9,21 +9,22 @@
     <meta name="author" content="Salomon Leon">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="../wickedcss.min.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
     <header class="header">
-        <h1 class="header__title">Simple, traffic-based pricing</h1>
-        <p class="header__paragraph">Sign-up for our 30-Day Trial. No credit card required.</p>
+        <h1 class="header__title slideDown" >Simple, traffic-based pricing</h1>
+        <p class="header__paragraph slideDown">Sign-up for our 30-Day Trial. No credit card required.</p>
     </header>
     
     
-    <main >
+    <main  class="slideUp">
         <article class="pricing-component">
-            <p class="pricing-component__pageviews"><span id="pageviews">100</span>k PAGEVIEWS</p>
+            <p class="pricing-component__pageviews"><span id="pageviews">100</span> PAGEVIEWS</p>
 
             <div class="pricing-component__slider-container">
-                <input class="slider" type="range" min="1" max="5" step="1" value="3">
+                <input class="slider" type="range" min="1" max="5" step="1" value="3" id="slider">
                 <div class="slider__progress-bar" id="progress"></div>
             </div>
 
