@@ -101,7 +101,7 @@ body {
         }
         &--custom {
             @extend .app__input;
-            background-image: url();
+            background-image: url('');
         }
         &--numofpeople {
             @extend .app__input;
